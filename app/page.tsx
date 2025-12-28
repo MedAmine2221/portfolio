@@ -1,27 +1,37 @@
 import { Link } from "@heroui/link";
-import { Snippet } from "@heroui/snippet";
-import { Code } from "@heroui/code";
 import { button as buttonStyles } from "@heroui/theme";
-
 import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
-
+import Image from "next/image";
+import TypingText from "@/components/app/typing-text";
+import { Input } from "@heroui/input";
+import { FaRobot } from "react-icons/fa";
+import { FiSend } from "react-icons/fi";
+import RecommondationCard from "@/components/app/recommandation-card";
 export default function Home() {
+
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
       <div className="inline-block max-w-xl text-center justify-center">
-        <span className={title()}>Make&nbsp;</span>
-        <span className={title({ color: "violet" })}>beautiful&nbsp;</span>
-        <br />
-        <span className={title()}>
-          websites regardless of your design experience.
-        </span>
-        <div className={subtitle({ class: "mt-4" })}>
-          Beautiful, fast and modern React UI library.
-        </div>
+        <Image
+          src="/amine.png"
+          alt="That's Me"
+          width={1000}
+          height={1000}
+        />
+        <TypingText text="> Hello world." />
+        <TypingText text="> I'm Mohamed Amine LAZREG," />
+        <TypingText text="> Software Developer." />
       </div>
-
+      <Image src={"/programing.png"} width={125} alt="ReactJs" height={125} />
+      <div className="flex flex-row">
+        <Image src={"/js.png"} width={100} alt="JS" height={100} />
+        <div className="mx-2" />
+        <Image src={"/typescript.png"} width={100} alt="TS" height={100} />
+        <div className="mx-2" />
+        <Image src={"/git.png"} width={100} alt="GIT" height={25} />
+      </div>
+      <Image src={"/ReactNative.png"} width={300} alt="React Native" height={300} />
       <div className="flex gap-3">
         <Link
           isExternal
@@ -30,9 +40,9 @@ export default function Home() {
             radius: "full",
             variant: "shadow",
           })}
-          href={siteConfig.links.docs}
+          href={siteConfig.links.cv}
         >
-          Documentation
+          Download My CV
         </Link>
         <Link
           isExternal
@@ -43,13 +53,19 @@ export default function Home() {
           GitHub
         </Link>
       </div>
-
-      <div className="mt-8">
-        <Snippet hideCopyButton hideSymbol variant="bordered">
-          <span>
-            Get started by editing <Code color="primary">app/page.tsx</Code>
-          </span>
-        </Snippet>
+      <Input
+        labelPlacement="outside"
+        placeholder="Who is Mohamed Amine Lazreg ?"
+        startContent={
+          <FaRobot className="text-2xl text-default-400 pointer-events-none shrink-0" />
+        }
+        endContent={
+          <FiSend className="text-2xl text-default-400 pointer-events-none shrink-0" />
+        }
+        type="email"
+      />
+      <div className="flex flex-row">
+        <RecommondationCard />
       </div>
     </section>
   );

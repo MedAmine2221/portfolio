@@ -9,20 +9,20 @@ export const siteConfig = {
       href: "/",
     },
     {
-      label: "Docs",
-      href: "/docs",
-    },
-    {
-      label: "Pricing",
-      href: "/pricing",
-    },
-    {
-      label: "Blog",
-      href: "/blog",
-    },
-    {
       label: "About",
       href: "/about",
+    },
+    {
+      label: "Professional experience",
+      href: "/expPro",
+    },
+    {
+      label: "Projects",
+      href: "/projects",
+    },
+    {
+      label: "Contact",
+      href: "/contact",
     },
   ],
   navMenuItems: [
@@ -60,10 +60,10 @@ export const siteConfig = {
     },
   ],
   links: {
-    github: "https://github.com/heroui-inc/heroui",
-    twitter: "https://twitter.com/hero_ui",
-    docs: "https://heroui.com",
-    discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev",
+    github: "https://github.com/MedAmine2221",
+    facebook: "https://www.facebook.com/mouhamed.amine.lazreg/",
+    instagram: "https://www.instagram.com/mouhamedaminelz/",
+    linkedIn: "https://www.linkedin.com/in/mohamed-amine-lazreg-831b1817a/",
+    cv: "https://drive.google.com/file/d/1XM__X3RcQ_k4cKmvBIFjuTpTmu0AzD4Q/view?usp=sharing"
   },
 };
