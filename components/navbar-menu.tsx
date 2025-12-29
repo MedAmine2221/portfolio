@@ -11,7 +11,7 @@ export default function NavMenu() {
     <div className="flex w-full flex-col">
       <Tabs
         aria-label="Options"
-        color="primary"
+        color="default"
         variant="bordered"
         onSelectionChange={(key) => {
           router.push(key as string);
