@@ -25,14 +25,24 @@ export default function ProExp() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
   return (
-    <section className="min-h-screen py-20 px-4 bg-black relative">
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-black to-slate-900 opacity-40 pointer-events-none"></div>
-
-      <div className="max-w-6xl mx-auto relative z-10">
+    <section className="min-h-screen px-4 bg-black relative">
         <div className="text-center mb-24 space-y-6">
           <h1 className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400">
             About Me
           </h1>
+        </div>
+        <div className="flex justify-center mb-16">
+          <div
+            className="w-full rounded-2xl transition-all duration-500 transform hover:-translate-y-2
+              border border-slate-700/30 backdrop-blur-sm
+              bg-slate-900/50 shadow-2xl"
+          >
+            <div className="flex flex-col items-center p-6 relative z-10">
+              <h3 className="text-lg text-white mb-2 text-center">
+                As a computer engineer and part-time lecturer, I see myself as a professional who is attentive, methodical, and passionate about sharing knowledge. My experience in both industry and education has allowed me to develop an approach that is both rigorous and human-centered, where clarity, patience, and adaptability are at the core of my practice. I place great importance on collaborative work, effective communication, and personalized guidance, whether with students or within project teams. Driven by constant curiosity and a problem-solving mindset, I enjoy imparting not only technical skills but also work methods and a mindset oriented toward continuous learning and innovation.
+              </h3>
+            </div>
+          </div>
         </div>
 
         <div className="relative">
@@ -122,7 +132,6 @@ export default function ProExp() {
             </div>
           </div>
         </div>
-      </div>
     </section>
   )
 }
