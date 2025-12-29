@@ -6,7 +6,7 @@ export const projects = [
     title: "Educap",
     description: "This educational mobile application allows students and parents to track absences and sanctions, as well as homework assignments. The app is also accessible to teachers, helping them manage student attendance, add and organize lessons, homework, and many other modules.",
     lien: "https://play.google.com/store/apps/details?id=adn_expertise.educap&hl=fr",
-    img: "https://play-lh.googleusercontent.com/PfP4THlC0mF5YVonjtR401TRFStneEDTlqK7ln7k7GQN-jK9-BfehrjHXTbT9Aq4AmgqvHJBTV2oItB1d_Uh=w2560-h1440-rw",
+    img: ["https://play-lh.googleusercontent.com/PfP4THlC0mF5YVonjtR401TRFStneEDTlqK7ln7k7GQN-jK9-BfehrjHXTbT9Aq4AmgqvHJBTV2oItB1d_Uh=w2560-h1440-rw", "https://play-lh.googleusercontent.com/Dm6PUspQRbqt6VghGWAfhwkURGkulWVqA8OeUTgzNHKfCHfd5A_0oEMRjPQWuvt_mw-FOT9owfKa1j2fAAhTPg=w2560-h1440-rw", "https://play-lh.googleusercontent.com/d4nHSYaodt-stNZ36qFqSSmZpMQg4FuDSQpkU34lDoKPxPwdh9VeJCfm8Y2ov922-gW9lhEFPgfDwSGeOIt7=w2560-h1440-rw"],
     encours: false,
     githubLink: "",
     skills:[
@@ -23,7 +23,7 @@ export const projects = [
     title: "MAIDE",
     description: "A platform designed for administrators that enables analysis of past and current payer assessments and evidence requirements, guiding clinical trial design and market access strategy throughout the product lifecycle.",
     lien: "https://fedsvc.myaccount.iqvia.com/authenticationendpoint/login.do?client_id=7J3GXYkcCCrRhoyZ6CZjHNvs0J4a&commonAuthCallerPath=%2Foauth2%2Fauthorize&forceAuth=false&passiveAuth=false&redirect_uri=https%3A%2F%2Fback.mai-de.iqvia.com%2Foauth%2Fcallback%2F&response_type=code&scope=openid&tenantDomain=carbon.super&sessionDataKey=2b8c20f9-9f93-4f9b-a802-b8288d3acf34&relyingParty=7J3GXYkcCCrRhoyZ6CZjHNvs0J4a&type=oidc&sp=OIDC-RWS-HEOR-MAIDE&isSaaSApp=false&authenticators=IdentifierExecutor%3ALOCAL",
-    img: "https://i0.wp.com/pharmabharat.com/wp-content/uploads/2025/09/Samahita-Research-5.jpg",
+    img: ["https://i0.wp.com/pharmabharat.com/wp-content/uploads/2025/09/Samahita-Research-5.jpg"],
     encours: false,
     githubLink: "",
     skills:[
@@ -39,7 +39,7 @@ export const projects = [
     title: "DAILY COMPASS APP",
     description: "An intelligent goal management mobile application that allows you to break down your upcoming goals into tasks, with automatic email notifications sent when a task’s deadline is reached.",
     lien: "https://drive.google.com/file/d/1Q7bSl1-xnul99YIe3EyLTk_QkQ2b_V3V/view?usp=drive_link",
-    img: "/DailyCompass.png",
+    img: ["/DailyCompass.png", "/DailyCompass2.png","/DailyCompass3.png"],
     encours: false,
     githubLink: "https://github.com/MedAmine2221/daily-compass-app",
     skills:[
@@ -57,7 +57,7 @@ export const projects = [
     title: "DAILY COMPASS APP Management",
     description: "Web application for monitoring the 'DAILY COMPASS APP' mobile application.",
     lien: "",
-    img: "",
+    img: [""],
     encours: true,
     githubLink: "https://github.com/MedAmine2221/daily-compass-web-app-admin",
     skills:[
@@ -76,7 +76,7 @@ export const projects = [
     title: "QUIZ APP Mobile",
     description: "Mobile application for managing skills and updating CVs.",
     lien: "",
-    img: "",
+    img: ["/quizzAppMobile.png", "/QuzzAppMobile2.png"],
     encours: false,
     githubLink: "https://github.com/MedAmine2221/MobileQuizz",
     skills:[
@@ -91,7 +91,7 @@ export const projects = [
     title: "QUIZ APP Web",
     description: "Web application for managing skills and updating CVs",
     lien: "",
-    img: "",
+    img: ["/quizzAppWeb.png", "/QuizzAppWeb2.png", "/QuizzAppWeb3.png"],
     encours: false,
     githubLink: "https://github.com/MedAmine2221/FrontQuizApp",
     skills:[

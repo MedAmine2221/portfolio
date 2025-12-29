@@ -1,12 +1,19 @@
 "use client";
+import ZoomImage from "@/components/app/zoomImage";
 import { projects } from "@/constants";
 import { Card, CardFooter, CardHeader } from "@heroui/card";
 import { Button, Image } from "@heroui/react";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
+import { FiZoomIn } from "react-icons/fi";
 
 export default function Projects() {
   const [visibleCards, setVisibleCards] = useState([]);
   const [cardScales, setCardScales] = useState({});
+  const [currentProject, setCurrentProject] = useState<number | null>(null);
+  const projectSelected = useMemo(()=>{
+    const currentProj = projects.find((item)=>item.index === currentProject);
+    return {img: currentProj?.img, title: currentProj?.title};
+  },[currentProject])
   const cardRefs = useRef([]);
   useEffect(() => {
     projects.forEach((_, index) => {
@@ -50,17 +57,15 @@ export default function Projects() {
 
   return (
     <div className="min-h-screen py-12 px-4">
-        <div className="text-center mb-24 space-y-6">
-          <h1 className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400">
-            Projects
-          </h1>
-        </div>
-      
+      <div className="text-center mb-24 space-y-6">
+        <h1 className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400">
+          Projects
+        </h1>
+      </div>
       <div className="max-w-6xl mx-auto space-y-8">
         {projects.map((item, index) => {
           const isVisible = visibleCards.includes(index);
           const scale = cardScales[index] || 0.85;
-          
           return (
             <div
               key={item.index}
@@ -82,6 +87,9 @@ export default function Projects() {
               >
                 <CardHeader className="absolute z-10 top-1 flex-col items-start bg-gradient-to-b from-black/60 to-transparent p-6">
                   <h4 className="text-white font-bold text-2xl mb-2">{item.title}</h4>
+                  <Button onPress={() => setCurrentProject(item.index)}>
+                    <FiZoomIn />
+                  </Button>
                   {item.encours && (
                     <span className="bg-yellow-500 text-black text-xs px-3 py-1 rounded-full font-semibold">
                       En cours
@@ -93,7 +101,7 @@ export default function Projects() {
                   removeWrapper
                   alt={`${item.title} background`}
                   className="z-0 w-full h-full object-scale-down"
-                  src={item.img || "https://via.placeholder.com/800x400?text=Project+Image"}
+                  src={item.img[0] || "https://via.placeholder.com/800x400?text=Project+Image"}
                 />
                 
                 <CardFooter className="absolute bg-black/60 backdrop-blur-md bottom-0 z-10 border-t-1 border-purple-500/50 p-8">
@@ -141,6 +149,12 @@ export default function Projects() {
                   </div>
                 </CardFooter>
               </Card>
+              <ZoomImage
+                isOpen={currentProject !== null}
+                onOpenChange={(open) => { if(!open) setCurrentProject(null) }}
+                images={projectSelected.img ?? []}
+                projectName={projectSelected.title ?? ""}
+              />
             </div>
           );
         })}
