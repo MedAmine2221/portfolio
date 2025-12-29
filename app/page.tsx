@@ -1,15 +1,14 @@
+"use client";;
 import { Link } from "@heroui/link";
 import { button as buttonStyles } from "@heroui/theme";
 import { siteConfig } from "@/config/site";
 import { GithubIcon } from "@/components/icons";
 import Image from "next/image";
 import TypingText from "@/components/app/typing-text";
-import { Input } from "@heroui/input";
-import { FaRobot } from "react-icons/fa";
-import { FiSend } from "react-icons/fi";
 import RecommondationCard from "@/components/app/recommandation-card";
-export default function Home() {
+import Chatbot from "@/components/app/chatbot-form";
 
+export default function Home() {
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
       <div className="inline-block max-w-xl text-center justify-center">
@@ -53,17 +52,7 @@ export default function Home() {
           GitHub
         </Link>
       </div>
-      <Input
-        labelPlacement="outside"
-        placeholder="Who is Mohamed Amine Lazreg ?"
-        startContent={
-          <FaRobot className="text-2xl text-default-400 pointer-events-none shrink-0" />
-        }
-        endContent={
-          <FiSend className="text-2xl text-default-400 pointer-events-none shrink-0" />
-        }
-        type="email"
-      />
+      <Chatbot />
       <div className="flex flex-row">
         <RecommondationCard />
       </div>

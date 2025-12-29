@@ -53,7 +53,7 @@ export default function RecommendationCarousel() {
     setIsAutoPlay(false);
   };
 
-  const goToSlide = (index) => {
+  const goToSlide = (index: any) => {
     setCurrentIndex(index);
     setIsAutoPlay(false);
   };
