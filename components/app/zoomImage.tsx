@@ -1,15 +1,14 @@
+import { ZoomImageProps } from "@/constants/interface";
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button } from "@heroui/react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-interface ZoomImageProps {
-  isOpen: boolean;
-  onOpenChange: (open: boolean) => void;
-  images: string[];
-  projectName: string
-}
-
-export default function ZoomImage({ isOpen, onOpenChange, images, projectName }: ZoomImageProps) {
+export default function ZoomImage({ isOpen, onOpenChange, images, projectName, projectDec }: ZoomImageProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  useEffect(() => {
+    if (isOpen) {
+      setCurrentIndex(0);
+    }
+  }, [isOpen]);
 
   const nextImage = () => {
     setCurrentIndex((prev) => (prev + 1) % images.length);
@@ -20,7 +19,16 @@ export default function ZoomImage({ isOpen, onOpenChange, images, projectName }:
   };
 
   return (
-    <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+    <Modal 
+      isOpen={isOpen} 
+      onOpenChange={onOpenChange} 
+      size="4xl"
+      scrollBehavior="inside"
+      classNames={{
+        wrapper: "z-[9999]",
+        backdrop: "z-[9998]"
+      }}
+    >
       <ModalContent>
         {(onClose) => (
           <>
@@ -28,25 +36,42 @@ export default function ZoomImage({ isOpen, onOpenChange, images, projectName }:
               <span>{projectName}</span>
             </ModalHeader>
 
-            <ModalBody className="flex flex-col items-center justify-center gap-4">
+            <ModalBody className="flex flex-col items-center justify-center gap-4 py-6">
+              <div className="relative w-full">
+                <img
+                  src={images[currentIndex]}
+                  alt={`Image ${currentIndex + 1}`}
+                  className="max-h-[60vh] w-full object-contain rounded-lg"
+                />
+                {images.length > 1 && (
+                  <>
+                    <Button
+                      isIconOnly
+                      className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70"
+                      onPress={prevImage}
+                    >
+                      ←
+                    </Button>
+                    <Button
+                      isIconOnly
+                      className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70"
+                      onPress={nextImage}
+                    >
+                      →
+                    </Button>
+                  </>
+                )}
+              </div>
+
               {images.length > 1 && (
-                <div className="flex justify-between w-full mb-2">
-                  <Button size="sm" onPress={prevImage}>←</Button>
-                  <Button size="sm" onPress={nextImage}>→</Button>
-                </div>
+                <p className="text-sm font-medium">{`${currentIndex + 1} / ${images.length}`}</p>
               )}
-              <img
-                src={images[currentIndex]}
-                alt={`Image ${currentIndex + 1}`}
-                className="max-h-[70vh] object-contain"
-              />
-              {images.length > 1 && (
-                <p className="text-white/80 text-sm">{`${currentIndex + 1} / ${images.length}`}</p>
-              )}
+              
+              <p className="text-base text-center px-4">{projectDec}</p>
             </ModalBody>
 
             <ModalFooter>
-              <Button color="primary" onPress={() => onClose()}>
+              <Button color="danger" variant="light" onPress={onClose}>
                 Close
               </Button>
             </ModalFooter>

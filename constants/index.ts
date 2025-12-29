@@ -193,3 +193,27 @@ export const formations = [
     gradient: "from-pink-500 to-rose-600",
   },
 ];
+
+export const recommendations = [
+  {
+    username: "BOUSSADIA Marami",
+    role: "Responsable RH",
+    avatar: "https://media.licdn.com/dms/image/v2/D4D03AQHIYEYKgqACvQ/profile-displayphoto-scale_200_200/B4DZl2qWsVJEAY-/0/1758632439934?e=1768435200&v=beta&t=HNJikU4tiGFJ-DiLTO-RFRtOfmWrYB-sqP6CJPf_r2g",
+    recomm: `J'ai eu le plaisir d'accompagner Mohamed Amine Lazreg lors de son stage chez Waialys Group, puis de le voir évoluer en tant que collaborateur au sein de notre équipe. Dès le début, il a fait preuve d'un grand professionnalisme, d'une capacité d'adaptation remarquable et d'un véritable engagement dans ses missions. Son sérieux, sa rigueur et sa capacité à travailler aussi bien de manière autonome qu'en équipe ont fortement contribué à la réussite de plusieurs projets.`,
+    link: "https://www.linkedin.com/in/marami-boussadia-/"
+  },
+  {
+    username: "Hamza Khlifi",
+    role: "Tech Lead",
+    avatar: "https://media.licdn.com/dms/image/v2/D4D03AQEx_ZkmUbMAHQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1727439466229?e=1768435200&v=beta&t=eVooVt9lAufSN7V1D5bDpqIsCaZZEsx468GIT7mzwqA",
+    recomm: `J'ai eu le plaisir de collaborer avec Mohamed Amine depuis son stage de fin d'études (PFE) au sein de notre équipe. Ses compétences techniques et son engagement lui ont permis d'être recruté en tant que développeur JavaScript après son stage. Il a contribué de manière significative au développement de l'application mobile de notre projet principal.`,
+    link: "https://www.linkedin.com/in/hamza-khlifi-a8577114b/"
+  },
+  {
+    username: "Bourawi Khlifi",
+    role: "Scrum Master",
+    avatar: "https://media.licdn.com/dms/image/v2/D4E03AQFwSHFBLyo5HQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1728251350653?e=1768435200&v=beta&t=fy9V4ESDwA8tLksABNruIWsLdZIZSKSpozkQ39ooYS4",
+    recomm: `J'ai eu l'occasion de suivre le parcours de Mohamed Amine depuis son intégration en tant que stagiaire PFE jusqu'à son poste actuel de développeur JavaScript. Grâce à sa motivation et à ses compétences techniques, il a rapidement su gagner la confiance de l'équipe. Toujours impliqué et orienté résultats, Mohamed Amine se distingue par sa rigueur, sa curiosité et son excellent esprit collaboratif.`,
+    link: "https://www.linkedin.com/in/bouraoui-khlifi/"
+  }
+];

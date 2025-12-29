@@ -1,5 +1,5 @@
 import "@/styles/globals.css";
-import { Metadata, Viewport } from "next";
+import { Metadata } from "next";
 import { Link } from "@heroui/link";
 import clsx from "clsx";
 
@@ -19,13 +19,6 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
-};
-
-export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
 };
 
 export default function RootLayout({

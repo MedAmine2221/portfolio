@@ -10,11 +10,14 @@ export default function Projects() {
   const [visibleCards, setVisibleCards] = useState([]);
   const [cardScales, setCardScales] = useState({});
   const [currentProject, setCurrentProject] = useState<number | null>(null);
+  
   const projectSelected = useMemo(()=>{
     const currentProj = projects.find((item)=>item.index === currentProject);
-    return {img: currentProj?.img, title: currentProj?.title};
+    return {img: currentProj?.img, title: currentProj?.title, desc: currentProj?.description};
   },[currentProject])
+  
   const cardRefs = useRef([]);
+
   useEffect(() => {
     projects.forEach((_, index) => {
       setTimeout(() => {
@@ -34,7 +37,6 @@ export default function Projects() {
           const cardCenter = rect.top + rect.height / 2;
           const screenCenter = windowHeight / 2;
           
-          // Calcul de la distance du centre de la carte au centre de l'écran
           const distance = Math.abs(cardCenter - screenCenter);
           const maxDistance = windowHeight / 2;
           const scale = Math.max(0.85, Math.min(1.15, 1.15 - (distance / maxDistance) * 0.3));
@@ -62,6 +64,7 @@ export default function Projects() {
           Projects
         </h1>
       </div>
+      
       <div className="max-w-6xl mx-auto space-y-8">
         {projects.map((item, index) => {
           const isVisible = visibleCards.includes(index);
@@ -149,16 +152,19 @@ export default function Projects() {
                   </div>
                 </CardFooter>
               </Card>
-              <ZoomImage
-                isOpen={currentProject !== null}
-                onOpenChange={(open) => { if(!open) setCurrentProject(null) }}
-                images={projectSelected.img ?? []}
-                projectName={projectSelected.title ?? ""}
-              />
             </div>
           );
         })}
       </div>
+      
+      {/* UN SEUL MODAL EN DEHORS DE LA BOUCLE */}
+      <ZoomImage
+        isOpen={currentProject !== null}
+        onOpenChange={(open) => { if(!open) setCurrentProject(null) }}
+        images={projectSelected.img ?? []}
+        projectName={projectSelected.title ?? ""}
+        projectDec={projectSelected.desc ?? ""}
+      />
     </div>
   );
 }

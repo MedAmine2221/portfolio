@@ -18,12 +18,13 @@ export default function Chatbot() {
       </div>
       <div className="flex flex-row">
         <Input
+          {...register("prompt")}
           labelPlacement="outside"
           placeholder="Who is Mohamed Amine Lazreg ?"
           startContent={
             <FaRobot className="text-2xl text-default-400 pointer-events-none shrink-0" />
           }
-          type="email"
+          type="text"
           name="prompt"
           errorMessage={errors?.prompt?.message}
           isInvalid={!!errors?.prompt}
