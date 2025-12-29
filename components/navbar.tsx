@@ -17,6 +17,7 @@ import { FiFacebook, FiInstagram, FiLinkedin } from "react-icons/fi";
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { GithubIcon, SearchIcon } from "@/components/icons";
+import NavMenu from "./navbar-menu";
 
 export const Navbar = () => {
   const searchInput = (
@@ -48,7 +49,7 @@ export const Navbar = () => {
             <p className="font-bold text-inherit">Mohamed Amine LAZREG</p>
           </NextLink>
         </NavbarBrand>
-        <ul className="hidden lg:flex gap-4 justify-start ml-2">
+        {/* <ul className="hidden lg:flex gap-4 justify-start ml-2">
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink
@@ -64,6 +65,8 @@ export const Navbar = () => {
             </NavbarItem>
           ))}
         </ul>
+         */}
+         <NavMenu />
       </NavbarContent>
 
       <NavbarContent
