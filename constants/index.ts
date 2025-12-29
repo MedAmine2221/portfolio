@@ -4,7 +4,7 @@ export const projects = [
   {
     index: 1,
     title: "Educap",
-    description: "Application Mobile educative permet au éleve et parent a poursuivre leur absences et les sonctions, les devoir de maison ainsi cette application est accessible au professeur pour lui facilite la gestion des presence de ses eleve ajouter et gerer les cours les devoir de maison et beucoup d'autre module ",
+    description: "This educational mobile application allows students and parents to track absences and sanctions, as well as homework assignments. The app is also accessible to teachers, helping them manage student attendance, add and organize lessons, homework, and many other modules.",
     lien: "https://play.google.com/store/apps/details?id=adn_expertise.educap&hl=fr",
     img: "https://play-lh.googleusercontent.com/PfP4THlC0mF5YVonjtR401TRFStneEDTlqK7ln7k7GQN-jK9-BfehrjHXTbT9Aq4AmgqvHJBTV2oItB1d_Uh=w2560-h1440-rw",
     encours: false,
@@ -21,7 +21,7 @@ export const projects = [
   {
     index: 2,
     title: "MAIDE",
-    description: "A platform destinated for the admins that lets you analyze past and current payer assessments and evidence requirements to guide clinical trial design and market access strategy across the product lifecycle",
+    description: "A platform designed for administrators that enables analysis of past and current payer assessments and evidence requirements, guiding clinical trial design and market access strategy throughout the product lifecycle.",
     lien: "https://fedsvc.myaccount.iqvia.com/authenticationendpoint/login.do?client_id=7J3GXYkcCCrRhoyZ6CZjHNvs0J4a&commonAuthCallerPath=%2Foauth2%2Fauthorize&forceAuth=false&passiveAuth=false&redirect_uri=https%3A%2F%2Fback.mai-de.iqvia.com%2Foauth%2Fcallback%2F&response_type=code&scope=openid&tenantDomain=carbon.super&sessionDataKey=2b8c20f9-9f93-4f9b-a802-b8288d3acf34&relyingParty=7J3GXYkcCCrRhoyZ6CZjHNvs0J4a&type=oidc&sp=OIDC-RWS-HEOR-MAIDE&isSaaSApp=false&authenticators=IdentifierExecutor%3ALOCAL",
     img: "https://i0.wp.com/pharmabharat.com/wp-content/uploads/2025/09/Samahita-Research-5.jpg",
     encours: false,
@@ -37,7 +37,7 @@ export const projects = [
   {
     index: 3,
     title: "DAILY COMPASS APP",
-    description: "Application mobile de gestion intelligente des butes , vous permet de decouper vos prochaine but en des taches et notification par email envoyer automatiquement si une tache sont temp est arrivé",
+    description: "An intelligent goal management mobile application that allows you to break down your upcoming goals into tasks, with automatic email notifications sent when a task’s deadline is reached.",
     lien: "https://drive.google.com/file/d/1Q7bSl1-xnul99YIe3EyLTk_QkQ2b_V3V/view?usp=drive_link",
     img: "/DailyCompass.png",
     encours: false,
@@ -55,7 +55,7 @@ export const projects = [
   {
     index: 4,
     title: "DAILY COMPASS APP Management",
-    description: "Application web de monitoring de l'application mobile 'DAILY COMPASS APP'",
+    description: "Web application for monitoring the 'DAILY COMPASS APP' mobile application.",
     lien: "",
     img: "",
     encours: true,
@@ -74,7 +74,7 @@ export const projects = [
   {
     index: 5,
     title: "QUIZ APP Mobile",
-    description: "Application mobile de gestion des competence et mise a jour des cv",
+    description: "Mobile application for managing skills and updating CVs.",
     lien: "",
     img: "",
     encours: false,
@@ -89,7 +89,7 @@ export const projects = [
   {
     index: 6,
     title: "QUIZ APP Web",
-    description: "Application Web de gestion des competence et mise a jour des cv",
+    description: "Web application for managing skills and updating CVs",
     lien: "",
     img: "",
     encours: false,
