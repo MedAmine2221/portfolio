@@ -11,9 +11,7 @@ export default function ContactForm() {
   const { register, handleSubmit, formState: { errors } } = useForm({
     resolver : yupResolver(contactSchema())
   });
-  const onSubmit = (data: any) => {
-    console.log("data ",data);
-    
+  const onSubmit = (data: any) => {    
     contactMe(data)
   }
   return (

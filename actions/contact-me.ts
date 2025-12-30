@@ -1,12 +1,8 @@
 import { db } from "@/config/firebase";
 import { addDoc, collection } from "firebase/firestore";
 
-export const contactMe = async (data: any) =>{
-    console.log("dataaaaaa ",data);
-    
-    const tasksRef = collection(db, "contact");
-    console.log("tasksRef ",tasksRef);
-    
+export const contactMe = async (data: any) =>{    
+    const tasksRef = collection(db, "contact");    
     await addDoc(tasksRef, {
         lastName: data.lastName,
         firstName: data.firstName,
