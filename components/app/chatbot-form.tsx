@@ -75,7 +75,7 @@ export default function Chatbot() {
       setMessages((prev) =>
         prev.map((msg) =>
           msg.id === botMessageId
-            ? { ...msg, text: resp }
+            ? { ...msg, text: resp ?? "" }
             : msg
         )
       );
