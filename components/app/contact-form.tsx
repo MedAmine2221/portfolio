@@ -1,4 +1,5 @@
 "use client";
+import { contactMe } from "@/actions/contact-me";
 import contactSchema from "@/schema/contactSchema";
 import { Button } from "@heroui/button";
 import { Input, Textarea } from "@heroui/input";
@@ -10,8 +11,13 @@ export default function ContactForm() {
   const { register, handleSubmit, formState: { errors } } = useForm({
     resolver : yupResolver(contactSchema())
   });
+  const onSubmit = (data: any) => {
+    console.log("data ",data);
+    
+    contactMe(data)
+  }
   return (
-    <form onSubmit={handleSubmit(()=>console.log("hello"))}>
+    <form onSubmit={handleSubmit(onSubmit)}>
       <div className="flex flex-row">
         <Input
           {...register("firstName")}
