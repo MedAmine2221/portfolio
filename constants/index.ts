@@ -1,3 +1,4 @@
+import { siteConfig } from "@/config/site";
 import { Code, GraduationCap, Laptop, Smartphone } from "lucide-react";
 
 export const projects = [
@@ -217,3 +218,71 @@ export const recommendations = [
     link: "https://www.linkedin.com/in/bouraoui-khlifi/"
   }
 ];
+
+export const STATIC_KNOWLEDGE = {
+  developer: {
+    name: "Mohamed Amine LAZREG",
+    role: "Ingénieur informatique – Enseignant vacataire",
+    contact: {
+      email: "lazregamine258@gmail.com",
+      phone: "+216 53 739 484",
+      linkedin: siteConfig.links.linkedIn,
+      github: siteConfig.links.github,
+      facebook: siteConfig.links.facebook,
+      instagram: siteConfig.links.instagram
+    },
+    cv_summary: `Ingénieur en informatique et enseignant vacataire spécialisé dans les technologies web et mobiles. Expé-
+                rience dans le développement d’applications réelles en entreprise et dans l’accompagnement d’étudiants
+                sur les concepts fondamentaux : programmation orientée objet, développement frontend, méthodologies
+                agiles et bonnes pratiques. Particulier intérêt pour la pédagogie active, la clarté de transmission et la
+                création de supports structurés.`,
+    skills: [
+      "React.js, Next.js, Nest.js, Spring Boot, Flask, Laravel",
+      "React Native, Flutter",
+      "Java, JavaScript, TypeScript, Python, PHP",
+      "MySQL, PostgreSQL",
+      "Scrum, UML",
+      "Git, Linux"
+    ],
+    experience: [
+      `07/2024 – 07/2025 Développeur FullStack JS – Waialys DEV
+        Participation au développement d’applications web et mobiles : Next.js, Nest.js,
+        React Native.
+        Collaboration avec des équipes pluridisciplinaires (Scrum).`,
+      `02/2024 – 06/2024 Stage de fin d’études d’ingénieur – Waialys DEV
+        Développement d’un outil interne de gestion (NestJS / NextJS).
+        Initiation à la planification de sprints et aux revues de code.`,
+      `08/2023 – 08/2023Stage d’été – Relead
+        Développement mobile pour la gestion des employés et projets (Flutter / Flask).`,
+      `08/2022 – 08/2022Stage d’été – Educanet Tunisie
+        Application de gestion et formation des employés (Spring Boot MVC).`,
+        `02/2021 – 05/2021Projet de fin d’études Licence – Enova Robotics
+            Développement mobile (React Native) et backend (Flask).`
+    ],
+    formation:[
+        "2021 – 2024 Diplôme National d’Ingénieur en Informatique – ISSAT Sousse",
+        "2018 – 2021 Licence en Informatique Industrielle – ISSAT Sousse",
+        "2018 Baccalauréat en Sciences Expérimentales"
+    ],
+    projet: [
+        {
+            name:"Machine Learning",
+            description: "détection d’objets avec TensorFlow, prédiction de prix immobiliers.",
+        },
+        {
+            name:"Plateforme web/mobile de quiz et certification",
+            description: "accessibilité pour utilisateurs malvoyants, certifications vérifiables, forum intégré. Web : React.js — Mobile : React Native — Backend : Laravel.",
+        },
+        {
+            name:"to do mobile app",
+            description: "Application de gestion des tâches qui utilise l'IA pour proposer une fragmentation des objectifs en tâches prioritaires",
+        },
+    ],
+    langues:[
+        "Français",
+        "Anglais",
+        "Arabe"
+    ],
+    cv_file: siteConfig.links.cv
+  }
+};

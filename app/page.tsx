@@ -6,7 +6,6 @@ import { GithubIcon } from "@/components/icons";
 import Image from "next/image";
 import TypingText from "@/components/app/typing-text";
 import RecommondationCard from "@/components/app/recommandation-card";
-import Chatbot from "@/components/app/chatbot-form";
 
 export default function Home() {
   return (
@@ -52,7 +51,6 @@ export default function Home() {
           GitHub
         </Link>
       </div>
-      <Chatbot />
       <div className="flex flex-row">
         <RecommondationCard />
       </div>

@@ -9,6 +9,7 @@ import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 import PageTransition from "@/components/page-transition";
+import ChatFloating from "@/components/app/chat-floating";
 
 export const metadata: Metadata = {
   title: {
@@ -43,6 +44,7 @@ export default function RootLayout({
                 {children}
               </PageTransition>
             </main>
+            <ChatFloating />
             <footer className="w-full flex items-center justify-center py-3">
               <Link
                 isExternal
