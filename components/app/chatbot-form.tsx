@@ -57,16 +57,17 @@ export default function Chatbot() {
     <div className="flex flex-col h-[400px]">
       <div className="flex-1 overflow-y-auto space-y-3 pr-2">
         {messages.length ? messages.map((msg) => (
-          <div
-            key={msg.id}
-            className={`max-w-[75%] px-4 py-2 rounded-xl text-sm
-              ${
-                msg.sender === "user"
-                  ? "ml-auto bg-primary text-white"
-                  : "mr-auto bg-default-200"
-              }
-            `}
-          >
+        <div
+          key={msg.id}
+          className={`max-w-[75%] px-4 py-2 rounded-xl text-sm
+            break-words whitespace-pre-wrap
+            ${
+              msg.sender === "user"
+                ? "ml-auto bg-primary text-white"
+                : "mr-auto bg-default-200"
+            }
+          `}
+        >
             {renderMessageText(msg.text)}
           </div>
         )): 
