@@ -7,7 +7,7 @@ export const projects = [
     title: "Educap",
     description: "This educational mobile application allows students and parents to track absences and sanctions, as well as homework assignments. The app is also accessible to teachers, helping them manage student attendance, add and organize lessons, homework, and many other modules.",
     lien: "https://play.google.com/store/apps/details?id=adn_expertise.educap&hl=fr",
-    img: ["https://play-lh.googleusercontent.com/PfP4THlC0mF5YVonjtR401TRFStneEDTlqK7ln7k7GQN-jK9-BfehrjHXTbT9Aq4AmgqvHJBTV2oItB1d_Uh=w2560-h1440-rw", "https://play-lh.googleusercontent.com/Dm6PUspQRbqt6VghGWAfhwkURGkulWVqA8OeUTgzNHKfCHfd5A_0oEMRjPQWuvt_mw-FOT9owfKa1j2fAAhTPg=w2560-h1440-rw", "https://play-lh.googleusercontent.com/d4nHSYaodt-stNZ36qFqSSmZpMQg4FuDSQpkU34lDoKPxPwdh9VeJCfm8Y2ov922-gW9lhEFPgfDwSGeOIt7=w2560-h1440-rw"],
+    img: ["/educap0.png","/educap1.png"],
     encours: false,
     githubLink: "",
     skills:[
@@ -58,7 +58,7 @@ export const projects = [
     title: "DAILY COMPASS APP Management",
     description: "Web application for monitoring the 'DAILY COMPASS APP' mobile application.",
     lien: "",
-    img: [""],
+    img: ["/inProgress.png"],
     encours: true,
     githubLink: "https://github.com/MedAmine2221/daily-compass-web-app-admin",
     skills:[

@@ -89,7 +89,7 @@ export default function ProjectsList() {
                   </Button>
                   {item.encours && (
                     <span className="bg-yellow-500 text-black text-xs px-3 py-1 rounded-full font-semibold">
-                      En cours
+                      In Progress
                     </span>
                   )}
                 </CardHeader>
@@ -128,7 +128,7 @@ export default function ProjectsList() {
                         href={item.lien}
                         target="_blank"
                       >
-                        Voir l'app
+                        View App
                       </Button>
                     )}
                     {item.githubLink !== "" && (
