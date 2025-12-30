@@ -150,8 +150,6 @@ export default function ProjectsList() {
           );
         })}
       </div>
-      
-      {/* UN SEUL MODAL EN DEHORS DE LA BOUCLE */}
       <ZoomImage
         isOpen={currentProject !== null}
         onOpenChange={(open) => { if(!open) setCurrentProject(null) }}

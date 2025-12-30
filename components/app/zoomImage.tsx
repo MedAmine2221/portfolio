@@ -2,7 +2,7 @@
 import { ZoomImageProps } from "@/constants/interface";
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button } from "@heroui/react";
 import { useState, useEffect } from "react";
-
+import {FiArrowRight, FiArrowLeft } from "react-icons/fi"
 export default function ZoomImage({ isOpen, onOpenChange, images, projectName, projectDec }: ZoomImageProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   useEffect(() => {
@@ -51,14 +51,14 @@ export default function ZoomImage({ isOpen, onOpenChange, images, projectName, p
                       className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70"
                       onPress={prevImage}
                     >
-                      ←
+                      <FiArrowLeft size={25} />
                     </Button>
                     <Button
                       isIconOnly
                       className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70"
                       onPress={nextImage}
                     >
-                      →
+                      <FiArrowRight size={25} />
                     </Button>
                   </>
                 )}
