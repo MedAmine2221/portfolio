@@ -1,3 +1,4 @@
+"use client"
 import { ZoomImageProps } from "@/constants/interface";
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button } from "@heroui/react";
 import { useState, useEffect } from "react";

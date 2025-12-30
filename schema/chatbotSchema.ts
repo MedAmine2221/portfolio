@@ -3,7 +3,7 @@ import * as yup from "yup"
 export const chatbotSchema = () =>
   yup.object().shape({
     prompt: yup
-      .string()
+      .string().trim()
       .required("Prompt is required"),
   });
 

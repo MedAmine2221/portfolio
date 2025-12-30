@@ -1,19 +1,16 @@
 "use client";
-
 import { Button } from "@heroui/button";
 import {
-    Modal,
-    ModalContent,
-    ModalHeader,
-    ModalBody,
-    useDisclosure,
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  useDisclosure,
 } from "@heroui/react";
 import { FiMessageSquare } from "react-icons/fi";
 import Chatbot from "./chatbot-form";
-
 export default function ChatFloating() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
-
   return (
     <>
       <Button
@@ -31,7 +28,7 @@ export default function ChatFloating() {
       </Button>
       <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="lg">
         <ModalContent>
-          {(onClose) => (
+          {() => (
             <>
               <ModalHeader>AI Chat 🤖</ModalHeader>
               <ModalBody>
