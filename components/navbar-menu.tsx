@@ -1,33 +1,23 @@
 "use client";
 
-import { siteConfig } from "@/config/site";
 import { Tabs, Tab } from "@heroui/react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
+import { siteConfig } from "@/config/site";
 
 export default function NavMenu() {
   const router = useRouter();
+  const pathname = usePathname();
 
   return (
-    <div className="flex w-full flex-col">
-      <Tabs
-        aria-label="Options"
-        color="default"
-        variant="bordered"
-        onSelectionChange={(key) => {
-          router.push(key as string);
-        }}
-      >
-        {siteConfig.navItems.map((item) => (
-          <Tab
-            key={item.href} // 👈 مهم
-            title={
-              <div className="flex items-center space-x-2">
-                <span>{item.label}</span>
-              </div>
-            }
-          />
-        ))}
-      </Tabs>
-    </div>
+    <Tabs
+      selectedKey={pathname}
+      aria-label="Navigation"
+      variant="bordered"
+      onSelectionChange={(key) => router.push(key as string)}
+    >
+      {siteConfig.navItems.map((item) => (
+        <Tab key={item.href} title={item.label} />
+      ))}
+    </Tabs>
   );
 }
