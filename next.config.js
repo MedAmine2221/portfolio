@@ -1,22 +1,21 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  eslint: {
+    ignoreDuringBuilds: false,
+  },
+
   images: {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "cdn-icons-png.flaticon.com",
+        hostname: "i0.wp.com",
       },
       {
         protocol: "https",
-        hostname: "i0.wp.com",
+        hostname: "images.unsplash.com",
       },
-      {      
-        eslint: {
-          ignoreDuringBuilds: true,
-        },
-      }
     ],
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
