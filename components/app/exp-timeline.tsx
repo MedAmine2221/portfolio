@@ -1,119 +1,144 @@
 "use client"
-import { useState } from "react";
-import { Briefcase, MapPin, Calendar } from "lucide-react";
-import { FaJava } from "react-icons/fa";
-import { experiences } from "@/constants";
+
+import { useEffect, useRef, useState } from "react"
+import { Briefcase, MapPin, Calendar } from "lucide-react"
+import { FaJava } from "react-icons/fa"
+import { experiences } from "@/constants"
 
 export default function ProExpTimeLine() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+  const [visibleItems, setVisibleItems] = useState<number[]>([])
+  const itemsRef = useRef<(HTMLDivElement | null)[]>([])
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const index = Number(entry.target.getAttribute("data-index"))
+            setVisibleItems(prev =>
+              prev.includes(index) ? prev : [...prev, index]
+            )
+          }
+        })
+      },
+      { threshold: 0.2 }
+    )
+
+    itemsRef.current.forEach(el => el && observer.observe(el))
+
+    return () => observer.disconnect()
+  }, [])
 
   return (
-    <div className="space-y-16">
-      {experiences.map((exp, index) => {
-        const Icon = exp.icon
-        const isLeft = index % 2 === 0
-        return (
-          <div
-            key={index}
-            className={`relative flex items-center ${isLeft ? "md:flex-row" : "md:flex-row-reverse"} flex-row`}
-            onMouseEnter={() => setHoveredIndex(index)}
-            onMouseLeave={() => setHoveredIndex(null)}
-          >
-            {/* Card contenant les items */}
-            <div className={`w-full md:w-7/12 max-w-7xl ${isLeft ? "md:pr-12" : "md:pl-12"}`}>
-              <div
-                className={`w-80 rounded-2xl transition-all duration-500 transform hover:-translate-y-2
-                border border-slate-700/30 overflow-hidden backdrop-blur-sm
-                ${hoveredIndex === index ? "scale-[1.02]" : ""}
-                md:${isLeft ? "-translate-x-[60%]" : "translate-x-[60%]"}
-                ${isLeft ? "-translate-x-[30%]" : "translate-x-[2%]"}
-                bg-slate-900/50 shadow-2xl
-                relative group
-                `}
-              >
-                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                  <div
-                    className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${exp.gradient} opacity-20 blur-2xl`}
-                  ></div>
-                </div>
-                <div className={`h-2 bg-gradient-to-r ${exp.gradient} shadow-lg shadow-purple-500/50`}></div>
-                <div className="flex items-center flex-col p-6 relative z-10">
-                  {exp.badge && (
-                    <div className="flex items-center gap-2">
-                      <span className="inline-flex items-center gap-2 px-3 py-1.5 text-xs font-bold rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 shadow-lg shadow-emerald-500/20">
-                        <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+    <div className="w-screen flex justify-center bg-slate-900/10 py-12">
+      <div className="w-full max-w-5xl space-y-24 px-4"> {/* Changé de max-w-4xl à max-w-5xl */}
+        
+        {experiences.map((exp, index) => {
+          const Icon = exp.icon
+          const isLeft = index % 2 === 0
+          const isVisible = visibleItems.includes(index)
+
+          return (
+            <div
+              key={index}
+              ref={el => { itemsRef.current[index] = el }}
+              data-index={index}
+              className={`relative flex flex-col md:flex-row items-center
+                ${!isLeft ? "md:flex-row-reverse" : ""}
+                transition-all duration-700 ease-out
+                ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}
+              `}
+            >
+              {/* Card */}
+              <div className="w-full md:w-6/12 px-4"> {/* Changé de md:w-5/12 à md:w-6/12 */}
+                <div
+                  className={`
+                    w-full rounded-2xl bg-slate-900/60 backdrop-blur
+                    border border-slate-700/40 shadow-2xl
+                  `}
+                >
+                  <div className={`h-2 bg-gradient-to-r ${exp.gradient}`} />
+
+                  <div className="p-4 md:p-6 space-y-4">
+                    {exp.badge && (
+                      <span className="inline-flex items-center gap-2 px-3 py-1 text-xs font-bold rounded-full
+                        bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">
+                        <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
                         {exp.badge}
                       </span>
-                    </div>
-                  )}
-                  <div>
-                    <h3 className="text-2xl font-bold text-white mb-2">{exp.title}</h3>
-                  </div>
-                  <div className="h-px bg-gradient-to-r from-transparent via-slate-600 to-transparent"></div>
-                  <ul className="space-y-3">
-                    {exp.items.map((item, i) => (
-                      <li key={i} className="flex items-start gap-3 text-slate-300 group/item">
+                    )}
+
+                    <h3 className="text-lg md:text-xl font-bold text-white">
+                      {exp.title}
+                    </h3>
+
+                    <ul className="space-y-3">
+                      {exp.items.map((item, i) => (
+                        <li key={i} className="flex gap-3 text-slate-300 text-sm">
+                          <span className={`mt-2 w-2 h-2 rounded-full bg-gradient-to-br ${exp.gradient}`} />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    <div className="flex flex-wrap gap-2">
+                      {exp.skills.map((skill, i) => (
                         <span
-                          className={`mt-1.5 w-2 h-2 rounded-full bg-gradient-to-br ${exp.gradient} flex-shrink-0 group-hover/item:scale-125 transition-transform duration-300 shadow-lg`}
-                        ></span>
-                        <span className="leading-relaxed text-sm group-hover/item:text-white transition-colors">
-                          {item}
+                          key={i}
+                          className="px-3 py-1 text-xs rounded-full bg-slate-700/50 text-slate-200 border border-slate-600/50"
+                        >
+                          {skill}
                         </span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="flex flex-wrap gap-2 mt-2">
-                    {exp.skills.map((skill, index) => (
-                      <span
-                        key={index}
-                        className="px-3 py-1 text-xs font-semibold rounded-full bg-slate-700/50 text-slate-200 border border-slate-600/50 hover:border-slate-500/70 transition-colors"
-                      >
-                        {skill}
-                      </span>
-                    ))}
+                      ))}
+                    </div>
                   </div>
                 </div>
+              </div>
+
+              {/* Timeline Icon */}
+              <div className="relative z-10 my-6 md:my-0 md:mx-8"> {/* Augmenté md:mx-6 à md:mx-8 */}
                 <div
-                  className={`absolute -top-2 -right-2 w-24 h-24 bg-gradient-to-br ${exp.gradient} opacity-5 rounded-full blur-2xl pointer-events-none`}
-                ></div>
+                  className={`w-12 h-12 md:w-16 md:h-16 rounded-full bg-gradient-to-br ${exp.gradient}
+                    border-4 border-slate-900 shadow-xl flex items-center justify-center
+                    transition-transform duration-500
+                    ${isVisible ? "scale-100 rotate-0" : "scale-75 rotate-12"}
+                  `}
+                >
+                  {exp.company === "Educanet" ? (
+                    <FaJava className="w-5 h-5 md:w-7 md:h-7 text-white" />
+                  ) : (
+                    <Icon className="w-5 h-5 md:w-7 md:h-7 text-white" />
+                  )}
+                </div>
+              </div>
+
+              {/* Info */}
+              <div className="w-full md:w-6/12 px-4"> {/* Changé de md:w-5/12 à md:w-6/12 */}
+                <div className="w-full rounded-2xl bg-slate-900/70 backdrop-blur border border-slate-700/50 shadow-lg p-4 space-y-2 text-sm text-slate-300">
+                  <div className="flex gap-2 items-center">
+                    <Calendar className="w-4 h-4" />
+                    {exp.date}
+                  </div>
+                  <div className="flex gap-2 items-center">
+                    <Briefcase className="w-4 h-4" />
+                    {exp.company}
+                  </div>
+                  <div className="flex gap-2 items-center text-slate-400">
+                    <MapPin className="w-4 h-4" />
+                    {exp.location}
+                  </div>
+                </div>
               </div>
             </div>
-            {/* Icon */}
-            <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 z-10">
-              <div
-                className={`w-16 h-16 rounded-full bg-gradient-to-br ${exp.gradient} shadow-2xl flex items-center justify-center border-4 border-slate-900 transition-transform duration-300 ${
-                  hoveredIndex === index ? "scale-125 rotate-12 shadow-2xl shadow-purple-500/50" : ""
-                }`}
-              >
-                {exp.company === "Educanet" ? (
-                  <FaJava className="w-7 h-7 text-white" />
-                ) : (
-                  <Icon className="w-7 h-7 text-white" />
-                )}
-              </div>
-            </div>
-            <div className="flex flex-col gap-1 px-4 py-3 bg-slate-900/70 rounded-2xl shadow-lg border border-slate-700/50 text-sm font-semibold text-slate-300 min-w-[240px] max-w-[420px] backdrop-blur-sm">
-              <div className="flex items-center gap-2">
-                <Calendar className="w-4 h-4 text-slate-400" />
-                {exp.date}
-              </div>
-              <div className="flex items-center gap-2">
-                <Briefcase className="w-4 h-4 text-slate-400" />
-                {exp.company}
-              </div>
-              <div className="flex items-center gap-2 text-slate-400">
-                <MapPin className="w-4 h-4" />
-                {exp.location}
-              </div>
-            </div>
-          </div>
-        )
-      })}
-      {/* Dernier icon flotant */}
-      <div className="relative flex items-center justify-center md:justify-center flex-row">
-        <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 z-10">
-          <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 to-indigo-600 shadow-2xl shadow-purple-500/50 flex items-center justify-center border-4 border-slate-900 animate-bounce">
-            <Briefcase className="text-3xl text-white" />
+          )
+        })}
+
+        {/* End Icon */}
+        <div className="relative flex justify-center">
+          <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-purple-500 to-indigo-600
+            border-4 border-slate-900 shadow-2xl animate-bounce flex items-center justify-center
+          ">
+            <Briefcase className="w-5 h-5 md:w-7 md:h-7 text-white" />
           </div>
         </div>
       </div>
