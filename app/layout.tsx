@@ -36,6 +36,8 @@ export default function RootLayout({
           "min-h-screen text-foreground bg-background font-sans antialiased",
           fontSans.variable,
         )}
+        // eslint-disable-next-line react/no-unknown-property
+        cz-shortcut-listen="true"
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <ReduxProviders>
