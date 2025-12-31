@@ -72,16 +72,16 @@ export const Navbar = () => {
       <NavbarContent className="hidden sm:flex" justify="end">
         <NavbarItem className="flex gap-3">
           <Link isExternal href={siteConfig.links.linkedIn}>
-            <FiLinkedin />
+            <FiLinkedin size={25} />
           </Link>
           <Link isExternal href={siteConfig.links.facebook}>
-            <FiFacebook />
+            <FiFacebook size={25} />
           </Link>
           <Link isExternal href={siteConfig.links.instagram}>
-            <FiInstagram />
+            <FiInstagram size={25} />
           </Link>
           <Link isExternal href={siteConfig.links.github}>
-            <GithubIcon />
+            <GithubIcon size={25} />
           </Link>
         </NavbarItem>
 
@@ -107,6 +107,20 @@ export const Navbar = () => {
             </Link>
           </NavbarMenuItem>
         ))}
+        <div className="flex flex-row justify-center items-center">
+          <Link isExternal href={siteConfig.links.linkedIn} className="mx-2">
+            <FiLinkedin size={25} />
+          </Link>
+          <Link isExternal href={siteConfig.links.facebook}>
+            <FiFacebook size={25} />
+          </Link>
+          <Link isExternal href={siteConfig.links.instagram} className="mx-2">
+            <FiInstagram size={25} />
+          </Link>
+          <Link isExternal href={siteConfig.links.github}>
+            <GithubIcon size={25} />
+          </Link>
+        </div>
       </NavbarMenu>
     </HeroUINavbar>
   );
