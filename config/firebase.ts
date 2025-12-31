@@ -1,8 +1,11 @@
-import { FirebaseApp, initializeApp } from "firebase/app";
-import { Firestore, getFirestore } from "firebase/firestore";
+// firebase.ts
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
 
-let app: FirebaseApp | undefined;
-let db: Firestore | undefined;
+let app;
+let auth;
+let db;
+let storage;
 
 if (typeof window !== "undefined") {
   // Only run on client
@@ -19,4 +22,4 @@ if (typeof window !== "undefined") {
   db = getFirestore(app);
 }
 
-export { app, db };
+export { app, auth, db, storage };
