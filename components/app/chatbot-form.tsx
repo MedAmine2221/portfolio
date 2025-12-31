@@ -82,8 +82,6 @@ export default function Chatbot() {
           msg.id === botMessageId ? { ...msg, text: resp ?? "" } : msg,
         ),
       );
-    } catch (error) {
-      console.error(error);
     } finally {
       dispatch(setLoadingFalse());
     }
