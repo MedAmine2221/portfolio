@@ -19,7 +19,7 @@ export default function Home() {
           alt="That's Me"
           width={300}
           height={300}
-          className="w-48 md:w-64 lg:w-72 h-auto"
+          className="md:w-200 lg:w-1000"
         />
 
         <div className="mt-4 space-y-1 text-sm md:text-base">
