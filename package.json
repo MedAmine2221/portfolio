@@ -73,6 +73,7 @@
   },
   "devDependencies": {
     "@eslint/compat": "^2.0.0",
+    "@eslint/eslintrc": "^3.3.3",
     "@eslint/js": "^9.39.2",
     "@next/eslint-plugin-next": "15.5.9",
     "@react-types/shared": "3.32.1",

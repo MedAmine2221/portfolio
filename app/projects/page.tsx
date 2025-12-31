@@ -1,4 +1,4 @@
-"use client";;
+"use client";
 import ProjectsList from "@/components/app/project-List";
 
 export default function Projects() {

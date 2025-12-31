@@ -1,7 +1,7 @@
-"use client";;
-import ContactForm from "@/components/app/contact-form";
-import { title } from "@/components/primitives";
+"use client";
 import Image from "next/image";
+
+import ContactForm from "@/components/app/contact-form";
 
 export default function PricingPage() {
   return (
@@ -12,12 +12,7 @@ export default function PricingPage() {
             Contact
           </h1>
         </div>
-        <Image
-          src="/amine.png"
-          alt="That's Me"
-          width={1000}
-          height={1000}
-        />
+        <Image alt="That's Me" height={1000} src="/amine.png" width={1000} />
         <div className="my-10" />
         <ContactForm />
       </div>

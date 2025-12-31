@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Briefcase, MapPin, Calendar } from "lucide-react";
+
 import { formations } from "@/constants";
 
 export default function FormationsTimeLine() {
@@ -11,7 +12,7 @@ export default function FormationsTimeLine() {
     <div className="relative py-8">
       {/* Vertical timeline line - hidden on mobile, visible on md+ */}
       <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-500 via-indigo-500 to-pink-500 -translate-x-1/2" />
-      
+
       {/* Mobile timeline line - visible on mobile only */}
       <div className="md:hidden absolute left-7 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-500 via-indigo-500 to-pink-500" />
 
@@ -29,10 +30,12 @@ export default function FormationsTimeLine() {
               onMouseLeave={() => setHoveredIndex(null)}
             >
               {/* Card - Left/Right on desktop, full width on mobile */}
-              <div className={`w-full md:w-5/12 ${isLeft ? 'md:text-right' : 'md:text-left'} pl-20 md:pl-0`}>
+              <div
+                className={`w-full md:w-5/12 ${isLeft ? "md:text-right" : "md:text-left"} pl-20 md:pl-0`}
+              >
                 <div
                   className={`
-                    w-full max-w-md ${isLeft ? 'md:ml-auto' : 'md:mr-auto'}
+                    w-full max-w-md ${isLeft ? "md:ml-auto" : "md:mr-auto"}
                     rounded-2xl transition-all duration-500 transform
                     hover:-translate-y-2
                     border border-slate-700/30 overflow-hidden backdrop-blur-sm
@@ -75,8 +78,12 @@ export default function FormationsTimeLine() {
               </div>
 
               {/* Info panel - Right/Left on desktop, below card on mobile */}
-              <div className={`w-full md:w-5/12 ${isLeft ? 'ml-auto md:text-left' : 'mr-auto md:text-right'} pl-20 md:pl-0`}>
-                <div className={`inline-flex flex-col gap-2 px-4 py-3 bg-slate-900/70 rounded-xl shadow-lg border border-slate-700/50 backdrop-blur-sm ${isLeft ? '' : 'md:ml-auto'}`}>
+              <div
+                className={`w-full md:w-5/12 ${isLeft ? "ml-auto md:text-left" : "mr-auto md:text-right"} pl-20 md:pl-0`}
+              >
+                <div
+                  className={`inline-flex flex-col gap-2 px-4 py-3 bg-slate-900/70 rounded-xl shadow-lg border border-slate-700/50 backdrop-blur-sm ${isLeft ? "" : "md:ml-auto"}`}
+                >
                   <div className="flex items-center gap-2 text-sm font-medium text-slate-300">
                     <Calendar className="w-4 h-4 text-slate-400 flex-shrink-0" />
                     <span>{exp.date}</span>

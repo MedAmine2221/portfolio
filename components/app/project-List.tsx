@@ -1,11 +1,12 @@
 "use client";
 
-import ZoomImage from "@/components/app/zoomImage";
-import { projects } from "@/constants";
 import { Card, CardFooter, CardHeader } from "@heroui/card";
 import { Button, Image } from "@heroui/react";
 import { useState, useEffect, useRef, useMemo } from "react";
 import { FiZoomIn } from "react-icons/fi";
+
+import { projects } from "@/constants";
+import ZoomImage from "@/components/app/zoomImage";
 
 export default function ProjectsList() {
   const [visibleCards, setVisibleCards] = useState<number[]>([]);
@@ -15,9 +16,8 @@ export default function ProjectsList() {
   const cardRefs = useRef<HTMLDivElement[]>([]);
 
   const projectSelected = useMemo(() => {
-    const currentProj = projects.find(
-      (item) => item.index === currentProject
-    );
+    const currentProj = projects.find((item) => item.index === currentProject);
+
     return {
       img: currentProj?.img,
       title: currentProj?.title,
@@ -51,7 +51,7 @@ export default function ProjectsList() {
         const maxDistance = windowHeight / 2;
         const scale = Math.max(
           0.92,
-          Math.min(1.08, 1.08 - (distance / maxDistance) * 0.25)
+          Math.min(1.08, 1.08 - (distance / maxDistance) * 0.25),
         );
 
         newScales[index] = scale;
@@ -137,7 +137,7 @@ export default function ProjectsList() {
                 <Image
                   removeWrapper
                   alt={`${item.title} background`}
-                  className="z-0 w-full h-full object-cover"
+                  className="z-0 w-full h-full object-center"
                   src={
                     item.img?.[0] ||
                     "https://via.placeholder.com/800x400?text=Project+Image"
@@ -183,11 +183,11 @@ export default function ProjectsList() {
                     <div className="flex flex-row md:flex-col gap-3 justify-end">
                       {item.lien && (
                         <Button
+                          as="a"
+                          className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold"
+                          href={item.lien}
                           radius="full"
                           size="md"
-                          className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold"
-                          as="a"
-                          href={item.lien}
                           target="_blank"
                         >
                           View App
@@ -196,11 +196,11 @@ export default function ProjectsList() {
 
                       {item.githubLink && (
                         <Button
+                          as="a"
+                          className="bg-gray-800 text-white hover:bg-gray-700"
+                          href={item.githubLink}
                           radius="full"
                           size="md"
-                          className="bg-gray-800 text-white hover:bg-gray-700"
-                          as="a"
-                          href={item.githubLink}
                           target="_blank"
                         >
                           GitHub
@@ -216,13 +216,13 @@ export default function ProjectsList() {
       </div>
 
       <ZoomImage
+        images={projectSelected.img ?? []}
         isOpen={currentProject !== null}
+        projectDec={projectSelected.desc ?? ""}
+        projectName={projectSelected.title ?? ""}
         onOpenChange={(open) => {
           if (!open) setCurrentProject(null);
         }}
-        images={projectSelected.img ?? []}
-        projectName={projectSelected.title ?? ""}
-        projectDec={projectSelected.desc ?? ""}
       />
     </>
   );

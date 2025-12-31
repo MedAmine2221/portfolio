@@ -52,6 +52,6 @@ export const siteConfig = {
     facebook: "https://www.facebook.com/mouhamed.amine.lazreg/",
     instagram: "https://www.instagram.com/mouhamedaminelz/",
     linkedIn: "https://www.linkedin.com/in/mohamed-amine-lazreg-831b1817a/",
-    cv: "https://drive.google.com/file/d/1XM__X3RcQ_k4cKmvBIFjuTpTmu0AzD4Q/view?usp=sharing"
+    cv: "https://drive.google.com/file/d/1XM__X3RcQ_k4cKmvBIFjuTpTmu0AzD4Q/view?usp=sharing",
   },
 };

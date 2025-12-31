@@ -1,6 +1,5 @@
 "use client";
 
-import { ZoomImageProps } from "@/constants/interface";
 import {
   Modal,
   ModalContent,
@@ -11,6 +10,9 @@ import {
 } from "@heroui/react";
 import { useState, useEffect } from "react";
 import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
+import Image from "next/image";
+
+import { ZoomImageProps } from "@/constants/interface";
 
 export default function ZoomImage({
   isOpen,
@@ -37,14 +39,14 @@ export default function ZoomImage({
 
   return (
     <Modal
-      isOpen={isOpen}
-      onOpenChange={onOpenChange}
-      size="full"
-      scrollBehavior="inside"
       classNames={{
         wrapper: "z-[9999]",
         backdrop: "z-[9998]",
       }}
+      isOpen={isOpen}
+      scrollBehavior="inside"
+      size="full"
+      onOpenChange={onOpenChange}
     >
       <ModalContent className="sm:max-w-3xl md:max-w-4xl">
         {(onClose) => (
@@ -60,10 +62,10 @@ export default function ZoomImage({
             <ModalBody className="flex flex-col items-center gap-4 py-4 sm:py-6">
               {/* IMAGE */}
               <div className="relative w-full flex items-center justify-center">
-                <img
-                  src={images[currentIndex]}
+                <Image
                   alt={`Image ${currentIndex + 1}`}
                   sizes="100"
+                  src={images[currentIndex]}
                 />
 
                 {/* ARROWS */}
@@ -71,12 +73,12 @@ export default function ZoomImage({
                   <>
                     <Button
                       isIconOnly
-                      size="sm"
                       className="
                         absolute left-2 top-1/2 -translate-y-1/2
                         bg-black/50 text-white
                         hover:bg-black/70
                       "
+                      size="sm"
                       onPress={prevImage}
                     >
                       <FiArrowLeft size={22} />
@@ -84,12 +86,12 @@ export default function ZoomImage({
 
                     <Button
                       isIconOnly
-                      size="sm"
                       className="
                         absolute right-2 top-1/2 -translate-y-1/2
                         bg-black/50 text-white
                         hover:bg-black/70
                       "
+                      size="sm"
                       onPress={nextImage}
                     >
                       <FiArrowRight size={22} />
@@ -115,8 +117,8 @@ export default function ZoomImage({
             <ModalFooter className="flex justify-center sm:justify-end px-4 sm:px-6">
               <Button
                 color="danger"
-                variant="light"
                 size="sm"
+                variant="light"
                 onPress={onClose}
               >
                 Close

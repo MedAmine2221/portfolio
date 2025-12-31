@@ -17,12 +17,17 @@ export default function About() {
         <div className="w-full max-w-4xl rounded-2xl transition-all duration-500 transform hover:-translate-y-2 border border-slate-700/30 backdrop-blur-sm bg-slate-900/50 shadow-2xl">
           <div className="flex flex-col items-center p-6 relative z-10">
             <h3 className="text-base md:text-lg text-white text-center leading-relaxed">
-              As a computer engineer and part-time lecturer, 
-              I see myself as a professional who is attentive, methodical, and passionate about sharing knowledge.
-              My experience in both industry and education has allowed me to develop an approach that is both rigorous and human-centered, 
-              where clarity, patience, and adaptability are at the core of my practice. 
-              I place great importance on collaborative work, effective communication, and personalized guidance, whether with students or within project teams. 
-              Driven by constant curiosity and a problem-solving mindset, I enjoy imparting not only technical skills but also work methods and a mindset oriented toward continuous learning and innovation.
+              As a computer engineer and part-time lecturer, I see myself as a
+              professional who is attentive, methodical, and passionate about
+              sharing knowledge. My experience in both industry and education
+              has allowed me to develop an approach that is both rigorous and
+              human-centered, where clarity, patience, and adaptability are at
+              the core of my practice. I place great importance on collaborative
+              work, effective communication, and personalized guidance, whether
+              with students or within project teams. Driven by constant
+              curiosity and a problem-solving mindset, I enjoy imparting not
+              only technical skills but also work methods and a mindset oriented
+              toward continuous learning and innovation.
             </h3>
           </div>
         </div>

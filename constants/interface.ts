@@ -8,4 +8,4 @@ export interface ZoomImageProps {
 export interface TypingTextProps {
   text: string;
   speed?: number;
-};
+}

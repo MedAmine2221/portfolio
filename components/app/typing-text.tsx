@@ -1,7 +1,8 @@
 "use client";
 
-import { TypingTextProps } from "@/constants/interface";
 import { useEffect, useState } from "react";
+
+import { TypingTextProps } from "@/constants/interface";
 
 export default function TypingText({ text, speed = 80 }: TypingTextProps) {
   const [displayedText, setDisplayedText] = useState("");

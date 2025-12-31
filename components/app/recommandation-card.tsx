@@ -1,19 +1,18 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from "react";
 import { Card, CardHeader, CardBody, Avatar, Button } from "@heroui/react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
+
 import { recommendations } from "@/constants";
 
 export default function RecommendationCarousel() {
-
-
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlay, setIsAutoPlay] = useState(true);
 
   useEffect(() => {
     if (!isAutoPlay) return;
-    
+
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % recommendations.length);
     }, 5000);
@@ -27,7 +26,9 @@ export default function RecommendationCarousel() {
   };
 
   const goToPrevious = () => {
-    setCurrentIndex((prev) => (prev - 1 + recommendations.length) % recommendations.length);
+    setCurrentIndex(
+      (prev) => (prev - 1 + recommendations.length) % recommendations.length,
+    );
     setIsAutoPlay(false);
   };
 
@@ -39,11 +40,11 @@ export default function RecommendationCarousel() {
   return (
     <div className="w-full max-w-6xl mx-auto px-4 py-8">
       <h2 className="text-3xl font-bold text-center mb-8">Recommandations</h2>
-      
+
       <div className="relative">
         {/* Carousel Container */}
         <div className="overflow-hidden">
-          <div 
+          <div
             className="flex transition-transform duration-500 ease-out"
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
           >
@@ -54,16 +55,20 @@ export default function RecommendationCarousel() {
                     <div className="flex gap-4">
                       <Avatar
                         isBordered
+                        className="ring-2 ring-primary"
                         radius="full"
                         size="lg"
                         src={rec.avatar}
-                        className="ring-2 ring-primary"
                       />
                       <div className="flex flex-col gap-1 items-start justify-center">
                         <Link href={rec.link}>
-                            <h4 className="text-lg font-bold text-default-700">{rec.username}</h4>
+                          <h4 className="text-lg font-bold text-default-700">
+                            {rec.username}
+                          </h4>
                         </Link>
-                        <h5 className="text-sm tracking-tight text-primary font-semibold">{rec.role}</h5>
+                        <h5 className="text-sm tracking-tight text-primary font-semibold">
+                          {rec.role}
+                        </h5>
                       </div>
                     </div>
                   </CardHeader>
@@ -80,17 +85,17 @@ export default function RecommendationCarousel() {
 
         {/* Navigation Buttons */}
         <button
-          onClick={goToPrevious}
-          className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition-all duration-200 z-10 hover:scale-110"
           aria-label="Previous"
+          className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition-all duration-200 z-10 hover:scale-110"
+          onClick={goToPrevious}
         >
           <ChevronLeft className="w-6 h-6 text-gray-800" />
         </button>
 
         <button
-          onClick={goToNext}
-          className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition-all duration-200 z-10 hover:scale-110"
           aria-label="Next"
+          className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition-all duration-200 z-10 hover:scale-110"
+          onClick={goToNext}
         >
           <ChevronRight className="w-6 h-6 text-gray-800" />
         </button>
@@ -101,13 +106,13 @@ export default function RecommendationCarousel() {
         {recommendations.map((_, index) => (
           <button
             key={index}
-            onClick={() => goToSlide(index)}
+            aria-label={`Go to slide ${index + 1}`}
             className={`transition-all duration-300 rounded-full ${
               index === currentIndex
                 ? "bg-primary w-8 h-3"
                 : "bg-gray-300 w-3 h-3 hover:bg-gray-400"
             }`}
-            aria-label={`Go to slide ${index + 1}`}
+            onClick={() => goToSlide(index)}
           />
         ))}
       </div>
@@ -115,10 +120,10 @@ export default function RecommendationCarousel() {
       {/* Auto-play Toggle */}
       <div className="flex justify-center mt-6">
         <Button
+          className="text-sm"
           size="sm"
           variant="flat"
           onPress={() => setIsAutoPlay(!isAutoPlay)}
-          className="text-sm"
         >
           {isAutoPlay ? "⏸ Pause Auto-play" : "▶ Resume Auto-play"}
         </Button>
