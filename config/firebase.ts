@@ -1,14 +1,10 @@
-// firebase.ts
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+import { getFirestore, Firestore } from "firebase/firestore";
 
 let app;
-let auth;
-let db;
-let storage;
+let db: Firestore | undefined;
 
 if (typeof window !== "undefined") {
-  // Only run on client
   app = initializeApp({
     apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
     authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
@@ -22,4 +18,4 @@ if (typeof window !== "undefined") {
   db = getFirestore(app);
 }
 
-export { app, auth, db, storage };
+export { app, db };
