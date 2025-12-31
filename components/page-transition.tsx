@@ -3,20 +3,20 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
 
-interface PageTransitionProps {
+export default function PageTransition({
+  children,
+}: {
   children: React.ReactNode;
-}
-
-export default function PageTransition({ children }: PageTransitionProps) {
+}) {
   const pathname = usePathname();
 
   return (
     <AnimatePresence mode="wait">
       <motion.div
+        key={pathname}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -10 }}
         initial={{ opacity: 0, y: 10 }}
-        key={pathname}
         transition={{ duration: 0.35, ease: "easeInOut" }}
       >
         {children}
