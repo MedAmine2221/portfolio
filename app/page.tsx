@@ -1,4 +1,5 @@
-"use client";;
+"use client";
+
 import { Link } from "@heroui/link";
 import { button as buttonStyles } from "@heroui/theme";
 import { siteConfig } from "@/config/site";
@@ -9,28 +10,52 @@ import RecommondationCard from "@/components/app/recommandation-card";
 
 export default function Home() {
   return (
-    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-      <div className="inline-block max-w-xl text-center justify-center">
+    <section className="flex flex-col items-center justify-center gap-6 px-4 py-8 md:py-16">
+      
+      {/* PROFILE + TEXT */}
+      <div className="flex flex-col items-center text-center max-w-xl">
         <Image
           src="/amine.png"
           alt="That's Me"
-          width={1000}
-          height={1000}
+          width={300}
+          height={300}
+          className="w-48 md:w-64 lg:w-72 h-auto"
         />
-        <TypingText text="> Hello world." />
-        <TypingText text="> I'm Mohamed Amine LAZREG," />
-        <TypingText text="> Software Developer." />
+
+        <div className="mt-4 space-y-1 text-sm md:text-base">
+          <TypingText text="> Hello world." />
+          <TypingText text="> I'm Mohamed Amine LAZREG," />
+          <TypingText text="> Software Developer." />
+        </div>
       </div>
-      <Image src={"/programing.png"} width={125} alt="ReactJs" height={125} />
-      <div className="flex flex-row">
-        <Image src={"/js.png"} width={100} alt="JS" height={100} />
-        <div className="mx-2" />
-        <Image src={"/typescript.png"} width={100} alt="TS" height={100} />
-        <div className="mx-2" />
-        <Image src={"/git.png"} width={100} alt="GIT" height={25} />
+
+      {/* PROGRAMMING IMAGE */}
+      <Image
+        src="/programing.png"
+        width={125}
+        height={125}
+        alt="Programming"
+        className="w-24 md:w-32 h-auto"
+      />
+
+      {/* TECH STACK */}
+      <div className="flex flex-wrap justify-center gap-4">
+        <Image src="/js.png" width={80} height={80} alt="JS" className="w-16 md:w-20" />
+        <Image src="/typescript.png" width={80} height={80} alt="TS" className="w-16 md:w-20" />
+        <Image src="/git.png" width={80} height={40} alt="GIT" className="w-20 md:w-24" />
       </div>
-      <Image src={"/ReactNative.png"} width={300} alt="React Native" height={300} />
-      <div className="flex gap-3">
+
+      {/* REACT NATIVE */}
+      <Image
+        src="/ReactNative.png"
+        width={300}
+        height={300}
+        alt="React Native"
+        className="w-48 md:w-64 lg:w-72 h-auto"
+      />
+
+      {/* BUTTONS */}
+      <div className="flex flex-col sm:flex-row gap-4">
         <Link
           isExternal
           className={buttonStyles({
@@ -42,16 +67,22 @@ export default function Home() {
         >
           Download My CV
         </Link>
+
         <Link
           isExternal
-          className={buttonStyles({ variant: "bordered", radius: "full" })}
+          className={buttonStyles({
+            variant: "bordered",
+            radius: "full",
+          })}
           href={siteConfig.links.github}
         >
           <GithubIcon size={20} />
           GitHub
         </Link>
       </div>
-      <div className="flex flex-row">
+
+      {/* RECOMMENDATIONS */}
+      <div className="w-full flex justify-center px-2 md:px-0">
         <RecommondationCard />
       </div>
     </section>

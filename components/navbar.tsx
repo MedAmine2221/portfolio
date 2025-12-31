@@ -1,5 +1,4 @@
-"use client";
-
+"use client";;
 import {
   Navbar as HeroUINavbar,
   NavbarContent,
@@ -18,7 +17,6 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 import { siteConfig } from "@/config/site";
-import { ThemeSwitch } from "@/components/theme-switch";
 import { GithubIcon, SearchIcon } from "@/components/icons";
 import NavMenu from "./navbar-menu";
 
@@ -85,7 +83,6 @@ export const Navbar = () => {
           <Link isExternal href={siteConfig.links.github}>
             <GithubIcon />
           </Link>
-          <ThemeSwitch />
         </NavbarItem>
 
         <NavbarItem className="hidden lg:flex">
