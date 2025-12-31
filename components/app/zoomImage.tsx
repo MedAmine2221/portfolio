@@ -1,15 +1,31 @@
-"use client"
+"use client";
+
 import { ZoomImageProps } from "@/constants/interface";
-import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button } from "@heroui/react";
+import {
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Button,
+} from "@heroui/react";
 import { useState, useEffect } from "react";
-import {FiArrowRight, FiArrowLeft } from "react-icons/fi"
-export default function ZoomImage({ isOpen, onOpenChange, images, projectName, projectDec }: ZoomImageProps) {
+import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
+
+export default function ZoomImage({
+  isOpen,
+  onOpenChange,
+  images,
+  projectName,
+  projectDec,
+}: ZoomImageProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
+
   useEffect(() => {
-    if (isOpen) {
-      setCurrentIndex(0);
-    }
+    if (isOpen) setCurrentIndex(0);
   }, [isOpen]);
+
+  if (!images || images.length === 0) return null;
 
   const nextImage = () => {
     setCurrentIndex((prev) => (prev + 1) % images.length);
@@ -20,59 +36,89 @@ export default function ZoomImage({ isOpen, onOpenChange, images, projectName, p
   };
 
   return (
-    <Modal 
-      isOpen={isOpen} 
-      onOpenChange={onOpenChange} 
-      size="4xl"
+    <Modal
+      isOpen={isOpen}
+      onOpenChange={onOpenChange}
+      size="full"
       scrollBehavior="inside"
       classNames={{
         wrapper: "z-[9999]",
-        backdrop: "z-[9998]"
+        backdrop: "z-[9998]",
       }}
     >
-      <ModalContent>
+      <ModalContent className="sm:max-w-3xl md:max-w-4xl">
         {(onClose) => (
           <>
-            <ModalHeader className="flex justify-between items-center">
-              <span>{projectName}</span>
+            {/* HEADER */}
+            <ModalHeader className="flex justify-between items-center px-4 sm:px-6">
+              <h3 className="text-base sm:text-lg md:text-xl font-bold">
+                {projectName}
+              </h3>
             </ModalHeader>
 
-            <ModalBody className="flex flex-col items-center justify-center gap-4 py-6">
-              <div className="relative w-full">
+            {/* BODY */}
+            <ModalBody className="flex flex-col items-center gap-4 py-4 sm:py-6">
+              {/* IMAGE */}
+              <div className="relative w-full flex items-center justify-center">
                 <img
                   src={images[currentIndex]}
                   alt={`Image ${currentIndex + 1}`}
-                  className="max-h-[60vh] w-full object-contain rounded-lg"
+                  sizes="100"
                 />
+
+                {/* ARROWS */}
                 {images.length > 1 && (
                   <>
                     <Button
                       isIconOnly
-                      className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70"
+                      size="sm"
+                      className="
+                        absolute left-2 top-1/2 -translate-y-1/2
+                        bg-black/50 text-white
+                        hover:bg-black/70
+                      "
                       onPress={prevImage}
                     >
-                      <FiArrowLeft size={25} />
+                      <FiArrowLeft size={22} />
                     </Button>
+
                     <Button
                       isIconOnly
-                      className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70"
+                      size="sm"
+                      className="
+                        absolute right-2 top-1/2 -translate-y-1/2
+                        bg-black/50 text-white
+                        hover:bg-black/70
+                      "
                       onPress={nextImage}
                     >
-                      <FiArrowRight size={25} />
+                      <FiArrowRight size={22} />
                     </Button>
                   </>
                 )}
               </div>
 
+              {/* COUNTER */}
               {images.length > 1 && (
-                <p className="text-sm font-medium">{`${currentIndex + 1} / ${images.length}`}</p>
+                <p className="text-xs sm:text-sm font-medium text-white/80">
+                  {currentIndex + 1} / {images.length}
+                </p>
               )}
-              
-              <p className="text-base text-center px-4">{projectDec}</p>
+
+              {/* DESCRIPTION */}
+              <p className="text-sm sm:text-base text-center px-2 sm:px-6 max-w-3xl">
+                {projectDec}
+              </p>
             </ModalBody>
 
-            <ModalFooter>
-              <Button color="danger" variant="light" onPress={onClose}>
+            {/* FOOTER */}
+            <ModalFooter className="flex justify-center sm:justify-end px-4 sm:px-6">
+              <Button
+                color="danger"
+                variant="light"
+                size="sm"
+                onPress={onClose}
+              >
                 Close
               </Button>
             </ModalFooter>
