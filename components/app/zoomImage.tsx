@@ -1,4 +1,4 @@
-"use client";;
+"use client";
 import {
   Modal,
   ModalContent,
@@ -9,9 +9,9 @@ import {
 } from "@heroui/react";
 import { useState, useEffect } from "react";
 import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
+import Image from "next/image";
 
 import { ZoomImageProps } from "@/constants/interface";
-import Image from "next/image";
 
 export default function ZoomImage({
   isOpen,
@@ -63,10 +63,18 @@ export default function ZoomImage({
               <div className="relative w-full flex items-center justify-center">
                 <Image
                   alt={`Image ${currentIndex + 1}`}
+                  height={
+                    projectName === "MAIDE" || projectName === "QUIZ APP Web"
+                      ? 1000
+                      : 500
+                  }
                   src={images[currentIndex]}
-                  width={projectName === "MAIDE" ||projectName === "QUIZ APP Web" ? 1000 : 500}
-                  height={projectName === "MAIDE" ||projectName === "QUIZ APP Web" ? 1000 : 500}
-                 />
+                  width={
+                    projectName === "MAIDE" || projectName === "QUIZ APP Web"
+                      ? 1000
+                      : 500
+                  }
+                />
                 {/* ARROWS */}
                 {images.length > 1 && (
                   <>

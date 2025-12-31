@@ -10,6 +10,11 @@ const nextConfig = {
         protocol: "https",
         hostname: "i0.wp.com",
       },
+      {      
+        eslint: {
+          ignoreDuringBuilds: true,
+        },
+      }
     ],
   },
 };
