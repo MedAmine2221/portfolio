@@ -39,7 +39,7 @@ export const projects = [
     title: "DAILY COMPASS APP",
     description:
       "An intelligent goal management mobile application that allows you to break down your upcoming goals into tasks, with automatic email notifications sent when a task’s deadline is reached.",
-    lien: "https://drive.google.com/file/d/1Q7bSl1-xnul99YIe3EyLTk_QkQ2b_V3V/view?usp=drive_link",
+    lien: "https://drive.google.com/file/d/1gzfmAVGVBBGpCuQR5eeoDEGn4fpWpS2Z/view?usp=sharing",
     img: ["/DailyCompass.png", "/DailyCompass2.png", "/DailyCompass3.png"],
     encours: false,
     githubLink: "https://github.com/MedAmine2221/daily-compass-app",
