@@ -4,7 +4,7 @@ import { Link } from "@heroui/link";
 import clsx from "clsx";
 
 import { Providers } from "./providers";
-
+import { FaCopyright } from "react-icons/fa";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
@@ -54,8 +54,11 @@ export default function RootLayout({
                   href={siteConfig.links.linkedIn}
                   title="heroui.com homepage"
                 >
-                  <span className="text-default-600">Developed by</span>
-                  <p className="text-primary">Mohamed Amine LAZREG</p>
+                  <FaCopyright className="text-white" />
+                  <span className="text-default-600 text-sm">
+                    All rights reserved 2025,
+                  </span>
+                  <p className="text-primary text-sm">Mohamed Amine LAZREG</p>
                 </Link>
               </footer>
             </div>

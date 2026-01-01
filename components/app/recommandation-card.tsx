@@ -1,7 +1,6 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import { Card, CardHeader, CardBody, Avatar, Button } from "@heroui/react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Card, CardHeader, CardBody, Avatar } from "@heroui/react";
 import Link from "next/link";
 
 import { recommendations } from "@/constants";
@@ -9,6 +8,38 @@ import { recommendations } from "@/constants";
 export default function RecommendationCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlay, setIsAutoPlay] = useState(true);
+  const [touchStartX, setTouchStartX] = useState<number | null>(null);
+  const [touchEndX, setTouchEndX] = useState<number | null>(null);
+  const minSwipeDistance = 50;
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEndX(null);
+    setTouchStartX(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    setTouchEndX(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStartX || !touchEndX) return;
+
+    const distance = touchStartX - touchEndX;
+
+    if (distance > minSwipeDistance) {
+      // swipe left → next
+      setCurrentIndex((prev) => (prev + 1) % recommendations.length);
+    }
+
+    if (distance < -minSwipeDistance) {
+      // swipe right → prev
+      setCurrentIndex((prev) =>
+        prev === 0 ? recommendations.length - 1 : prev - 1
+      );
+    }
+
+    setIsAutoPlay(false);
+  };
 
   useEffect(() => {
     if (!isAutoPlay) return;
@@ -20,18 +51,6 @@ export default function RecommendationCarousel() {
     return () => clearInterval(interval);
   }, [isAutoPlay, recommendations.length]);
 
-  const goToNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % recommendations.length);
-    setIsAutoPlay(false);
-  };
-
-  const goToPrevious = () => {
-    setCurrentIndex(
-      (prev) => (prev - 1 + recommendations.length) % recommendations.length,
-    );
-    setIsAutoPlay(false);
-  };
-
   const goToSlide = (index: any) => {
     setCurrentIndex(index);
     setIsAutoPlay(false);
@@ -42,8 +61,12 @@ export default function RecommendationCarousel() {
       <h2 className="text-3xl font-bold text-center mb-8">Recommandations</h2>
 
       <div className="relative">
-        {/* Carousel Container */}
-        <div className="overflow-hidden">
+        <div
+          className="overflow-hidden"
+          onTouchEnd={onTouchEnd}
+          onTouchMove={onTouchMove}
+          onTouchStart={onTouchStart}
+        >
           <div
             className="flex transition-transform duration-500 ease-out"
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -82,23 +105,6 @@ export default function RecommendationCarousel() {
             ))}
           </div>
         </div>
-
-        {/* Navigation Buttons */}
-        <button
-          aria-label="Previous"
-          className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition-all duration-200 z-10 hover:scale-110"
-          onClick={goToPrevious}
-        >
-          <ChevronLeft className="w-6 h-6 text-gray-800" />
-        </button>
-
-        <button
-          aria-label="Next"
-          className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition-all duration-200 z-10 hover:scale-110"
-          onClick={goToNext}
-        >
-          <ChevronRight className="w-6 h-6 text-gray-800" />
-        </button>
       </div>
 
       {/* Indicators */}
@@ -115,18 +121,6 @@ export default function RecommendationCarousel() {
             onClick={() => goToSlide(index)}
           />
         ))}
-      </div>
-
-      {/* Auto-play Toggle */}
-      <div className="flex justify-center mt-6">
-        <Button
-          className="text-sm"
-          size="sm"
-          variant="flat"
-          onPress={() => setIsAutoPlay(!isAutoPlay)}
-        >
-          {isAutoPlay ? "⏸ Pause Auto-play" : "▶ Resume Auto-play"}
-        </Button>
       </div>
     </div>
   );

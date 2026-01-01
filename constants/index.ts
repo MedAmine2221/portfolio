@@ -198,6 +198,14 @@ export const recommendations = [
     link: "https://www.linkedin.com/in/marami-boussadia-/",
   },
   {
+    username: "Emna Ben fraj",
+    role: "Business Developer",
+    avatar:
+      "https://media.licdn.com/dms/image/v2/D4E03AQF4bSxSuHST1A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1700154236891?e=1769040000&v=beta&t=4IApImwip3Zw78LmgBe6Z1qbNCTlSnDyZBpjmh1yhTE",
+    recomm: `J’ai eu l’occasion de travailler avec Mohamed amine et j’ai beaucoup apprécié sa rigueur, ses compétences techniques et son esprit d’équipe. Toujours disponible pour aider et partager ses connaissances, il a grandement contribué à la réussite de nos projets. Je le recommande vivement pour tout poste de développement.`,
+    link: "https://www.linkedin.com/in/ben-fraj-emna/",
+  },
+  {
     username: "Hamza Khlifi",
     role: "Tech Lead",
     avatar:
@@ -212,6 +220,32 @@ export const recommendations = [
       "https://media.licdn.com/dms/image/v2/D4E03AQFwSHFBLyo5HQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1728251350653?e=1768435200&v=beta&t=fy9V4ESDwA8tLksABNruIWsLdZIZSKSpozkQ39ooYS4",
     recomm: `J'ai eu l'occasion de suivre le parcours de Mohamed Amine depuis son intégration en tant que stagiaire PFE jusqu'à son poste actuel de développeur JavaScript. Grâce à sa motivation et à ses compétences techniques, il a rapidement su gagner la confiance de l'équipe. Toujours impliqué et orienté résultats, Mohamed Amine se distingue par sa rigueur, sa curiosité et son excellent esprit collaboratif.`,
     link: "https://www.linkedin.com/in/bouraoui-khlifi/",
+  },
+  {
+    username: "Boufares Mohamed Amine",
+    role: "Front-End Developer",
+    avatar:
+      "https://media.licdn.com/dms/image/v2/D4D03AQFdADQvXjN6nA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1716299926231?e=1769040000&v=beta&t=Nn5E09Dr-gxPjB_ObAP0DzOQGlJkzTaRNZ3A4g5iATE",
+    recomm: `J’ai eu l’occasion de travailler avec Mohamed Amine sur plusieurs projets frontend. Il fait preuve d’une grande volonté d’apprendre et d’une attitude positive et collaborative au sein de l’équipe. Bien qu’il soit encore en développement de ses compétences techniques en React, Next.js et TypeScript, il aborde les défis avec dévouement et volonté de progresser. Avec plus d’expérience, il a le potentiel de devenir un solide développeur frontend.`,
+    link: "https://www.linkedin.com/in/mohamed-amine-boufares/",
+  },
+  {
+    username: "Chamseddine Bouhouch",
+    role: "Tech Lead",
+    avatar:
+      "https://media.licdn.com/dms/image/v2/D4D03AQHtvou9WzGBBg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1667034830048?e=1769040000&v=beta&t=pozEv-kcwsPNylUOq2VBh2lVBkGfiOrQ-9fAZdGSL9c",
+    recomm: `I had the pleasure of working with Mohamed Amine, who consistently showed great potential and a strong eagerness to learn new skills. He contributed effectively to multiple frontend and mobile projects, bringing both technical value and fresh perspectives. Beyond his skills, he’s a genuinely good person who integrated seamlessly into the team and built strong relationships with colleagues.`,
+    link: "https://www.linkedin.com/in/chamseddine-bouhouch/",
+  },
+  {
+    username: "Taha Meskini",
+    role: "Software Engineer",
+    avatar:
+      "https://media.licdn.com/dms/image/v2/D4D03AQHB22iDGTZhPg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1726921484883?e=1769040000&v=beta&t=ivhfBgj_y7HmEH_tNL_DB6ezmaWYoI8jVED6yqxWTL4",
+    recomm: `I’ve had the opportunity to work alongside Amine since the beginning of our internship, and it has been a great experience. As a mobile developer, he consistently showed strong technical skills, dedication, and a real passion for building high-quality applications.
+             Amine is a hardworking teammate who always goes the extra mile to solve problems and deliver results on time. His collaborative spirit and willingness to share knowledge made our teamwork both smooth and enjoyable.
+             I highly recommend Amine for any role that requires a motivated and skilled mobile developer.`,
+    link: "https://www.linkedin.com/in/taha-meskini-488ab9190/",
   },
 ];
 
