@@ -1,23 +1,47 @@
-"use client";
+"use client";;
 import { Button } from "@heroui/button";
 import { Input, Textarea } from "@heroui/input";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import { FiSend } from "react-icons/fi";
-
+import { useDispatch, useSelector } from "react-redux";
 import contactSchema from "@/schema/contactSchema";
 import { contactMe } from "@/actions/contact-me";
+import { setLoadingFalse, setLoadingTrue } from "@/redux/loadingReducer";
+import { toast, ToastContainer } from "react-toastify";
 
 export default function ContactForm() {
+  const dispatch = useDispatch();
+  const loading = useSelector((state: any) => state.loading.loading);
   const {
     register,
+    reset,
     handleSubmit,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(contactSchema()),
+    defaultValues:{
+      email: "",
+      firstName: "",
+      lastName: "",
+      message: "",
+      object: "",
+    },
   });
+  const notify = () =>
+    toast.success("Your message has been sent successfully !");
   const onSubmit = (data: any) => {
-    contactMe(data);
+    try {
+      dispatch(setLoadingTrue());
+      contactMe(data);
+    } catch (error) {
+      // eslint-disable-next-line no-console
+      console.error(error);
+    } finally {
+      dispatch(setLoadingFalse());
+      reset();
+      notify();
+    }
   };
 
   return (
@@ -95,9 +119,15 @@ export default function ContactForm() {
         placeholder="Enter your Message"
       />
       <div className="my-10" />
-      <Button color="default" endContent={<FiSend />} type="submit">
+      <Button
+        color="default"
+        disabled={loading}
+        endContent={<FiSend />}
+        type="submit"
+      >
         Send
       </Button>
+      <ToastContainer  theme="dark" closeButton />
     </form>
   );
 }
