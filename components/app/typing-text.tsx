@@ -20,9 +20,9 @@ export default function TypingText({ text, speed = 80 }: TypingTextProps) {
   }, [index, text, speed]);
 
   return (
-    <h1 className="font-mono text-3xl">
+    <i className="font-mono text-2xl">
       {displayedText}
       <span className="animate-pulse">|</span>
-    </h1>
+    </i>
   );
 }

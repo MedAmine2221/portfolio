@@ -24,7 +24,9 @@ export default function Home() {
 
         <div className="mt-4 space-y-1 text-sm md:text-base">
           <TypingText text="> Hello world." />
+          <br />
           <TypingText text="> I'm Mohamed Amine LAZREG," />
+          <br />
           <TypingText text="> Software Developer." />
         </div>
       </div>
