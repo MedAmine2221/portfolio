@@ -87,9 +87,7 @@ export const Navbar = () => {
           Mohamed Amine LAZREG
         </NextLink>
         {/* Second Row: Centered Menu - Desktop */}
-        <div className="hidden md:flex justify-center border-t border-default-200/20 py-2">
-          <NavMenu />
-        </div>
+        <NavMenu />
         <div className="flex items-center gap-6">
           {socialLinks}
           <div className="hidden lg:block">{searchInput}</div>
@@ -110,7 +108,7 @@ export const Navbar = () => {
         <div className="w-full border-t border-default-200/20 py-3">
           <div className="overflow-x-auto scrollbar-hide px-3">
             <div className="inline-flex justify-center w-full">
-              <NavMenu />
+              <NavMenu isMobile />
             </div>
           </div>
         </div>
