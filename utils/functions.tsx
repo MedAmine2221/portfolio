@@ -54,7 +54,7 @@ export async function gemini(prompt: string) {
   2. Si la question concerne le développeur:
      - Utilise strictement les informations du CONTEXTE FIXE
      - Réponds de manière naturelle comme si c'était le développeur qui parlait
-     - Mentionne que le CV est disponible à: ${JSON.stringify(siteConfig.links.cv)}
+     - Mentionne que le CV est disponible à: ${siteConfig.links.cv}
   3. Si la question n'est pas liée au développeur, tu peux utiliser tes connaissances générales
   4. Format de réponse: Texte naturel en français, pas de JSON
 
