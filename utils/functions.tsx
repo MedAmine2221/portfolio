@@ -2,6 +2,7 @@ import { GoogleGenAI } from "@google/genai";
 import Link from "next/link";
 
 import { STATIC_KNOWLEDGE } from "@/constants";
+import { siteConfig } from "@/config/site";
 
 export const renderMessageText = (text: string) => {
   const urlRegex = /(https?:\/\/[^\s]+)/g;
@@ -53,7 +54,7 @@ export async function gemini(prompt: string) {
   2. Si la question concerne le développeur:
      - Utilise strictement les informations du CONTEXTE FIXE
      - Réponds de manière naturelle comme si c'était le développeur qui parlait
-     - Mentionne que le CV est disponible à: ${JSON.stringify(STATIC_KNOWLEDGE.developer.cv_file)}
+     - Mentionne que le CV est disponible à: ${JSON.stringify(siteConfig.links.cv)}
   3. Si la question n'est pas liée au développeur, tu peux utiliser tes connaissances générales
   4. Format de réponse: Texte naturel en français, pas de JSON
 
