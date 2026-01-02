@@ -8,7 +8,6 @@ import { FaCopyright } from "react-icons/fa";
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
-import PageTransition from "@/components/page-transition";
 import ChatFloating from "@/components/app/chat-floating";
 import { ReduxProviders } from "@/components/redux-provider";
 
@@ -44,7 +43,7 @@ export default function RootLayout({
             <div className="relative flex flex-col h-screen">
               <Navbar />
               <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
-                <PageTransition>{children}</PageTransition>
+                {children}
               </main>
               <ChatFloating />
               <footer className="w-full flex items-center justify-center py-3">

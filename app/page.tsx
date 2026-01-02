@@ -1,5 +1,4 @@
-"use client";
-
+"use client";;
 import { Link } from "@heroui/link";
 import { button as buttonStyles } from "@heroui/theme";
 import Image from "next/image";
@@ -8,8 +7,10 @@ import { siteConfig } from "@/config/site";
 import { GithubIcon } from "@/components/icons";
 import TypingText from "@/components/app/typing-text";
 import RecommondationCard from "@/components/app/recommandation-card";
+import ScrollHint from "@/components/app/scroll-hint";
 
 export default function Home() {
+
   return (
     <section className="flex flex-col items-center justify-center gap-6 px-4 py-8 md:py-16">
       {/* PROFILE + TEXT */}
@@ -105,6 +106,7 @@ export default function Home() {
       <div className="w-full flex justify-center px-2 md:px-0">
         <RecommondationCard />
       </div>
+      <ScrollHint direction="down" label="About" next="/about" />
     </section>
   );
 }

@@ -90,34 +90,22 @@ export const Navbar = () => {
       </NavbarContent>
 
       {/* MOBILE */}
-      <NavbarContent className="sm:hidden" justify="end">
-        <NavbarMenuToggle />
-      </NavbarContent>
 
       {/* MOBILE MENU */}
-      <NavbarMenu>
-        {siteConfig.navItems.map((item) => (
-          <NavbarMenuItem key={item.href}>
-            <Link className="w-full" onPress={() => router.push(item.href)}>
-              {item.label}
-            </Link>
-          </NavbarMenuItem>
-        ))}
-        <div className="flex flex-row justify-center items-center">
-          <Link isExternal className="mx-2" href={siteConfig.links.linkedIn}>
-            <FiLinkedin size={25} />
-          </Link>
-          <Link isExternal href={siteConfig.links.facebook}>
-            <FiFacebook size={25} />
-          </Link>
-          <Link isExternal className="mx-2" href={siteConfig.links.instagram}>
-            <FiInstagram size={25} />
-          </Link>
-          <Link isExternal href={siteConfig.links.github}>
-            <GithubIcon size={25} />
-          </Link>
-        </div>
-      </NavbarMenu>
+      <div className="flex flex-row justify-center items-center">
+        <Link isExternal className="mx-2" href={siteConfig.links.linkedIn}>
+          <FiLinkedin size={20} />
+        </Link>
+        <Link isExternal href={siteConfig.links.facebook}>
+          <FiFacebook size={20} />
+        </Link>
+        <Link isExternal className="mx-2" href={siteConfig.links.instagram}>
+          <FiInstagram size={20} />
+        </Link>
+        <Link isExternal href={siteConfig.links.github}>
+          <GithubIcon size={20} />
+        </Link>
+      </div>
     </HeroUINavbar>
   );
 };
