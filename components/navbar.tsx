@@ -44,25 +44,25 @@ export const Navbar = () => {
   );
 
   const socialLinks = (
-    <div className="flex gap-4 items-center">
-      <Link 
-        isExternal 
+    <div className="flex items-center">
+      <Link
+        isExternal
+        className="mx-2 text-default-500 hover:text-primary transition-colors"
         href={siteConfig.links.linkedIn}
-        className="text-default-500 hover:text-primary transition-colors"
       >
         <FiLinkedin size={20} />
       </Link>
-      <Link 
-        isExternal 
-        href={siteConfig.links.facebook}
+      <Link
+        isExternal
         className="text-default-500 hover:text-primary transition-colors"
+        href={siteConfig.links.facebook}
       >
         <FiFacebook size={20} />
       </Link>
-      <Link 
-        isExternal 
+      <Link
+        isExternal
+        className="mx-2 text-default-500 hover:text-primary transition-colors"
         href={siteConfig.links.instagram}
-        className="text-default-500 hover:text-primary transition-colors"
       >
         <FiInstagram size={20} />
       </Link>
@@ -107,9 +107,9 @@ export const Navbar = () => {
           </NextLink>
           {socialLinks}
         </div>
-        <div className="w-full border-t border-default-200/20 py-4">
-          <div className="w-full overflow-x-auto scrollbar-hide px-6">
-            <div className="inline-block min-w-max">
+        <div className="w-full border-t border-default-200/20 py-3">
+          <div className="overflow-x-auto scrollbar-hide px-3">
+            <div className="inline-flex justify-center w-full">
               <NavMenu />
             </div>
           </div>

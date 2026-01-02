@@ -12,6 +12,9 @@ export default function NavMenu() {
   return (
     <Tabs
       aria-label="Navigation"
+      classNames={{
+        tabList: "overflow-x-auto scrollbar-hide w-100",
+      }}
       selectedKey={pathname}
       variant="bordered"
       onSelectionChange={(key) => router.push(key as string)}
