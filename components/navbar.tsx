@@ -1,13 +1,4 @@
-"use client";
-import {
-  Navbar as HeroUINavbar,
-  NavbarContent,
-  NavbarMenu,
-  NavbarMenuItem,
-  NavbarMenuToggle,
-  NavbarBrand,
-  NavbarItem,
-} from "@heroui/navbar";
+"use client";;
 import { Link } from "@heroui/link";
 import { Input } from "@heroui/input";
 import NextLink from "next/link";
@@ -16,7 +7,6 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 import NavMenu from "./navbar-menu";
-
 import { siteConfig } from "@/config/site";
 import { GithubIcon, SearchIcon } from "@/components/icons";
 
@@ -39,7 +29,7 @@ export const Navbar = () => {
     <Input
       aria-label="Search"
       classNames={{
-        inputWrapper: "bg-default-100",
+        inputWrapper: "bg-default-100/50 border border-default-200/50 hover:border-default-300 transition-colors",
         input: "text-sm",
       }}
       placeholder="Search..."
@@ -53,59 +43,78 @@ export const Navbar = () => {
     />
   );
 
-  return (
-    <HeroUINavbar maxWidth="xl" position="sticky">
-      {/* LEFT */}
-      <NavbarContent justify="start">
-        <NavbarBrand>
-          <NextLink className="font-bold" href="/">
-            Mohamed Amine LAZREG
-          </NextLink>
-        </NavbarBrand>
+  const socialLinks = (
+    <div className="flex gap-4 items-center">
+      <Link 
+        isExternal 
+        href={siteConfig.links.linkedIn}
+        className="text-default-500 hover:text-primary transition-colors"
+      >
+        <FiLinkedin size={20} />
+      </Link>
+      <Link 
+        isExternal 
+        href={siteConfig.links.facebook}
+        className="text-default-500 hover:text-primary transition-colors"
+      >
+        <FiFacebook size={20} />
+      </Link>
+      <Link 
+        isExternal 
+        href={siteConfig.links.instagram}
+        className="text-default-500 hover:text-primary transition-colors"
+      >
+        <FiInstagram size={20} />
+      </Link>
+      <Link
+        isExternal
+        className="text-default-500 hover:text-primary transition-colors"
+        href={siteConfig.links.github}
+      >
+        <GithubIcon size={20} />
+      </Link>
+    </div>
+  );
 
-        {/* Desktop tabs */}
-        <div className="hidden sm:flex">
+  return (
+    <div className="w-full backdrop-blur-lg bg-black/70 border-b border-default-200/20 sticky top-0 z-50">
+      {/* First Row: Name and Social Icons - Desktop */}
+      <div className="hidden md:flex items-center justify-between max-w-7xl mx-auto px-6 py-3">
+        <NextLink
+          className="font-bold text-white text-lg tracking-tight hover:text-primary transition-colors" 
+          href="/"
+        >
+          Mohamed Amine LAZREG
+        </NextLink>
+        {/* Second Row: Centered Menu - Desktop */}
+        <div className="hidden md:flex justify-center border-t border-default-200/20 py-2">
           <NavMenu />
         </div>
-      </NavbarContent>
-
-      {/* RIGHT DESKTOP */}
-      <NavbarContent className="hidden sm:flex" justify="end">
-        <NavbarItem className="flex gap-3">
-          <Link isExternal href={siteConfig.links.linkedIn}>
-            <FiLinkedin size={25} />
-          </Link>
-          <Link isExternal href={siteConfig.links.facebook}>
-            <FiFacebook size={25} />
-          </Link>
-          <Link isExternal href={siteConfig.links.instagram}>
-            <FiInstagram size={25} />
-          </Link>
-          <Link isExternal href={siteConfig.links.github}>
-            <GithubIcon size={25} />
-          </Link>
-        </NavbarItem>
-
-        <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
-      </NavbarContent>
-
-      {/* MOBILE */}
-
-      {/* MOBILE MENU */}
-      <div className="flex flex-row justify-center items-center">
-        <Link isExternal className="mx-2" href={siteConfig.links.linkedIn}>
-          <FiLinkedin size={20} />
-        </Link>
-        <Link isExternal href={siteConfig.links.facebook}>
-          <FiFacebook size={20} />
-        </Link>
-        <Link isExternal className="mx-2" href={siteConfig.links.instagram}>
-          <FiInstagram size={20} />
-        </Link>
-        <Link isExternal href={siteConfig.links.github}>
-          <GithubIcon size={20} />
-        </Link>
+        <div className="flex items-center gap-6">
+          {socialLinks}
+          <div className="hidden lg:block">{searchInput}</div>
+        </div>
       </div>
-    </HeroUINavbar>
+
+      {/* Mobile Layout */}
+      <div className="md:hidden">
+        <div className="flex items-center justify-between px-6 py-3">
+          <NextLink
+            className="font-bold text-white text-lg tracking-tight"
+            href="/"
+          >
+            Mohamed Amine LAZREG
+          </NextLink>
+          {socialLinks}
+        </div>
+        <div className="w-full border-t border-default-200/20 py-4">
+          <div className="w-full overflow-x-auto scrollbar-hide px-6">
+            <div className="inline-block min-w-max">
+              <NavMenu />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };

@@ -1,13 +1,9 @@
-"use client";
+"use client";;
 import FormationsTimeLine from "@/components/app/formation-timeline";
-import ScrollHint from "@/components/app/scroll-hint";
 
 export default function About() {
   return (
     <section className="min-h-screen px-4 bg-black relative">
-      <div className="mb-5">
-        <ScrollHint direction="up" label="Home" next="/" />
-      </div>
       <div className="text-center mb-10 space-y-6">
         <h1 className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400">
           About Me
@@ -40,13 +36,6 @@ export default function About() {
         {/* Vertical line */}
         <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-500 via-purple-400 to-transparent md:-translate-x-1/2" />
         <FormationsTimeLine />
-      </div>
-      <div className="my-10">
-        <ScrollHint
-          direction="down"
-          label="Professional Experience"
-          next="/expPro"
-        />
       </div>
     </section>
   );

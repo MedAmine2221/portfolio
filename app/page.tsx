@@ -7,7 +7,6 @@ import { siteConfig } from "@/config/site";
 import { GithubIcon } from "@/components/icons";
 import TypingText from "@/components/app/typing-text";
 import RecommondationCard from "@/components/app/recommandation-card";
-import ScrollHint from "@/components/app/scroll-hint";
 
 export default function Home() {
 
@@ -106,7 +105,6 @@ export default function Home() {
       <div className="w-full flex justify-center px-2 md:px-0">
         <RecommondationCard />
       </div>
-      <ScrollHint direction="down" label="About" next="/about" />
     </section>
   );
 }
