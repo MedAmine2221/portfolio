@@ -1,4 +1,4 @@
-"use client";;
+"use client";
 import { Link } from "@heroui/link";
 import { button as buttonStyles } from "@heroui/theme";
 import Image from "next/image";
@@ -9,10 +9,8 @@ import TypingText from "@/components/app/typing-text";
 import RecommondationCard from "@/components/app/recommandation-card";
 
 export default function Home() {
-
   return (
     <section className="flex flex-col items-center justify-center gap-6 px-4 py-8 md:py-16">
-      {/* PROFILE + TEXT */}
       <div className="flex flex-col items-center text-center max-w-xl">
         <Image
           alt="That's Me"
@@ -32,13 +30,22 @@ export default function Home() {
       </div>
 
       {/* PROGRAMMING IMAGE */}
-      <Image
-        alt="Programming"
-        className="w-24 md:w-32 h-auto"
-        height={125}
-        src="/programing.png"
-        width={125}
-      />
+      <div className="flex flex-row items-center justify-center gap-4 md:gap-8">
+        <Image
+          alt="Programming"
+          className="w-24 md:w-32 h-auto"
+          height={125}
+          src="/programing.png"
+          width={125}
+        />
+        <Image
+          alt="Nest"
+          className="w-24 md:w-32 h-auto"
+          height={125}
+          src="/nest.svg"
+          width={125}
+        />
+      </div>
 
       {/* TECH STACK */}
       <div className="flex flex-wrap justify-center gap-4">

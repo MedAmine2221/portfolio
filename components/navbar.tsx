@@ -1,4 +1,4 @@
-"use client";;
+"use client";
 import { Link } from "@heroui/link";
 import { Input } from "@heroui/input";
 import NextLink from "next/link";
@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 import NavMenu from "./navbar-menu";
+
 import { siteConfig } from "@/config/site";
 import { GithubIcon, SearchIcon } from "@/components/icons";
 
@@ -29,7 +30,8 @@ export const Navbar = () => {
     <Input
       aria-label="Search"
       classNames={{
-        inputWrapper: "bg-default-100/50 border border-default-200/50 hover:border-default-300 transition-colors",
+        inputWrapper:
+          "bg-default-100/50 border border-default-200/50 hover:border-default-300 transition-colors",
         input: "text-sm",
       }}
       placeholder="Search..."
@@ -81,7 +83,7 @@ export const Navbar = () => {
       {/* First Row: Name and Social Icons - Desktop */}
       <div className="hidden md:flex items-center justify-between max-w-7xl mx-auto px-6 py-3">
         <NextLink
-          className="font-bold text-white text-lg tracking-tight hover:text-primary transition-colors" 
+          className="font-bold text-white text-lg tracking-tight hover:text-primary transition-colors"
           href="/"
         >
           Mohamed Amine LAZREG

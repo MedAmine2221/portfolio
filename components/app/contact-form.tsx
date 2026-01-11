@@ -1,14 +1,15 @@
-"use client";;
+"use client";
 import { Button } from "@heroui/button";
 import { Input, Textarea } from "@heroui/input";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import { FiSend } from "react-icons/fi";
 import { useDispatch, useSelector } from "react-redux";
+import { toast, ToastContainer } from "react-toastify";
+
 import contactSchema from "@/schema/contactSchema";
 import { contactMe } from "@/actions/contact-me";
 import { setLoadingFalse, setLoadingTrue } from "@/redux/loadingReducer";
-import { toast, ToastContainer } from "react-toastify";
 
 export default function ContactForm() {
   const dispatch = useDispatch();
@@ -20,7 +21,7 @@ export default function ContactForm() {
     formState: { errors },
   } = useForm({
     resolver: yupResolver(contactSchema()),
-    defaultValues:{
+    defaultValues: {
       email: "",
       firstName: "",
       lastName: "",
@@ -127,7 +128,7 @@ export default function ContactForm() {
       >
         Send
       </Button>
-      <ToastContainer  theme="dark" closeButton />
+      <ToastContainer closeButton />
     </form>
   );
 }
