@@ -39,7 +39,7 @@ export default function RootLayout({
         // eslint-disable-next-line react/no-unknown-property
         cz-shortcut-listen="true"
       >
-        <Providers>
+        <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <ReduxProviders>
             <div className="relative flex flex-col h-screen">
               <Navbar />
