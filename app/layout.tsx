@@ -18,8 +18,28 @@ export const metadata: Metadata = {
     template: `%s - ${siteConfig.name}`,
   },
   description: siteConfig.description,
+
   icons: {
     icon: "/amine.png",
+  },
+
+  openGraph: {
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: [
+      {
+        url: "https://portfolio-rho-brown-aosm4qjgn0.vercel.app/amine.png",
+        width: 1200,
+        height: 630,
+        alt: "Mohamed Amine Lazreg",
+      },
+    ],
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    images: ["https://portfolio-rho-brown-aosm4qjgn0.vercel.app/amine.png"],
   },
 };
 
