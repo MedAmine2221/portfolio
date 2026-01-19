@@ -76,13 +76,15 @@ export default function RecommendationCarousel() {
                 <Card className="max-w-2xl mx-auto shadow-xl hover:shadow-2xl transition-shadow duration-300">
                   <CardHeader className="justify-between pb-4">
                     <div className="flex gap-4">
-                      <Avatar
-                        isBordered
-                        className="ring-2 ring-primary"
-                        radius="full"
-                        size="lg"
-                        src={rec.avatar}
-                      />
+                      <div className="avatar placeholder">
+                        <div className="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center text-2xl font-bold ring-2 ring-primary">
+                          {rec.username
+                            .split(" ")
+                            .map((n) => n[0])
+                            .join("")
+                            .toUpperCase()}
+                        </div>
+                      </div>
                       <div className="flex flex-col gap-1 items-start justify-center">
                         <Link href={rec.link}>
                           <h4 className="text-lg font-bold text-default-700">

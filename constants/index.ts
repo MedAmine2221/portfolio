@@ -221,32 +221,24 @@ export const recommendations = [
   {
     username: "BOUSSADIA Marami",
     role: "Responsable RH",
-    avatar:
-      "https://media.licdn.com/dms/image/v2/D4D03AQHIYEYKgqACvQ/profile-displayphoto-scale_200_200/B4DZl2qWsVJEAY-/0/1758632439934?e=1768435200&v=beta&t=HNJikU4tiGFJ-DiLTO-RFRtOfmWrYB-sqP6CJPf_r2g",
     recomm: `J'ai eu le plaisir d'accompagner Mohamed Amine Lazreg lors de son stage chez Waialys Group, puis de le voir évoluer en tant que collaborateur au sein de notre équipe. Dès le début, il a fait preuve d'un grand professionnalisme, d'une capacité d'adaptation remarquable et d'un véritable engagement dans ses missions. Son sérieux, sa rigueur et sa capacité à travailler aussi bien de manière autonome qu'en équipe ont fortement contribué à la réussite de plusieurs projets.`,
     link: "https://www.linkedin.com/in/marami-boussadia-/",
   },
   {
     username: "Emna Ben fraj",
     role: "Business Developer",
-    avatar:
-      "https://media.licdn.com/dms/image/v2/D4E03AQF4bSxSuHST1A/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1700154236891?e=1769040000&v=beta&t=4IApImwip3Zw78LmgBe6Z1qbNCTlSnDyZBpjmh1yhTE",
     recomm: `J’ai eu l’occasion de travailler avec Mohamed amine et j’ai beaucoup apprécié sa rigueur, ses compétences techniques et son esprit d’équipe. Toujours disponible pour aider et partager ses connaissances, il a grandement contribué à la réussite de nos projets. Je le recommande vivement pour tout poste de développement.`,
     link: "https://www.linkedin.com/in/ben-fraj-emna/",
   },
   {
     username: "Hamza Khlifi",
     role: "Tech Lead",
-    avatar:
-      "https://media.licdn.com/dms/image/v2/D4D03AQEx_ZkmUbMAHQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1727439466229?e=1768435200&v=beta&t=eVooVt9lAufSN7V1D5bDpqIsCaZZEsx468GIT7mzwqA",
     recomm: `J'ai eu le plaisir de collaborer avec Mohamed Amine depuis son stage de fin d'études (PFE) au sein de notre équipe. Ses compétences techniques et son engagement lui ont permis d'être recruté en tant que développeur JavaScript après son stage. Il a contribué de manière significative au développement de l'application mobile de notre projet principal.`,
     link: "https://www.linkedin.com/in/hamza-khlifi-a8577114b/",
   },
   {
     username: "Bourawi Khlifi",
     role: "Scrum Master",
-    avatar:
-      "https://media.licdn.com/dms/image/v2/D4E03AQFwSHFBLyo5HQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1728251350653?e=1768435200&v=beta&t=fy9V4ESDwA8tLksABNruIWsLdZIZSKSpozkQ39ooYS4",
     recomm: `J'ai eu l'occasion de suivre le parcours de Mohamed Amine depuis son intégration en tant que stagiaire PFE jusqu'à son poste actuel de développeur JavaScript. Grâce à sa motivation et à ses compétences techniques, il a rapidement su gagner la confiance de l'équipe. Toujours impliqué et orienté résultats, Mohamed Amine se distingue par sa rigueur, sa curiosité et son excellent esprit collaboratif.`,
     link: "https://www.linkedin.com/in/bouraoui-khlifi/",
   },
@@ -261,16 +253,12 @@ export const recommendations = [
   {
     username: "Chamseddine Bouhouch",
     role: "Tech Lead",
-    avatar:
-      "https://media.licdn.com/dms/image/v2/D4D03AQHtvou9WzGBBg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1667034830048?e=1769040000&v=beta&t=pozEv-kcwsPNylUOq2VBh2lVBkGfiOrQ-9fAZdGSL9c",
     recomm: `I had the pleasure of working with Mohamed Amine, who consistently showed great potential and a strong eagerness to learn new skills. He contributed effectively to multiple frontend and mobile projects, bringing both technical value and fresh perspectives. Beyond his skills, he’s a genuinely good person who integrated seamlessly into the team and built strong relationships with colleagues.`,
     link: "https://www.linkedin.com/in/chamseddine-bouhouch/",
   },
   {
     username: "Taha Meskini",
     role: "Software Engineer",
-    avatar:
-      "https://media.licdn.com/dms/image/v2/D4D03AQHB22iDGTZhPg/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1726921484883?e=1769040000&v=beta&t=ivhfBgj_y7HmEH_tNL_DB6ezmaWYoI8jVED6yqxWTL4",
     recomm: `I’ve had the opportunity to work alongside Amine since the beginning of our internship, and it has been a great experience. As a mobile developer, he consistently showed strong technical skills, dedication, and a real passion for building high-quality applications.
              Amine is a hardworking teammate who always goes the extra mile to solve problems and deliver results on time. His collaborative spirit and willingness to share knowledge made our teamwork both smooth and enjoyable.
              I highly recommend Amine for any role that requires a motivated and skilled mobile developer.`,
