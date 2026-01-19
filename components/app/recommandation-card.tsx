@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { Card, CardHeader, CardBody, Avatar } from "@heroui/react";
+import { Card, CardHeader, CardBody } from "@heroui/react";
 import Link from "next/link";
 
 import { recommendations } from "@/constants";
@@ -34,7 +34,7 @@ export default function RecommendationCarousel() {
     if (distance < -minSwipeDistance) {
       // swipe right → prev
       setCurrentIndex((prev) =>
-        prev === 0 ? recommendations.length - 1 : prev - 1
+        prev === 0 ? recommendations.length - 1 : prev - 1,
       );
     }
 
