@@ -58,20 +58,26 @@ export default function ZoomImage({
             </ModalHeader>
 
             {/* BODY */}
-            <ModalBody className="flex flex-col items-center gap-4 py-4 sm:py-6">
+            <ModalBody className="flex flex-col justify-center items-center gap-4 py-4 sm:py-6">
               {/* IMAGE */}
               <div className="relative w-full flex items-center justify-center">
                 <Image
                   alt={`Image ${currentIndex + 1}`}
                   height={
-                    projectName === "MAIDE" || projectName === "QUIZ APP Web"
-                      ? 1000
+                    projectName === "MAIDE" ||
+                    projectName === "QUIZ APP Web" ||
+                    projectName === "Mohamed Amine's Portfolio Managment APP" ||
+                    projectName === "DAILY COMPASS APP Management"
+                      ? 1500
                       : 500
                   }
                   src={images[currentIndex]}
                   width={
-                    projectName === "MAIDE" || projectName === "QUIZ APP Web"
-                      ? 1000
+                    projectName === "MAIDE" ||
+                    projectName === "QUIZ APP Web" ||
+                    projectName === "Mohamed Amine's Portfolio Managment APP" ||
+                    projectName === "DAILY COMPASS APP Management"
+                      ? 1500
                       : 500
                   }
                 />
