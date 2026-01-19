@@ -36,6 +36,30 @@ export const projects = [
   },
   {
     index: 3,
+    title: "Mohamed Amine's Portfolio Managment APP",
+    description:
+      "Mohamed Amine's Portfolio Management App helps me manage all my clients who contact me through my portfolio. I can organize my appointments with a calendar, create Google Meet links for meetings, and automatically send confirmation, cancellation, or rescheduling emails. This app makes managing my schedule and client interactions much easier and more efficient.",
+    lien: "https://portfolio-management-app-ten.vercel.app/",
+    img: [
+      "/porfolioAppManagement.png",
+      "/porfolioAppManagement2.png",
+      "/porfolioAppManagement3.png",
+      "/porfolioAppManagement4.png",
+    ],
+    encours: false,
+    githubLink: "https://github.com/MedAmine2221/portfolio-management-app",
+    skills: [
+      "Next JS",
+      "FireBase",
+      "google API",
+      "TailWind",
+      "redux toolkit",
+      "git",
+      "gitHub",
+    ],
+  },
+  {
+    index: 4,
     title: "DAILY COMPASS APP",
     description:
       "An intelligent goal management mobile application that allows you to break down your upcoming goals into tasks, with automatic email notifications sent when a task’s deadline is reached.",
@@ -59,7 +83,7 @@ export const projects = [
     ],
   },
   {
-    index: 4,
+    index: 5,
     title: "DAILY COMPASS APP Management",
     description:
       "Web application for monitoring the 'DAILY COMPASS APP' mobile application.",
@@ -78,7 +102,7 @@ export const projects = [
     ],
   },
   {
-    index: 5,
+    index: 6,
     title: "QUIZ APP Mobile",
     description: "Mobile application for managing skills and updating CVs.",
     lien: "",
@@ -88,7 +112,7 @@ export const projects = [
     skills: ["React Native", "Laravel", "git", "github"],
   },
   {
-    index: 6,
+    index: 7,
     title: "QUIZ APP Web",
     description: "Web application for managing skills and updating CVs",
     lien: "",
