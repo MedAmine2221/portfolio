@@ -1,0 +1,127 @@
+{
+  "chooseLanguage": "Choisissez votre langue",
+  "close": "Fermer",
+  "in_Progress": "En cours",
+  "navbar": {
+    "home": "Accueil",
+    "about": "À propos",
+    "professional_experience": "Expérience professionnelle",
+    "projects": "Projets",
+    "contact": "Contact",
+    "search_placeholder": "Rechercher..."
+  },
+  "chat": {
+    "no_messages": "Aucun message",
+    "ai_chat": "Chat IA",
+    "placeholder": "Qui est Mohamed Amine Lazreg ?"
+  },
+  "home": {
+    "recommendations": "Recommandations",
+    "download_cv": "Télécharger le CV",
+    "hello_world": "Bonjour le monde !",
+    "i_am": "Je suis Mohamed Amine LAZREG",
+    "full_stack_developer": "Développeur Full Stack",
+    "recomm": {
+      "BOUSSADIA_Marami": "J’ai eu le plaisir d’encadrer Mohamed Amine Lazreg lors de son stage au sein du groupe Waialys, puis de le voir évoluer comme membre de notre équipe. Dès le début, il a fait preuve d’un grand professionnalisme, d’une remarquable capacité d’adaptation et d’un réel engagement dans ses missions. Sa rigueur, son sérieux et sa capacité à travailler aussi bien en autonomie qu’en équipe ont largement contribué au succès de plusieurs projets.",
+      "Emna_Ben_fraj": "J’ai eu l’opportunité de travailler avec Mohamed Amine et j’ai beaucoup apprécié sa rigueur, ses compétences techniques et son esprit d’équipe. Toujours disponible pour aider et partager ses connaissances, il a contribué de manière significative à la réussite de nos projets. Je le recommande vivement pour tout poste de développement.",
+      "Hamza_Khlifi": "J’ai eu le plaisir de collaborer avec Mohamed Amine depuis son stage de fin d’études (PFE) au sein de notre équipe. Ses compétences techniques et son engagement ont conduit à son recrutement en tant que développeur JavaScript après son stage. Il a apporté une contribution majeure au développement de l’application mobile de notre projet principal.",
+      "Bourawi_Khlifi": "J’ai eu l’occasion de suivre le parcours de Mohamed Amine depuis son premier stage jusqu’à son poste actuel de développeur JavaScript. Grâce à sa motivation et à ses compétences techniques, il a rapidement gagné la confiance de l’équipe. Toujours impliqué et orienté résultats, Mohamed Amine se distingue par sa rigueur, sa curiosité et son excellent esprit collaboratif.",
+      "Boufares_Mohamed_Amine": "J’ai eu l’opportunité de travailler avec Mohamed Amine sur plusieurs projets frontend. Il fait preuve d’une forte volonté d’apprendre et d’une attitude positive et collaborative au sein de l’équipe. Bien qu’il développe encore ses compétences techniques en React, Next.js et TypeScript, il aborde les défis avec sérieux et détermination. Avec plus d’expérience, il a le potentiel de devenir un développeur frontend solide.",
+      "Chamseddine_Bouhouch": "J’ai eu le plaisir de travailler avec Mohamed Amine, qui a toujours montré un grand potentiel et une forte envie d’apprendre de nouvelles compétences. Il a contribué efficacement à plusieurs projets frontend et mobiles, apportant à la fois une valeur technique et de nouvelles perspectives. Au-delà de ses compétences, c’est une personne agréable qui s’est parfaitement intégrée à l’équipe.",
+      "Taha_Meskini": "J’ai eu l’occasion de travailler aux côtés d’Amine depuis le début de notre stage, et ce fut une excellente expérience. En tant que développeur mobile, il a constamment démontré de solides compétences techniques, un grand engagement et une véritable passion pour le développement d’applications de qualité. Travailleur et toujours prêt à faire des efforts supplémentaires, Amine est un coéquipier fiable que je recommande vivement."
+    }
+  },
+  "about": {
+    "title": "À propos de moi",
+    "desc": "En tant qu’ingénieur informatique et enseignant vacataire, je me considère comme un professionnel attentif, méthodique et passionné par la transmission du savoir. Mon expérience à la fois dans l’industrie et dans l’enseignement m’a permis de développer une approche à la fois rigoureuse et centrée sur l’humain, où la clarté, la patience et l’adaptabilité occupent une place essentielle. J’accorde une grande importance au travail collaboratif, à une communication efficace et à un accompagnement personnalisé, que ce soit avec les étudiants ou au sein des équipes projet. Animé par une curiosité constante et un esprit orienté vers la résolution de problèmes, j’aime transmettre non seulement des compétences techniques, mais aussi des méthodes de travail et un état d’esprit tourné vers l’apprentissage continu et l’innovation.",
+    "formations": {
+      "title_2": "Diplôme National d’Ingénieur en Génie Informatique – Spécialité : Architecture Logicielle",
+      "title_1": "Licence Appliquée en Informatique Industrielle"
+    }
+  },
+  "experiences": [
+    {
+      "date": "09-2025 — Présent",
+      "title": "Enseignant vacataire",
+      "badge": "EN COURS",
+      "items": [
+        "Encadrement des travaux pratiques et des projets étudiants (Programmation, POO).",
+        "Animation de séances axées sur la résolution de problèmes et l’application pratique.",
+        "Suivi pédagogique et accompagnement des étudiants."
+      ]
+    },
+    {
+      "title": "Développeur Full Stack",
+      "items": [
+        "Contribution au développement de SAAS MAI DE, une plateforme SaaS facilitant l’analyse des évaluations payeurs et la conception des essais cliniques.",
+        "Participation au développement de composants pour Educap, une application mobile éducative.",
+        "Développement de DentalFlow, une application mobile médicale dédiée aux prothèses dentaires.",
+        "Développement de Waialys Med, une application mobile médicale."
+      ]
+    },
+    {
+      "title": "Stage de fin d’études ingénieur – Développeur Full Stack",
+      "items": [
+        "Développement d’une application complète de gestion d’entreprise."
+      ]
+    },
+    {
+      "title": "Stage d’été – Développeur Mobile",
+      "localisation":"",
+      "items": [
+        "Développement d’une application mobile de gestion des employés."
+      ]
+    },
+    {
+      "title": "Stage d’été – Développeur Spring Boot",
+      "items": [
+        "Développement d’une application web de gestion des employés et des formations."
+      ]
+    },
+    {
+      "title": "Projet de fin d’études – Licence",
+      "items": [
+        "Conception et développement d’une application de contrôle de robot."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "description": "Cette application mobile éducative permet aux élèves et aux parents de suivre les absences et les sanctions, ainsi que les devoirs. L'application est également accessible aux enseignants, les aidant à gérer la présence des élèves, ajouter et organiser les cours, les devoirs et de nombreux autres modules."
+    },
+    {
+      "description": "Une plateforme conçue pour les administrateurs permettant d’analyser les évaluations passées et actuelles des payeurs ainsi que les exigences en matière de preuves, guidant la conception des essais cliniques et la stratégie d’accès au marché tout au long du cycle de vie du produit."
+    },
+    {
+      "description": "L'application de gestion du portfolio de Mohamed Amine m'aide à gérer tous mes clients qui me contactent via mon portfolio. Je peux organiser mes rendez-vous avec un calendrier, créer des liens Google Meet pour les réunions, et envoyer automatiquement des emails de confirmation, d'annulation ou de replanification. Cette application facilite grandement la gestion de mon emploi du temps et des interactions avec mes clients."
+    },
+    {
+      "description": "Application mobile intelligente de gestion des objectifs qui vous permet de décomposer vos objectifs à venir en tâches, avec envoi automatique d'emails lorsque la date limite d'une tâche est atteinte."
+    },
+    {
+      "description": "Application web pour le suivi de l'application mobile 'DAILY COMPASS APP'."
+    },
+    {
+      "description": "Application mobile pour gérer les compétences et mettre à jour les CV."
+    },
+    {
+      "description": "Application web pour gérer les compétences et mettre à jour les CV."
+    }
+  ],
+  "contact": {
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "object": "Objet",
+    "message": "Message",
+    "send": "Envoyer"
+  },
+  "errors": {
+    "lastName": "Le nom est requis",
+    "firstName": "Le prénom est requis",
+    "email": "L'email est requis",
+    "object": "L'objet est requis",
+    "message": "Le message est requis",
+    "prompt": "Le prompt est requis"
+  }
+
+}

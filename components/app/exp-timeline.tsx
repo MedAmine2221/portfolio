@@ -5,10 +5,13 @@ import { Briefcase, MapPin, Calendar } from "lucide-react";
 import { FaJava } from "react-icons/fa";
 
 import { experiences } from "@/constants";
+import { useTranslations } from "next-intl";
 
 export default function ProExpTimeLine() {
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
   const itemsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const t = useTranslations();
+  const exp = experiences(t);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -36,7 +39,7 @@ export default function ProExpTimeLine() {
       <div className="w-full max-w-5xl space-y-24 px-4">
         {" "}
         {/* Changé de max-w-4xl à max-w-5xl */}
-        {experiences.map((exp, index) => {
+        {exp.map((exp, index) => {
           const Icon = exp.icon;
           const isLeft = index % 2 === 0;
           const isVisible = visibleItems.includes(index);

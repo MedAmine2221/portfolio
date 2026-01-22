@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { Card, CardHeader, CardBody } from "@heroui/react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 import { recommendations } from "@/constants";
 
@@ -11,7 +12,8 @@ export default function RecommendationCarousel() {
   const [touchStartX, setTouchStartX] = useState<number | null>(null);
   const [touchEndX, setTouchEndX] = useState<number | null>(null);
   const minSwipeDistance = 50;
-
+  const t = useTranslations("home");
+  const recomm = recommendations(t);
   const onTouchStart = (e: React.TouchEvent) => {
     setTouchEndX(null);
     setTouchStartX(e.targetTouches[0].clientX);
@@ -28,14 +30,12 @@ export default function RecommendationCarousel() {
 
     if (distance > minSwipeDistance) {
       // swipe left → next
-      setCurrentIndex((prev) => (prev + 1) % recommendations.length);
+      setCurrentIndex((prev) => (prev + 1) % recomm.length);
     }
 
     if (distance < -minSwipeDistance) {
       // swipe right → prev
-      setCurrentIndex((prev) =>
-        prev === 0 ? recommendations.length - 1 : prev - 1,
-      );
+      setCurrentIndex((prev) => (prev === 0 ? recomm.length - 1 : prev - 1));
     }
 
     setIsAutoPlay(false);
@@ -45,11 +45,11 @@ export default function RecommendationCarousel() {
     if (!isAutoPlay) return;
 
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % recommendations.length);
+      setCurrentIndex((prev) => (prev + 1) % recomm.length);
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [isAutoPlay, recommendations.length]);
+  }, [isAutoPlay, recomm.length]);
 
   const goToSlide = (index: any) => {
     setCurrentIndex(index);
@@ -58,7 +58,10 @@ export default function RecommendationCarousel() {
 
   return (
     <div className="w-full max-w-6xl mx-auto px-4 py-8">
-      <h2 className="text-3xl font-bold text-center mb-8">Recommandations</h2>
+      <h2 className="text-3xl font-bold text-center mb-8">
+        {" "}
+        {t("recommendations")}{" "}
+      </h2>
 
       <div className="relative">
         <div
@@ -71,7 +74,7 @@ export default function RecommendationCarousel() {
             className="flex transition-transform duration-500 ease-out"
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
           >
-            {recommendations.map((rec, index) => (
+            {recomm.map((rec, index) => (
               <div key={index} className="w-full flex-shrink-0 px-4">
                 <Card className="max-w-2xl mx-auto shadow-xl hover:shadow-2xl transition-shadow duration-300">
                   <CardHeader className="justify-between pb-4">
@@ -111,7 +114,7 @@ export default function RecommendationCarousel() {
 
       {/* Indicators */}
       <div className="flex justify-center gap-3 mt-8">
-        {recommendations.map((_, index) => (
+        {recomm.map((_, index) => (
           <button
             key={index}
             aria-label={`Go to slide ${index + 1}`}

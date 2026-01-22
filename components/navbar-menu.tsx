@@ -2,12 +2,15 @@
 
 import { Tabs, Tab } from "@heroui/react";
 import { useRouter, usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 import { siteConfig } from "@/config/site";
 
 export default function NavMenu({ isMobile }: { isMobile?: boolean }) {
   const router = useRouter();
   const pathname = usePathname();
+  const t = useTranslations("navbar");
+  const siteConfigRes = siteConfig(t);
 
   return isMobile ? (
     <Tabs
@@ -19,17 +22,18 @@ export default function NavMenu({ isMobile }: { isMobile?: boolean }) {
       variant="bordered"
       onSelectionChange={(key) => router.push(key as string)}
     >
-      {siteConfig.navItems.map((item) => (
+      {siteConfigRes.navItems.map((item) => (
         <Tab key={item.href} title={item.label} />
       ))}
-    </Tabs>):(
+    </Tabs>
+  ) : (
     <Tabs
       aria-label="Navigation"
       selectedKey={pathname}
       variant="bordered"
       onSelectionChange={(key) => router.push(key as string)}
     >
-      {siteConfig.navItems.map((item) => (
+      {siteConfigRes.navItems.map((item) => (
         <Tab key={item.href} title={item.label} />
       ))}
     </Tabs>

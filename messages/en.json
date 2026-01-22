@@ -1,0 +1,126 @@
+{
+  "chooseLanguage": "Choose your language",
+  "in_Progress": "In Progress",
+  "close": "Close",
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "professional_experience": "Professional Experience",
+    "projects": "Projects",
+    "contact": "Contact",
+    "search_placeholder": "Search..."
+  },
+  "chat": {
+    "no_messages": "No messages",
+    "ai_chat": "AI Chat",
+    "placeholder": "Who is Mohamed Amine Lazreg?"
+  },
+  "home": {
+    "recommendations": "Recommendations",
+    "download_cv": "Download CV",
+    "hello_world": "Hello, World!",
+    "i_am": "I'm Mohamed Amine LAZREG",
+    "full_stack_developer": "Full Stack Developer",
+    "recomm": {
+      "BOUSSADIA_Marami": "I had the pleasure of mentoring Mohamed Amine Lazreg during his internship at Waialys Group, and then watching him grow as a member of our team. From the outset, he demonstrated great professionalism, remarkable adaptability, and genuine commitment to his tasks. His diligence, rigor, and ability to work both independently and as part of a team significantly contributed to the success of several projects.",
+      "Emna_Ben_fraj": "I had the opportunity to work with Mohamed Amine and I greatly appreciated his rigor, technical skills, and team spirit. Always available to help and share his knowledge, he made a significant contribution to the success of our projects. I highly recommend him for any development position.",
+      "Hamza_Khlifi": "I had the pleasure of collaborating with Mohamed Amine since his final-year internship (PFE) with our team. His technical skills and dedication led to his recruitment as a JavaScript developer after his internship. He made a significant contribution to the development of the mobile application for our main project.",
+      "Bourawi_Khlifi": "I've had the opportunity to follow Mohamed Amine's career path from his initial internship to his current position as a JavaScript developer. Thanks to his motivation and technical skills, he quickly gained the team's trust. Always committed and results-oriented, Mohamed Amine stands out for his rigor, curiosity, and excellent collaborative spirit.",
+      "Boufares_Mohamed_Amine": "I've had the opportunity to work with Mohamed Amine on several frontend projects. He demonstrates a strong desire to learn and a positive, collaborative attitude within the team. Although he's still developing his technical skills in React, Next.js, and TypeScript, he approaches challenges with dedication and a drive to improve. With more experience, he has the potential to become a solid frontend developer.",
+      "Chamseddine_Bouhouch": "I had the pleasure of working with Mohamed Amine, who consistently showed great potential and a strong eagerness to learn new skills. He contributed effectively to multiple frontend and mobile projects, bringing both technical value and fresh perspectives. Beyond his skills, he’s a genuinely good person who integrated seamlessly into the team and built strong relationships with colleagues.",
+      "Taha_Meskini": "I’ve had the opportunity to work alongside Amine since the beginning of our internship, and it has been a great experience. As a mobile developer, he consistently showed strong technical skills, dedication, and a real passion for building high-quality applications. Amine is a hardworking teammate who always goes the extra mile to solve problems and deliver results on time. His collaborative spirit and willingness to share knowledge made our teamwork both smooth and enjoyable. I highly recommend Amine for any role that requires a motivated and skilled mobile developer."
+    }
+  },
+  "about": {
+    "title": "About Me",
+    "desc": "As a computer engineer and part-time lecturer, I see myself as a professional who is attentive, methodical, and passionate about sharing knowledge. My experience in both industry and education has allowed me to develop an approach that is both rigorous and human-centered, where clarity, patience, and adaptability are at the core of my practice. I place great importance on collaborative work, effective communication, and personalized guidance, whether with students or within project teams. Driven by constant curiosity and a problem-solving mindset, I enjoy imparting not only technical skills but also work methods and a mindset oriented toward continuous learning and innovation.",
+    "formations": {
+      "title_1": "Applied Bachelor's Degree in Industrial Computing",
+      "title_2": "National Engineering Diploma in Software Engineering – Specialization: Software Architecture"
+    }
+  },
+  "experiences": [
+    {
+      "date": "09-2025 — Present",
+      "title": "Part-time Lecturer",
+      "badge": "CURRENT",
+      "items": [
+        "Supervision of practical exercises and student projects (Programming, OOP).",
+        "Facilitation of sessions focused on problem-solving and hands-on application.",
+        "Academic monitoring and student support."
+      ]
+    },
+    {
+      "title": "Full Stack Developer",
+      "items": [
+        "Contributed to the development of SAAS MAI DE, a SaaS platform streamlining payer assessment analysis and supporting clinical trial design and market access strategy.",
+        "Participated in the development of components for Educap, an educational mobile application.",
+        "Developed DentalFlow, a medical mobile application focused on dental prosthetics.",
+        "Developed Waialys Med, a medical mobile application."
+      ]
+    },
+    {
+      "title": "Final-Year Engineering Internship – Full Stack Developer",
+      "items": [
+        "Development of a comprehensive business management application."
+      ]
+    },
+    {
+      "title": "Summer Internship – Mobile Developer",
+      "localisation":"",
+      "items": [
+        "Development of a mobile application for employee management."
+      ]
+    },
+    {
+      "title": "Summer Internship – Spring Boot Developer",
+      "items": [
+        "Development of a web application for employee and training management."
+      ]
+    },
+    {
+      "title": "Bachelor's Final Project",
+      "items": [
+        "Design and development of a robot control application."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "description": "This educational mobile application allows students and parents to track absences and sanctions, as well as homework assignments. The app is also accessible to teachers, helping them manage student attendance, add and organize lessons, homework, and many other modules."
+    },
+    {
+      "description": "A platform designed for administrators that enables analysis of past and current payer assessments and evidence requirements, guiding clinical trial design and market access strategy throughout the product lifecycle."
+    },
+    {
+      "description": "Mohamed Amine's Portfolio Management App helps me manage all my clients who contact me through my portfolio. I can organize my appointments with a calendar, create Google Meet links for meetings, and automatically send confirmation, cancellation, or rescheduling emails. This app makes managing my schedule and client interactions much easier and more efficient."
+    },
+    {
+      "description": "An intelligent goal management mobile application that allows you to break down your upcoming goals into tasks, with automatic email notifications sent when a task’s deadline is reached."
+    },
+    {
+      "description": "Web application for monitoring the 'DAILY COMPASS APP' mobile application."
+    },
+    {
+      "description": "Mobile application for managing skills and updating CVs."
+    },
+    {
+      "description": "Web application for managing skills and updating CVs."
+    }
+  ],
+  "contact": {
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "object": "Object",
+    "message": "Message",
+    "send": "Send"
+  },
+  "errors": {
+    "lastName": "Last Name is required",
+    "firstName": "First Name is required",
+    "email": "Email is required",
+    "object": "Object is required",
+    "message": "Message is required",
+    "prompt": "Prompt is required"
+  }
+}

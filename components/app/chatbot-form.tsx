@@ -9,6 +9,7 @@ import { useForm } from "react-hook-form";
 import { MessageSquareOff } from "lucide-react";
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
+import { useTranslations } from "next-intl";
 
 import { gemini, renderMessageText } from "@/utils/functions";
 import chatbotSchema from "@/schema/chatbotSchema";
@@ -24,6 +25,9 @@ export default function Chatbot() {
   const [messages, setMessages] = useState<Message[]>([]);
   const loading = useSelector((state: any) => state.loading.loading);
   const dispatch = useDispatch();
+  const t = useTranslations("navbar");
+  const tChat = useTranslations("chat");
+  const tError = useTranslations("errors");
   const bottomRef = useRef<HTMLDivElement | null>(null);
   const {
     register,
@@ -31,7 +35,7 @@ export default function Chatbot() {
     formState: { errors },
     reset,
   } = useForm({
-    resolver: yupResolver(chatbotSchema()),
+    resolver: yupResolver(chatbotSchema(tError)),
     defaultValues: {
       prompt: "",
     },
@@ -65,7 +69,7 @@ export default function Chatbot() {
 
       reset();
 
-      const resp = await gemini(data.prompt);
+      const resp = await gemini(data.prompt, t);
 
       if (resp === null) {
         setMessages((prev) =>
@@ -122,7 +126,7 @@ export default function Chatbot() {
         ) : (
           <div className="flex flex-col justify-center items-center">
             <MessageSquareOff size={60} />
-            <p className="text-2xl my-4">No Messages</p>
+            <p className="text-2xl my-4">{tChat("no_messages")}</p>
           </div>
         )}
         <div ref={bottomRef} />
@@ -135,7 +139,7 @@ export default function Chatbot() {
             isInvalid={!!errors?.prompt}
             labelPlacement="outside"
             name="prompt"
-            placeholder="Who is Mohamed Amine Lazreg ?"
+            placeholder={tChat("placeholder")}
             startContent={
               <FaRobot className="text-2xl text-default-400 pointer-events-none shrink-0" />
             }

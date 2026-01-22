@@ -8,10 +8,12 @@ import {
   useDisclosure,
 } from "@heroui/react";
 import { FiMessageSquare } from "react-icons/fi";
+import { useTranslations } from "next-intl";
 
 import Chatbot from "./chatbot-form";
 export default function ChatFloating() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const t = useTranslations("chat");
 
   return (
     <>
@@ -32,7 +34,7 @@ export default function ChatFloating() {
         <ModalContent>
           {() => (
             <>
-              <ModalHeader>AI Chat 🤖</ModalHeader>
+              <ModalHeader> {t("ai_chat")}🤖</ModalHeader>
               <ModalBody>
                 <Chatbot />
               </ModalBody>

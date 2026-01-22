@@ -1,0 +1,126 @@
+{
+  "chooseLanguage": "Scegli la tua lingua",
+  "close": "Chiudi",
+  "in_Progress": "In corso",
+  "navbar": {
+    "home": "Benvenuto",
+    "about": "Chi sono",
+    "professional_experience": "Esperienza professionale",
+    "projects": "Progetti",
+    "contact": "Contatto",
+    "search_placeholder": "Cerca..."
+  },
+  "chat": {
+    "no_messages": "Nessun messaggio",
+    "ai_chat": "Chatta IA",
+    "placeholder": "Chi è Mohamed Amine Lazreg?"
+  },
+  "home": {
+    "recommendations": "Raccomandazioni",
+    "download_cv": "Scarica CV",
+    "hello_world": "Ciao, mondo!",
+    "i_am": "Sono Mohamed Amine LAZREG",
+    "full_stack_developer": "Sviluppatore Full Stack",
+    "recomm": {
+      "BOUSSADIA_Marami": "Ho avuto il piacere di seguire Mohamed Amine Lazreg durante il suo stage presso Waialys Group e di vederlo crescere come membro del nostro team. Fin dall’inizio ha dimostrato grande professionalità, notevole capacità di adattamento e un forte impegno nel suo lavoro. La sua precisione e la sua capacità di lavorare sia in autonomia che in team hanno contribuito in modo significativo al successo di diversi progetti.",
+      "Emna_Ben_fraj": "Ho avuto l’opportunità di lavorare con Mohamed Amine e ho apprezzato molto il suo rigore, le sue competenze tecniche e il suo spirito di squadra. Sempre disponibile ad aiutare e condividere le sue conoscenze, ha contribuito in modo importante al successo dei nostri progetti. Lo raccomando vivamente per qualsiasi posizione di sviluppo.",
+      "Hamza_Khlifi": "Ho avuto il piacere di collaborare con Mohamed Amine fin dal suo tirocinio di fine studi (PFE). Le sue competenze tecniche e la sua dedizione hanno portato alla sua assunzione come sviluppatore JavaScript. Ha contribuito in modo significativo allo sviluppo dell’app mobile del nostro progetto principale.",
+      "Bourawi_Khlifi": "Ho seguito il percorso professionale di Mohamed Amine dal suo primo stage fino al suo attuale ruolo di sviluppatore JavaScript. Grazie alla sua motivazione e alle sue competenze tecniche, ha rapidamente guadagnato la fiducia del team. Si distingue per la sua precisione, curiosità e ottimo spirito collaborativo.",
+      "Boufares_Mohamed_Amine": "Ho lavorato con Mohamed Amine su diversi progetti frontend. Dimostra una grande voglia di imparare e un atteggiamento positivo e collaborativo. Anche se sta ancora sviluppando le sue competenze in React, Next.js e TypeScript, affronta le sfide con impegno e determinazione. Con più esperienza, ha il potenziale per diventare un solido sviluppatore frontend.",
+      "Chamseddine_Bouhouch": "Ho avuto il piacere di lavorare con Mohamed Amine, che ha sempre mostrato grande potenziale e una forte volontà di apprendere nuove competenze. Ha contribuito efficacemente a diversi progetti frontend e mobile, apportando valore tecnico e nuove idee. Inoltre, è una persona positiva che si integra facilmente nel team.",
+      "Taha_Meskini": "Ho lavorato con Amine fin dall’inizio del nostro stage ed è stata un’ottima esperienza. Come sviluppatore mobile, ha sempre dimostrato solide competenze tecniche, dedizione e passione per applicazioni di qualità. È un collega affidabile e motivato che consiglio vivamente."
+    }
+  },
+  "about": {
+    "title": "Chi sono",
+    "desc": "In qualità di ingegnere informatico e docente a contratto, mi considero un professionista attento, metodico e appassionato della condivisione del sapere. La mia esperienza sia nel settore industriale che in quello educativo mi ha permesso di sviluppare un approccio al tempo stesso rigoroso e centrato sulla persona, in cui chiarezza, pazienza e capacità di adattamento sono al centro della mia pratica. Do grande importanza al lavoro collaborativo, a una comunicazione efficace e a un accompagnamento personalizzato, sia con gli studenti sia all’interno dei team di progetto. Animato da una curiosità costante e da una mentalità orientata alla risoluzione dei problemi, mi piace trasmettere non solo competenze tecniche, ma anche metodi di lavoro e un approccio orientato all’apprendimento continuo e all’innovazione.",
+    "formations": {
+      "title_2": "Diploma Nazionale di Ingegneria Informatica – Specializzazione: Architettura Software",
+      "title_1": "Laurea Applicata in Informatica Industriale"
+    }
+  },
+  "experiences": [
+    {
+      "date": "09-2025 — Presente",
+      "title": "Docente a contratto",
+      "badge": "IN CORSO",
+      "items": [
+        "Supervisione di esercitazioni pratiche e progetti degli studenti (Programmazione, OOP).",
+        "Conduzione di sessioni focalizzate sulla risoluzione dei problemi e sull’applicazione pratica.",
+        "Monitoraggio accademico e supporto agli studenti."
+      ]
+    },
+    {
+      "title": "Sviluppatore Full Stack",
+      "items": [
+        "Contributo allo sviluppo di SAAS MAI DE, una piattaforma SaaS per l’analisi delle valutazioni dei payer e la progettazione di studi clinici.",
+        "Partecipazione allo sviluppo di componenti per Educap, un’app mobile educativa.",
+        "Sviluppo di DentalFlow, un’app mobile medica focalizzata sulle protesi dentarie.",
+        "Sviluppo di Waialys Med, un’applicazione mobile medica."
+      ]
+    },
+    {
+      "title": "Tirocinio di fine studi in Ingegneria – Sviluppatore Full Stack",
+      "items": [
+        "Sviluppo di un’applicazione completa per la gestione aziendale."
+      ]
+    },
+    {
+      "title": "Tirocinio estivo – Sviluppatore Mobile",
+      "localisation":"",
+      "items": [
+        "Sviluppo di un’applicazione mobile per la gestione dei dipendenti."
+      ]
+    },
+    {
+      "title": "Tirocinio estivo – Sviluppatore Spring Boot",
+      "items": [
+        "Sviluppo di un’applicazione web per la gestione dei dipendenti e delle formazioni."
+      ]
+    },
+    {
+      "title": "Progetto di fine laurea",
+      "items": [
+        "Progettazione e sviluppo di un’applicazione per il controllo di robot."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "description": "Questa applicazione mobile educativa consente a studenti e genitori di monitorare assenze e sanzioni, nonché i compiti. L'app è anche accessibile agli insegnanti, aiutandoli a gestire la presenza degli studenti, aggiungere e organizzare lezioni, compiti e molti altri moduli."
+    },
+    {
+      "description": "Una piattaforma progettata per gli amministratori che consente di analizzare le valutazioni dei pagatori passate e attuali e i requisiti di prova, guidando la progettazione degli studi clinici e la strategia di accesso al mercato durante l'intero ciclo di vita del prodotto."
+    },
+    {
+      "description": "L'app di gestione del portfolio di Mohamed Amine mi aiuta a gestire tutti i miei clienti che mi contattano tramite il mio portfolio. Posso organizzare gli appuntamenti con un calendario, creare link Google Meet per le riunioni e inviare automaticamente email di conferma, cancellazione o riprogrammazione. Questa app rende molto più facile ed efficiente gestire il mio programma e le interazioni con i clienti."
+    },
+    {
+      "description": "Applicazione mobile intelligente per la gestione degli obiettivi che ti consente di suddividere i tuoi obiettivi imminenti in attività, con notifiche email automatiche inviate quando viene raggiunta la scadenza di un'attività."
+    },
+    {
+      "description": "Applicazione web per monitorare l'app mobile 'DAILY COMPASS APP'."
+    },
+    {
+      "description": "Applicazione mobile per gestire le competenze e aggiornare i CV."
+    },
+    {
+      "description": "Applicazione web per gestire le competenze e aggiornare i CV."
+    }
+  ],
+  "contact": {
+    "firstName": "Nome",
+    "lastName": "Cognome",
+    "object": "Oggetto",
+    "message": "Messaggio",
+    "send": "Invia"
+  },
+  "errors": {
+    "lastName": "Il cognome è obbligatorio",
+    "firstName": "Il nome è obbligatorio",
+    "email": "L'email è obbligatoria",
+    "object": "L'oggetto è obbligatorio",
+    "message": "Il messaggio è obbligatorio",
+    "prompt": "Il prompt è obbligatorio"
+  } 
+}

@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { FiSend } from "react-icons/fi";
 import { useDispatch, useSelector } from "react-redux";
 import { toast, ToastContainer } from "react-toastify";
+import { useTranslations } from "next-intl";
 
 import contactSchema from "@/schema/contactSchema";
 import { contactMe } from "@/actions/contact-me";
@@ -13,6 +14,8 @@ import { setLoadingFalse, setLoadingTrue } from "@/redux/loadingReducer";
 
 export default function ContactForm() {
   const dispatch = useDispatch();
+  const t = useTranslations("contact");
+  const tError = useTranslations("errors");
   const loading = useSelector((state: any) => state.loading.loading);
   const {
     register,
@@ -20,7 +23,7 @@ export default function ContactForm() {
     handleSubmit,
     formState: { errors },
   } = useForm({
-    resolver: yupResolver(contactSchema()),
+    resolver: yupResolver(contactSchema(tError)),
     defaultValues: {
       email: "",
       firstName: "",
@@ -55,10 +58,10 @@ export default function ContactForm() {
           }}
           errorMessage={errors?.firstName?.message}
           isInvalid={!!errors?.firstName}
-          label={"First Name"}
+          label={t("firstName")}
           labelPlacement="outside"
           name="firstName"
-          placeholder="First Name"
+          placeholder={t("firstName")}
           type="text"
         />
         <div className="mx-2" />
@@ -69,10 +72,10 @@ export default function ContactForm() {
           }}
           errorMessage={errors?.lastName?.message}
           isInvalid={!!errors?.lastName}
-          label={"Last Name"}
+          label={t("lastName")}
           labelPlacement="outside"
           name="lastName"
-          placeholder="Last Name"
+          placeholder={t("lastName")}
           type="text"
         />
       </div>
@@ -98,10 +101,10 @@ export default function ContactForm() {
         }}
         errorMessage={errors?.object?.message}
         isInvalid={!!errors?.object}
-        label={"Object"}
+        label={t("object")}
         labelPlacement="outside"
         name="object"
-        placeholder="Object"
+        placeholder={t("object")}
         type="text"
       />
       <div className="my-4" />
@@ -114,10 +117,10 @@ export default function ContactForm() {
         }}
         errorMessage={errors?.message?.message}
         isInvalid={!!errors?.message}
-        label="Message"
+        label={t("message")}
         labelPlacement="outside"
         name="message"
-        placeholder="Enter your Message"
+        placeholder={t("message")}
       />
       <div className="my-10" />
       <Button
@@ -126,7 +129,7 @@ export default function ContactForm() {
         endContent={<FiSend />}
         type="submit"
       >
-        Send
+        {t("send")}
       </Button>
       <ToastContainer closeButton />
     </form>

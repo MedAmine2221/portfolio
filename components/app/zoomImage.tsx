@@ -10,6 +10,7 @@ import {
 import { useState, useEffect } from "react";
 import { FiArrowRight, FiArrowLeft } from "react-icons/fi";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 import { ZoomImageProps } from "@/constants/interface";
 
@@ -20,6 +21,7 @@ export default function ZoomImage({
   projectName,
   projectDec,
 }: ZoomImageProps) {
+  const t = useTranslations();
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -134,7 +136,7 @@ export default function ZoomImage({
                 variant="light"
                 onPress={onClose}
               >
-                Close
+                {t("close")}
               </Button>
             </ModalFooter>
           </>

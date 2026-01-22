@@ -4,11 +4,14 @@ import { Card, CardFooter, CardHeader } from "@heroui/card";
 import { Button, Image } from "@heroui/react";
 import { useState, useEffect, useRef, useMemo } from "react";
 import { FiZoomIn } from "react-icons/fi";
+import { useTranslations } from "next-intl";
 
 import { projects } from "@/constants";
 import ZoomImage from "@/components/app/zoomImage";
 
 export default function ProjectsList() {
+  const t = useTranslations();
+  const projectList = projects(t);
   const [visibleCards, setVisibleCards] = useState<number[]>([]);
   const [cardScales, setCardScales] = useState<Record<number, number>>({});
   const [currentProject, setCurrentProject] = useState<number | null>(null);
@@ -16,7 +19,9 @@ export default function ProjectsList() {
   const cardRefs = useRef<HTMLDivElement[]>([]);
 
   const projectSelected = useMemo(() => {
-    const currentProj = projects.find((item) => item.index === currentProject);
+    const currentProj = projectList.find(
+      (item) => item.index === currentProject,
+    );
 
     return {
       img: currentProj?.img,
@@ -27,7 +32,7 @@ export default function ProjectsList() {
 
   /* Reveal animation */
   useEffect(() => {
-    projects.forEach((_, index) => {
+    projectList.forEach((_, index) => {
       setTimeout(() => {
         setVisibleCards((prev) => [...prev, index]);
       }, index * 200);
@@ -73,7 +78,7 @@ export default function ProjectsList() {
   return (
     <>
       <div className="max-w-7xl mx-auto space-y-14 px-4 sm:px-6">
-        {projects.map((item, index) => {
+        {projectList.map((item, index) => {
           const isVisible = visibleCards.includes(index);
           const scale = cardScales[index] || 0.92;
 
@@ -127,7 +132,7 @@ export default function ProjectsList() {
 
                     {item.encours && (
                       <span className="bg-yellow-500 text-black text-xs px-3 py-1 rounded-full font-semibold">
-                        In Progress
+                        {t("in_Progress")}
                       </span>
                     )}
                   </div>

@@ -2,11 +2,14 @@
 
 import { useState } from "react";
 import { Briefcase, MapPin, Calendar } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 import { formations } from "@/constants";
 
 export default function FormationsTimeLine() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const t = useTranslations("about");
+  const form = formations(t);
 
   return (
     <div className="relative py-8">
@@ -17,7 +20,7 @@ export default function FormationsTimeLine() {
       <div className="md:hidden absolute left-7 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-500 via-indigo-500 to-pink-500" />
 
       <div className="space-y-12 md:space-y-16">
-        {formations.map((exp, index) => {
+        {form.map((exp, index) => {
           const isLeft = index % 2 === 0;
 
           return (

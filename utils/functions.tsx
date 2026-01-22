@@ -36,7 +36,9 @@ const ai = new GoogleGenAI({
 
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
-export async function gemini(prompt: string) {
+export async function gemini(prompt: string, t: any) {
+  const siteConfigRes = siteConfig(t);
+  const knowledge = STATIC_KNOWLEDGE(siteConfigRes);
   let attempts = 0;
   const maxAttempts = 3;
   const baseDelay = 2000;
@@ -44,7 +46,7 @@ export async function gemini(prompt: string) {
 
   const fullPrompt = `
   ### CONTEXTE FIXE ###
-  Développeur: ${JSON.stringify(STATIC_KNOWLEDGE.developer)}
+  Développeur: ${JSON.stringify(knowledge.developer)}
 
   ### QUESTION UTILISATEUR ###
   ${prompt}
@@ -106,20 +108,4 @@ export async function gemini(prompt: string) {
   }
 
   return "Je ne peux pas répondre pour le moment. Veuillez réessayer plus tard.";
-}
-
-let lastCallTime = 0;
-const MIN_CALL_INTERVAL = 3000;
-
-export async function throttledGemini(prompt: string) {
-  const now = Date.now();
-  const timeSinceLastCall = now - lastCallTime;
-
-  if (timeSinceLastCall < MIN_CALL_INTERVAL) {
-    await delay(MIN_CALL_INTERVAL - timeSinceLastCall);
-  }
-
-  lastCallTime = Date.now();
-
-  return gemini(prompt);
 }

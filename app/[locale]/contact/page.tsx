@@ -1,15 +1,18 @@
-"use client";;
+"use client";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 import ContactForm from "@/components/app/contact-form";
 
 export default function PricingPage() {
+  const t = useTranslations("navbar");
+
   return (
     <div className="items-center justify-center">
       <div className="flex flex-col">
         <div className="text-center mb-24 space-y-6">
           <h1 className="text-2xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400">
-            Contact
+            {t("contact")}
           </h1>
         </div>
         <Image alt="That's Me" height={500} src="/amine.png" width={500} />

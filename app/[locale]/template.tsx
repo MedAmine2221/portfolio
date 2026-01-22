@@ -10,12 +10,12 @@ export default function Template({ children }: { children: React.ReactNode }) {
     <AnimatePresence mode="wait">
       <motion.div
         key={pathname}
-        animate={{ 
+        animate={{
           opacity: 1,
           y: 0,
-          scale: 1
+          scale: 1,
         }}
-        exit={{ 
+        exit={{
           opacity: 0,
           y: -150,
           scale: 0.95,
