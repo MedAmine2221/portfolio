@@ -14,6 +14,8 @@ import { useTranslations } from "next-intl";
 import { gemini, renderMessageText } from "@/utils/functions";
 import chatbotSchema from "@/schema/chatbotSchema";
 import { setLoadingFalse, setLoadingTrue } from "@/redux/loadingReducer";
+import { PathnameContext } from "next/dist/shared/lib/hooks-client-context.shared-runtime";
+import { usePathname } from "next/navigation";
 
 type Message = {
   id: number;
@@ -23,6 +25,7 @@ type Message = {
 
 export default function Chatbot() {
   const [messages, setMessages] = useState<Message[]>([]);
+  const pathname = usePathname();
   const loading = useSelector((state: any) => state.loading.loading);
   const dispatch = useDispatch();
   const t = useTranslations("navbar");
@@ -70,7 +73,7 @@ export default function Chatbot() {
 
       reset();
 
-      const resp = await gemini(data.prompt, t);
+      const resp = await gemini(data.prompt, t, pathname);
 
       if (resp === null) {
         setMessages((prev) =>
