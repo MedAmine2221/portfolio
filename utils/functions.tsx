@@ -36,9 +36,9 @@ const ai = new GoogleGenAI({
 
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
-export async function gemini(prompt: string, t: any, pathname? : string) {
-  console.log("ttt ",pathname);
-  
+export async function gemini(prompt: string, t: any, pathname?: string) {
+  console.log(pathname);
+
   const siteConfigRes = siteConfig(t);
   const knowledge = STATIC_KNOWLEDGE(siteConfigRes);
   let attempts = 0;
@@ -47,7 +47,13 @@ export async function gemini(prompt: string, t: any, pathname? : string) {
   const maxDelay = 10000;
 
   const fullPrompt = `
-  ${pathname === "it" ? "repondre en italien" : pathname === "en" ? "repondre en anglais" : "repondre en français"}
+  ${
+    pathname?.startsWith("/it")
+      ? "repondre en italien"
+      : pathname?.startsWith("/en")
+        ? "repondre en anglais"
+        : "repondre en français"
+  }
   ### CONTEXTE FIXE ###
   Développeur: ${JSON.stringify(knowledge.developer)}
 
