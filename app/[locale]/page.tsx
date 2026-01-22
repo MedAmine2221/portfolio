@@ -9,6 +9,7 @@ import { siteConfig } from "@/config/site";
 import { GithubIcon } from "@/components/icons";
 import TypingText from "@/components/app/typing-text";
 import RecommondationCard from "@/components/app/recommandation-card";
+import TypingTextEffect from "@/components/app/typing-text-effect";
 
 export default function Home() {
   const t = useTranslations("home");
@@ -19,6 +20,18 @@ export default function Home() {
   return (
     <section className="flex flex-col items-center justify-center gap-6 px-4 py-8 md:py-16">
       <div className="flex flex-col items-center text-center max-w-xl">
+        <div className="mt-4 space-y-1 text-sm md:text-base">
+          <TypingText text={`${t("hello_world")}`} />
+          <br />
+          <TypingText text={`${t("i_am")}`} />
+          <br />
+          <TypingTextEffect
+            texts={[
+              `${t("full_stack_developer")}`,
+              `${t("enseignant_vacataire")}`,
+            ]}
+          />
+        </div>
         <Image
           alt="That's Me"
           className="md:w-200 lg:w-1000"
@@ -26,14 +39,6 @@ export default function Home() {
           src="/amine.png"
           width={300}
         />
-
-        <div className="mt-4 space-y-1 text-sm md:text-base">
-          <TypingText text={`> ${t("hello_world")}`} />
-          <br />
-          <TypingText text={`> ${t("i_am")},`} />
-          <br />
-          <TypingText text={`> ${t("full_stack_developer")}.`} />
-        </div>
       </div>
 
       {/* PROGRAMMING IMAGE */}
