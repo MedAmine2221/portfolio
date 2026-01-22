@@ -47,7 +47,7 @@ export async function gemini(prompt: string, t: any, pathname? : string) {
   const maxDelay = 10000;
 
   const fullPrompt = `
-  ${pathname ? "repondre avec cette langue" + pathname : "repondre en anglais " }
+  ${pathname === "it" ? "repondre en italien" : pathname === "en" ? "repondre en anglais" : "repondre en français"}
   ### CONTEXTE FIXE ###
   Développeur: ${JSON.stringify(knowledge.developer)}
 
