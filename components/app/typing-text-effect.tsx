@@ -13,7 +13,7 @@ export default function TypingTextEffect({
   texts,
   typingSpeed = 80,
   deletingSpeed = 50,
-  pauseDelay = 1200,
+  pauseDelay = 2400,
 }: TypingTextProps) {
   const [textIndex, setTextIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
@@ -54,7 +54,7 @@ export default function TypingTextEffect({
   ]);
 
   return (
-    <i className="font-mono text-4xl font-bold text-zinc-100">
+    <i className="font-mono text-4xl font-bold text-indigo-400">
       {displayedText}
       <span className="animate-pulse">|</span>
     </i>
