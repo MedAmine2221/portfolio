@@ -28,6 +28,7 @@ export default function Chatbot() {
   const t = useTranslations("navbar");
   const tChat = useTranslations("chat");
   const tError = useTranslations("errors");
+  const tTyping = useTranslations();
   const bottomRef = useRef<HTMLDivElement | null>(null);
   const {
     register,
@@ -63,7 +64,7 @@ export default function Chatbot() {
         {
           id: botMessageId,
           sender: "bot",
-          text: "Typing...",
+          text: tTyping("typing") + "...",
         },
       ]);
 
