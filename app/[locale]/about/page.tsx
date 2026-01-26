@@ -28,7 +28,6 @@ export default function About() {
       {/* Timeline */}
       <div className="relative">
         {/* Vertical line */}
-        <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-purple-500 via-purple-400 to-transparent md:-translate-x-1/2" />
         <FormationsTimeLine />
       </div>
     </section>

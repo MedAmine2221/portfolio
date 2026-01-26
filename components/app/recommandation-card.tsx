@@ -12,8 +12,10 @@ export default function RecommendationCarousel() {
   const [touchStartX, setTouchStartX] = useState<number | null>(null);
   const [touchEndX, setTouchEndX] = useState<number | null>(null);
   const minSwipeDistance = 50;
+
   const t = useTranslations("home");
   const recomm = recommendations(t);
+
   const onTouchStart = (e: React.TouchEvent) => {
     setTouchEndX(null);
     setTouchStartX(e.targetTouches[0].clientX);
@@ -25,16 +27,13 @@ export default function RecommendationCarousel() {
 
   const onTouchEnd = () => {
     if (!touchStartX || !touchEndX) return;
-
     const distance = touchStartX - touchEndX;
 
     if (distance > minSwipeDistance) {
-      // swipe left → next
       setCurrentIndex((prev) => (prev + 1) % recomm.length);
     }
 
     if (distance < -minSwipeDistance) {
-      // swipe right → prev
       setCurrentIndex((prev) => (prev === 0 ? recomm.length - 1 : prev - 1));
     }
 
@@ -51,16 +50,15 @@ export default function RecommendationCarousel() {
     return () => clearInterval(interval);
   }, [isAutoPlay, recomm.length]);
 
-  const goToSlide = (index: any) => {
+  const goToSlide = (index: number) => {
     setCurrentIndex(index);
     setIsAutoPlay(false);
   };
 
   return (
-    <div className="w-full max-w-6xl mx-auto px-4 py-8">
-      <h2 className="text-3xl font-bold text-center mb-8">
-        {" "}
-        {t("recommendations")}{" "}
+    <div className="w-full max-w-6xl mx-auto px-4 py-6 md:py-8">
+      <h2 className="text-3xl font-bold text-center mb-5 md:mb-8">
+        {t("recommendations")}
       </h2>
 
       <div className="relative">
@@ -75,7 +73,7 @@ export default function RecommendationCarousel() {
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
           >
             {recomm.map((rec, index) => (
-              <div key={index} className="w-full flex-shrink-0 px-4">
+              <div key={index} className="w-full flex-shrink-0 px-2 md:px-4">
                 <Card className="max-w-2xl mx-auto shadow-xl hover:shadow-2xl transition-shadow duration-300">
                   <CardHeader className="justify-between pb-4">
                     <div className="flex gap-4">
@@ -88,6 +86,7 @@ export default function RecommendationCarousel() {
                             .toUpperCase()}
                         </div>
                       </div>
+
                       <div className="flex flex-col gap-1 items-start justify-center">
                         <Link href={rec.link}>
                           <h4 className="text-lg font-bold text-default-700">
@@ -100,6 +99,7 @@ export default function RecommendationCarousel() {
                       </div>
                     </div>
                   </CardHeader>
+
                   <CardBody className="px-6 py-4">
                     <p className="text-default-600 leading-relaxed text-justify">
                       {rec.recomm}
@@ -113,7 +113,7 @@ export default function RecommendationCarousel() {
       </div>
 
       {/* Indicators */}
-      <div className="flex justify-center gap-3 mt-8">
+      <div className="flex justify-center gap-3 mt-4 md:mt-8">
         {recomm.map((_, index) => (
           <button
             key={index}

@@ -37,8 +37,6 @@ const ai = new GoogleGenAI({
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 export async function gemini(prompt: string, t: any, pathname?: string) {
-  console.log(pathname);
-
   const siteConfigRes = siteConfig(t);
   const knowledge = STATIC_KNOWLEDGE(siteConfigRes);
   let attempts = 0;

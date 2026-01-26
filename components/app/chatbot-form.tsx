@@ -10,12 +10,11 @@ import { MessageSquareOff } from "lucide-react";
 import Image from "next/image";
 import { useDispatch, useSelector } from "react-redux";
 import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 
 import { gemini, renderMessageText } from "@/utils/functions";
 import chatbotSchema from "@/schema/chatbotSchema";
 import { setLoadingFalse, setLoadingTrue } from "@/redux/loadingReducer";
-import { PathnameContext } from "next/dist/shared/lib/hooks-client-context.shared-runtime";
-import { usePathname } from "next/navigation";
 
 type Message = {
   id: number;
