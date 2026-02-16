@@ -17,5 +17,6 @@ export const contactMe = async (data: any) => {
     object: data.object,
     message: data.message,
     createdAt: new Date().toISOString(),
+    status: "Waiting",
   });
 };
