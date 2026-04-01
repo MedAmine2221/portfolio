@@ -144,7 +144,7 @@ export const experiences = (t: any) => [
       t("experiences.1.items.1"),
       t("experiences.1.items.2"),
     ],
-    skills: ["JAVA", "POO"],
+    skills: ["JAVA", "POO", "Git", "Trello", "Slack"],
   },
   {
     date: "07-2024 — 07-2025",
