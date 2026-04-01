@@ -296,6 +296,17 @@ export const STATIC_KNOWLEDGE = (siteConfig: any) => {
         "Git, Linux",
       ],
       experience: [
+        `Current 03-2026 — Present Full Stack Trainer – Gate Training
+          "Supervision of final-year projects (Capstone projects).",
+          "Facilitation of sessions focused on problem-solving and practical application.",
+          "Academic monitoring and personalized student support.",
+          "Design and delivery of Full Stack development training programs."
+        `,
+        `Current 09-2025 — Present Part-time Lecturer ISSAT Sousse
+          "Supervision of practical exercises and student projects (Programming, OOP, Git, Trello, Slack).",
+          "Facilitation of sessions focused on problem-solving and hands-on application.",
+          "Academic monitoring and student support."
+        `,
         `07/2024 – 07/2025 Développeur FullStack JS – Waialys DEV
         Participation au développement d’applications web et mobiles : Next.js, Nest.js,
         React Native.
