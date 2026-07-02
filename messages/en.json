@@ -21,7 +21,7 @@
     "download_cv": "Download CV",
     "hello_world": "Hello, World!",
     "i_am": "I'm Mohamed Amine LAZREG",
-    "enseignant_vacataire": "Part-time teacher",
+    "enseignant_vacataire": "Full-Stack Trainer",
     "full_stack_developer": "Full Stack Developer",
     "recomm": {
       "BOUSSADIA_Marami": "I had the pleasure of mentoring Mohamed Amine Lazreg during his internship at Waialys Group, and then watching him grow as a member of our team. From the outset, he demonstrated great professionalism, remarkable adaptability, and genuine commitment to his tasks. His diligence, rigor, and ability to work both independently and as part of a team significantly contributed to the success of several projects.",
@@ -119,6 +119,12 @@
     },
     {
       "description": "Web application for managing skills and updating CVs."
+    },
+    {
+      "description": "As part of supervising a summer internship, the project consists of developing an intelligent web application dedicated to managing wedding venue reservations and wedding packages. The application includes two artificial intelligence modules. 1. Client Module: an intelligent wedding advisor that assists future couples in planning their wedding. Users describe their preferences (wedding style, budget, number of guests, location, atmosphere, etc.), and the system recommends the most suitable wedding venues. It also suggests pastries, music bands, and other services that best match the users' requirements. 2. Administrator Module: an intelligent dashboard designed to analyze customer reviews and feedback. Using artificial intelligence, the system performs sentiment analysis, identifies strengths and areas for improvement, and generates statistics to help managers optimize their services."
+    },
+    {
+      "description": "As part of supervising an end-of-study internship (Final Year Project), the project aims to develop an intelligent web application for managing technical documents and APIs. The application is based on three main user roles: Administrator, Developer, and Client. Both administrators and developers can create and manage technical documents and associate them with their corresponding APIs. Each document is linked to one or more APIs to provide centralized technical documentation. When a developer submits a new document or API, it must be reviewed and approved by an administrator before publication. Once approved, the document and its associated API are automatically deployed. The deployed APIs are then made available to clients through a dedicated interface where they can browse the documentation and interactively test the APIs, similarly to the experience provided by Swagger."
     }
   ],
   "contact": {

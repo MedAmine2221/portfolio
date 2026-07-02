@@ -22,7 +22,7 @@
     "hello_world": "Ciao, mondo!",
     "i_am": "Sono Mohamed Amine LAZREG",
     "full_stack_developer": "Sviluppatore Full Stack",
-    "enseignant_vacataire": "Insegnante a tempo parziale",
+    "enseignant_vacataire": "Formatore Full-Stack",
     "recomm": {
       "BOUSSADIA_Marami": "Ho avuto il piacere di seguire Mohamed Amine Lazreg durante il suo stage presso Waialys Group e di vederlo crescere come membro del nostro team. Fin dall’inizio ha dimostrato grande professionalità, notevole capacità di adattamento e un forte impegno nel suo lavoro. La sua precisione e la sua capacità di lavorare sia in autonomia che in team hanno contribuito in modo significativo al successo di diversi progetti.",
       "Emna_Ben_fraj": "Ho avuto l’opportunità di lavorare con Mohamed Amine e ho apprezzato molto il suo rigore, le sue competenze tecniche e il suo spirito di squadra. Sempre disponibile ad aiutare e condividere le sue conoscenze, ha contribuito in modo importante al successo dei nostri progetti. Lo raccomando vivamente per qualsiasi posizione di sviluppo.",
@@ -119,6 +119,12 @@
     },
     {
       "description": "Applicazione web per gestire le competenze e aggiornare i CV."
+    },
+    {
+      "description": "Nell'ambito della supervisione di una tirocinante durante uno stage estivo, il progetto consiste nello sviluppo di un'applicazione web intelligente dedicata alla gestione delle prenotazioni delle sale per ricevimenti di matrimonio e dei pacchetti matrimoniali. L'applicazione comprende due moduli basati sull'intelligenza artificiale. 1. Modulo Cliente: un consulente matrimoniale intelligente che assiste le future coppie nella scelta delle soluzioni più adatte. Gli utenti descrivono le proprie preferenze (stile del matrimonio, budget, numero di invitati, località, atmosfera, ecc.) e il sistema consiglia le sale per ricevimenti più adatte. Inoltre, propone una selezione di pasticcerie, gruppi musicali (band) e altri servizi in linea con le esigenze espresse. 2. Modulo Amministratore: una dashboard intelligente che consente di analizzare le recensioni e i feedback dei clienti. Grazie all'intelligenza artificiale, il sistema esegue un'analisi del sentiment, individua i punti di forza e gli aspetti da migliorare e genera statistiche per aiutare i responsabili a ottimizzare i propri servizi."
+    },
+    {
+      "description": "Nell'ambito della supervisione di una tirocinante per il Progetto di Fine Studi (PFE), il progetto consiste nello sviluppo di un'applicazione web intelligente per la gestione della documentazione tecnica e delle API. L'applicazione prevede tre ruoli principali: Amministratore, Sviluppatore e Cliente. Gli amministratori e gli sviluppatori possono aggiungere documenti tecnici e associarli alle rispettive API. Ogni documento è collegato a una o più API per centralizzare la documentazione tecnica. Quando uno sviluppatore inserisce un nuovo documento o una nuova API, questi devono essere approvati da un amministratore prima della pubblicazione. Una volta approvati, i documenti e le API vengono distribuiti automaticamente. Le API approvate sono quindi rese disponibili ai clienti tramite un'interfaccia dedicata che consente di consultare la documentazione e di testare le API in modo interattivo, in modo simile all'interfaccia offerta da Swagger."
     }
   ],
   "contact": {

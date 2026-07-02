@@ -1,8 +1,49 @@
+/* eslint-disable prettier/prettier */
 import { Code, GraduationCap, Laptop, Smartphone } from "lucide-react";
 
 export const projects = (t: any) => [
-  {
+    {
     index: 1,
+    title: "DocGen",
+    description: t("projects.8.description"),
+    lien: "",
+    img: ["/swaggerPageBack.png", "/loginPage.png", "/forgetpasswordPage.png", "/adminDash1.png", "/adminDash2.png", "/userManagement.png", "/addNewUserModal.png", "/docDetails.png", "/quiteModalVerificationModal.png", "/logsManagements.png", "/rollbackAction.png", "/profile.png", "/settingsPage.png", "/developerDash.png", "/clientDash.png", "/executeApiModal.png"],
+    encours: false,
+    githubLink: "",
+    skills: [
+      "Next Js",
+      "Nest Js",
+      "PostgreSQL",
+      "redux toolkit",
+      "tailwind",
+      "i18n",
+      "Swagger",
+      "heroui",
+      "github",
+      "Encadrement",
+    ],
+  },
+  {
+    index: 2,
+    title: "CarthageEvent",
+    description: t("projects.7.description"),
+    lien: "https://carthage-event.vercel.app/",
+    img: ["/carthage1.png", "/carthage2.png", "/carthage3.png", "/carthage4.png", "/carthage5.png", "/carthage6.png", "/carthage7.png", "/carthage8.png", "/carthage9.png", "/carthage10.png"],
+    encours: false,
+    githubLink: "",
+    skills: [
+      "Next Js",
+      "Firebase",
+      "redux toolkit",
+      "tailwind",
+      "heroui",
+      "github",
+      "API Gemini",
+      "Encadrement",
+    ],
+  },
+  {
+    index: 3,
     title: "Educap",
     description: t("projects.0.description"),
     lien: "https://play.google.com/store/apps/details?id=adn_expertise.educap&hl=fr",
@@ -19,7 +60,7 @@ export const projects = (t: any) => [
     ],
   },
   {
-    index: 2,
+    index: 4,
     title: "MAIDE",
     description: t("projects.1.description"),
     lien: "https://fedsvc.myaccount.iqvia.com/authenticationendpoint/login.do?client_id=7J3GXYkcCCrRhoyZ6CZjHNvs0J4a&commonAuthCallerPath=%2Foauth2%2Fauthorize&forceAuth=false&passiveAuth=false&redirect_uri=https%3A%2F%2Fback.mai-de.iqvia.com%2Foauth%2Fcallback%2F&response_type=code&scope=openid&tenantDomain=carbon.super&sessionDataKey=2b8c20f9-9f93-4f9b-a802-b8288d3acf34&relyingParty=7J3GXYkcCCrRhoyZ6CZjHNvs0J4a&type=oidc&sp=OIDC-RWS-HEOR-MAIDE&isSaaSApp=false&authenticators=IdentifierExecutor%3ALOCAL",
@@ -28,10 +69,10 @@ export const projects = (t: any) => [
     ],
     encours: false,
     githubLink: "",
-    skills: ["NestJS", "ReactJS", "git", "github", "Scrum Methodology"],
+    skills: ["NestJS", "ReactJS", "git", "tailwind", "github", "Scrum Methodology"],
   },
   {
-    index: 3,
+    index: 5,
     title: "Mohamed Amine's Portfolio Managment APP",
     description: t("projects.2.description"),
     lien: "https://portfolio-management-app-ten.vercel.app/",
@@ -54,7 +95,7 @@ export const projects = (t: any) => [
     ],
   },
   {
-    index: 4,
+    index: 6,
     title: "DAILY COMPASS APP",
     description: t("projects.3.description"),
     lien: "https://drive.google.com/file/d/1gzfmAVGVBBGpCuQR5eeoDEGn4fpWpS2Z/view?usp=sharing",
@@ -77,7 +118,7 @@ export const projects = (t: any) => [
     ],
   },
   {
-    index: 5,
+    index: 7,
     title: "DAILY COMPASS APP Management",
     description: t("projects.4.description"),
     lien: "",
@@ -89,13 +130,14 @@ export const projects = (t: any) => [
       "FireBase",
       "heroUI",
       "redux toolkit",
+      "tailwind",
       "FireBase",
       "git",
       "github",
     ],
   },
   {
-    index: 6,
+    index: 8,
     title: "QUIZ APP Mobile",
     description: t("projects.5.description"),
     lien: "",
@@ -105,7 +147,7 @@ export const projects = (t: any) => [
     skills: ["React Native", "Laravel", "git", "github"],
   },
   {
-    index: 7,
+    index: 9,
     title: "QUIZ APP Web",
     description: t("projects.6.description"),
     lien: "",

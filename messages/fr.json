@@ -22,7 +22,7 @@
     "hello_world": "Bonjour le monde !",
     "i_am": "Je suis Mohamed Amine LAZREG",
     "full_stack_developer": "Développeur Full Stack",
-    "enseignant_vacataire": "Enseignant vacataire",
+    "enseignant_vacataire": "Formateur FullStack",
     "recomm": {
       "BOUSSADIA_Marami": "J’ai eu le plaisir d’encadrer Mohamed Amine Lazreg lors de son stage au sein du groupe Waialys, puis de le voir évoluer comme membre de notre équipe. Dès le début, il a fait preuve d’un grand professionnalisme, d’une remarquable capacité d’adaptation et d’un réel engagement dans ses missions. Sa rigueur, son sérieux et sa capacité à travailler aussi bien en autonomie qu’en équipe ont largement contribué au succès de plusieurs projets.",
       "Emna_Ben_fraj": "J’ai eu l’opportunité de travailler avec Mohamed Amine et j’ai beaucoup apprécié sa rigueur, ses compétences techniques et son esprit d’équipe. Toujours disponible pour aider et partager ses connaissances, il a contribué de manière significative à la réussite de nos projets. Je le recommande vivement pour tout poste de développement.",
@@ -119,6 +119,12 @@
     },
     {
       "description": "Application web pour gérer les compétences et mettre à jour les CV."
+    },
+    {
+      "description": "Dans le cadre de l'encadrement d'une stagiaire en stage d'été, le projet consiste à développer une application web intelligente dédiée à la gestion des réservations de salles des fêtes de mariage et des packs de mariage.\n L'application comprend deux modules intégrant l'intelligence artificielle :\n 1. Module Client : un conseiller de mariage intelligent qui accompagne les futurs mariés dans leurs choix. Les utilisateurs décrivent leurs préférences (style de mariage, budget, nombre d'invités, localisation, ambiance, etc.), puis le système recommande les salles des fêtes les plus adaptées. Il propose également une sélection de pâtisseries, de groupes de musique (bands) et d'autres prestations correspondant aux besoins exprimés.\n 2. Module Administrateur : un tableau de bord intelligent permettant d'analyser les avis et les retours des clients. Grâce à l'intelligence artificielle, le système réalise une analyse des sentiments, identifie les points forts et les points à améliorer, et génère des statistiques afin d'aider les gestionnaires à optimiser leurs services."
+    },
+    {
+      "description": "Dans le cadre de l'encadrement d'une stagiaire en Projet de Fin d'Études (PFE), le projet consiste à développer une application web intelligente dédiée à la gestion des documents techniques et des API. L'application repose sur trois rôles principaux : Administrateur, Développeur et Client. Les administrateurs et les développeurs peuvent ajouter des documents ainsi que les API correspondantes. Chaque document est associé à une ou plusieurs API afin de centraliser la documentation technique. Lorsqu'un développeur soumet un nouveau document ou une nouvelle API, ceux-ci doivent être validés par un administrateur avant leur publication. Une fois approuvés, les documents et les API sont automatiquement déployés. Les API validées sont ensuite mises à la disposition des clients via une interface dédiée permettant de les consulter, de visualiser leur documentation et de les tester de manière interactive, à l'image de l'interface proposée par Swagger."
     }
   ],
   "contact": {
