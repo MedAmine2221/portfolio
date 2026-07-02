@@ -4,10 +4,9 @@ import { db } from "@/config/firebase";
 
 export const contactMe = async (data: any) => {
   if (!db) {
-    throw new Error("Firestore is not initialized"); // runtime safety check
+    throw new Error("Firestore is not initialized");
   }
 
-  // db is now definitely a Firestore instance
   const tasksRef = collection(db as Firestore, "contact");
 
   await addDoc(tasksRef, {

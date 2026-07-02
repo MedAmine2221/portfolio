@@ -390,3 +390,28 @@ export const STATIC_KNOWLEDGE = (siteConfig: any) => {
     },
   };
 };
+
+export const OBJECT_OPTIONS = (t: any) => {
+  return [
+    { key: "pfe", label: t("object-pfe") },
+    { key: "dev", label: t("object-dev") },
+    { key: "formation", label: t("object-formations") },
+  ];
+}
+export const FRAMEWORK_OPTIONS = [
+  { key: "flutter", label: "Flutter" },
+  { key: "react-native", label: "React Native" },
+  { key: "reactjs-nextjs", label: "ReactJS / NextJS" },
+  { key: "nestjs", label: "NestJS" },
+  { key: "sql", label: "SQL" },
+  { key: "python", label: "Python" },
+  { key: "java", label: "Java" },
+  { key: "poo", label: "POO" },
+  { key: "js-ts", label: "JS / TS" },
+];
+
+export const DEV_TECH_OPTIONS = [
+  { key: "react-native-mobile", label: "React Native" },
+  { key: "nextjs-front", label: "NextJS" },
+  { key: "nestjs-back", label: "NestJS" },
+];

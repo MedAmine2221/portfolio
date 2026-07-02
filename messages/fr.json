@@ -131,6 +131,11 @@
     "firstName": "Prénom",
     "lastName": "Nom",
     "object": "Objet",
+    "choix-dev": "Avec quelle(s) technologie(s) souhaitez-vous développer ?",
+    "choix-formations": "Quels frameworks / langages vous intéressent ?",
+    "object-pfe": "Encadrement privé PFE",
+    "object-dev": "Développement d'une application web/mobile",
+    "object-formations": "Formation",
     "message": "Message",
     "send": "Envoyer"
   },

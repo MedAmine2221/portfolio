@@ -131,6 +131,11 @@
     "firstName": "First Name",
     "lastName": "Last Name",
     "object": "Object",
+    "choix-dev": "Which technology or technologies do you wish to develop with?",
+    "choix-formations": "Which frameworks/languages interest you ?",
+    "object-pfe": "Private supervision for the final-year project",
+    "object-dev": "Development of a web/mobile application",
+    "object-formations": "Training",
     "message": "Message",
     "send": "Send"
   },

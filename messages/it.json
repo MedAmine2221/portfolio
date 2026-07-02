@@ -131,6 +131,11 @@
     "firstName": "Nome",
     "lastName": "Cognome",
     "object": "Oggetto",
+    "choix-dev": "Con quale tecnologia o quali tecnologie desideri sviluppare?",
+    "choix-formations": "Quali framework o linguaggi ti interessano?",
+    "object-pfe": "Supervisione privata per il progetto dell'ultimo anno",
+    "object-dev": "Sviluppo di un'applicazione web/mobile",
+    "object-formations": "Formazione",
     "message": "Messaggio",
     "send": "Invia"
   },

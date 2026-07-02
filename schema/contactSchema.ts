@@ -6,6 +6,14 @@ export const contactSchema = (t: any) =>
     firstName: yup.string().required(t("firstName")),
     email: yup.string().required(t("email")),
     object: yup.string().required(t("object")),
+    frameworks: yup.array().when("object", {
+      is: "formation",
+      then: (schema) => schema.min(1, t("required")),
+    }),
+    devTech: yup.array().when("object", {
+      is: "dev",
+      then: (schema) => schema.min(1, t("required")),
+    }),
     message: yup.string().required(t("message")),
   });
 
