@@ -54,7 +54,7 @@ export default function TypingTextEffect({
   ]);
 
   return (
-    <i className="font-mono text-4xl font-bold text-indigo-400">
+    <i className="font-mono text-4xl font-bold text-violet-400">
       {displayedText}
       <span className="animate-pulse">|</span>
     </i>

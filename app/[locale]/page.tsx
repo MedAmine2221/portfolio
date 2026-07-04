@@ -4,12 +4,23 @@ import { button as buttonStyles } from "@heroui/theme";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
+import { FiDownload } from "react-icons/fi";
 
 import { siteConfig } from "@/config/site";
 import { GithubIcon } from "@/components/icons";
 import TypingText from "@/components/app/typing-text";
 import RecommondationCard from "@/components/app/recommandation-card";
 import TypingTextEffect from "@/components/app/typing-text-effect";
+import ServicesSection from "@/components/app/services-section";
+
+const techStack = [
+  { src: "/js.png", alt: "JavaScript" },
+  { src: "/typescript.png", alt: "TypeScript" },
+  { src: "/nest.svg", alt: "NestJS" },
+  { src: "/ReactNative.png", alt: "React Native" },
+  { src: "/programing.png", alt: "Next.js" },
+  { src: "/git.png", alt: "Git" },
+];
 
 export default function Home() {
   const t = useTranslations("home");
@@ -18,118 +29,108 @@ export default function Home() {
   const pathname = usePathname();
 
   return (
-    <section className="flex flex-col items-center justify-center gap-6 px-4 py-8 md:py-16">
-      <div className="flex flex-col items-center text-center max-w-xl">
-        <div className="mt-4 space-y-1 text-sm md:text-base">
-          <TypingText text={`${t("hello_world")}`} />
-          <br />
-          <TypingText text={`${t("i_am")}`} />
-          <br />
-          <TypingTextEffect
-            texts={[
-              `${t("full_stack_developer")}`,
-              `${t("enseignant_vacataire")}`,
-            ]}
-          />
+    <>
+      <section className="flex flex-col items-center justify-center gap-10 px-4 py-14 md:py-24">
+        <div className="flex flex-col items-center text-center max-w-xl gap-6">
+          <div
+            className="
+              relative w-52 h-52 md:w-96 md:h-96
+              rounded-full overflow-hidden
+              border-2 border-violet-400/30
+              shadow-[0_0_40px_-10px_rgba(167,139,250,0.5)]
+            "
+          >
+            <Image
+              fill
+              alt="Mohamed Amine Lazreg"
+              className="object-cover"
+              src="/amine.png"
+            />
+          </div>
+
+          <div className="space-y-1 text-sm md:text-base">
+            <TypingText text={`${t("hello_world")}`} />
+            <br />
+            <TypingText text={`${t("i_am")}`} />
+            <br />
+            <TypingTextEffect
+              texts={[
+                `${t("full_stack_developer")}`,
+                `${t("enseignant_vacataire")}`,
+              ]}
+            />
+          </div>
         </div>
-        <Image
-          alt="That's Me"
-          className="md:w-200 lg:w-1000"
-          height={300}
-          src="/amine.png"
-          width={300}
-        />
-      </div>
 
-      {/* PROGRAMMING IMAGE */}
-      <div className="flex flex-row items-center justify-center gap-4 md:gap-8">
-        <Image
-          alt="Programming"
-          className="w-24 md:w-32 h-auto"
-          height={125}
-          src="/programing.png"
-          width={125}
-        />
-        <Image
-          alt="Nest"
-          className="w-24 md:w-32 h-auto"
-          height={125}
-          src="/nest.svg"
-          width={125}
-        />
-      </div>
+        {/* TECH STACK STRIP */}
+        <div className="flex flex-wrap items-center justify-center gap-3">
+          {techStack.map((tech) => (
+            <div
+              key={tech.alt}
+              className="
+                group relative
+                w-14 h-14 md:w-16 md:h-16
+                flex items-center justify-center
+                rounded-xl
+                bg-white/[0.03]
+                border border-white/10
+                hover:border-violet-400/40
+                transition-colors
+              "
+              title={tech.alt}
+            >
+              <Image
+                alt={tech.alt}
+                className="object-contain w-3/5 h-3/5"
+                height={40}
+                src={tech.src}
+                width={40}
+              />
+            </div>
+          ))}
+        </div>
 
-      {/* TECH STACK */}
-      <div className="flex flex-wrap justify-center gap-4">
-        <Image
-          alt="JS"
-          className="w-16 md:w-20"
-          height={80}
-          src="/js.png"
-          width={80}
-        />
-        <Image
-          alt="TS"
-          className="w-16 md:w-20"
-          height={80}
-          src="/typescript.png"
-          width={80}
-        />
-        <Image
-          alt="GIT"
-          className="w-20 md:w-24"
-          height={40}
-          src="/git.png"
-          width={80}
-        />
-      </div>
+        {/* BUTTONS */}
+        <div className="flex flex-col sm:flex-row gap-4">
+          <Link
+            isExternal
+            className={buttonStyles({
+              color: "primary",
+              radius: "full",
+              variant: "shadow",
+            })}
+            href={
+              pathname === "/it"
+                ? siteConfigRes.links.cv_it
+                : pathname === "/en"
+                  ? siteConfigRes.links.cv_eng
+                  : siteConfigRes.links.cv
+            }
+          >
+            <FiDownload size={18} />
+            {t("download_cv")}
+          </Link>
 
-      {/* REACT NATIVE */}
-      <Image
-        alt="React Native"
-        className="w-48 md:w-64 lg:w-72 h-auto"
-        height={300}
-        src="/ReactNative.png"
-        width={300}
-      />
+          <Link
+            isExternal
+            className={buttonStyles({
+              variant: "bordered",
+              radius: "full",
+            })}
+            href={siteConfigRes.links.github}
+          >
+            <GithubIcon size={20} />
+            GitHub
+          </Link>
+        </div>
+      </section>
 
-      {/* BUTTONS */}
-      <div className="flex flex-col sm:flex-row gap-4">
-        <Link
-          isExternal
-          className={buttonStyles({
-            color: "primary",
-            radius: "full",
-            variant: "shadow",
-          })}
-          href={
-            pathname === "/it"
-              ? siteConfigRes.links.cv_it
-              : pathname === "/en"
-                ? siteConfigRes.links.cv_eng
-                : siteConfigRes.links.cv
-          }
-        >
-          {t("download_cv")}
-        </Link>
-
-        <Link
-          isExternal
-          className={buttonStyles({
-            variant: "bordered",
-            radius: "full",
-          })}
-          href={siteConfigRes.links.github}
-        >
-          <GithubIcon size={20} />
-          GitHub
-        </Link>
-      </div>
+      <ServicesSection />
 
       {/* RECOMMENDATIONS */}
-      <div className="w-full flex justify-center px-2 md:px-0">
+      <div className="w-full flex justify-center px-2 md:px-0 pb-16">
         <RecommondationCard />
       </div>
-    </section>
+    </>
   );
 }

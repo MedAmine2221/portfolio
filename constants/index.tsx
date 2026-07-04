@@ -1,5 +1,7 @@
 /* eslint-disable prettier/prettier */
 import { Code, GraduationCap, Laptop, Smartphone } from "lucide-react";
+import { Service } from "./interface";
+import { FiBookOpen, FiCode, FiUsers } from "react-icons/fi";
 
 export const projects = (t: any) => [
     {
@@ -415,3 +417,40 @@ export const DEV_TECH_OPTIONS = [
   { key: "nextjs-front", label: "NextJS" },
   { key: "nestjs-back", label: "NestJS" },
 ];
+
+
+export const mesServices = (t: any) : Service[] => {
+  return [
+    {
+      eyebrow: t('contact.object-formations'),
+      icon: <FiBookOpen size={20} />,
+      title: t("service-forma"),
+      description:
+        t("service-forma-desc"),
+      tags: ["Next.js", "React Native", "Python", "JS", "HTML", "CSS", "TS", "NestJS"],
+    },
+    {
+      eyebrow: t("service-dev"),
+      icon: <FiCode size={20} />,
+      title: t("contact.object-dev"),
+      description:
+        t("service-dev-desc"),
+      tags: [
+        "ReactJS",
+        "NextJS",
+        "NestJS",
+        "React Native",
+        "Firebase",
+        "PostgreSQL",
+      ],
+    },
+    {
+      eyebrow: t("contact.object-pfe"),
+      icon: <FiUsers size={20} />,
+      title: t("service-encadrement"),
+      description:
+        t("service-encad-desc"),
+      tags: [],
+    },
+  ];
+}

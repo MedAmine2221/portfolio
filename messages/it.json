@@ -4,7 +4,18 @@
   "moins": "Vedi meno",
   "close": "Chiudi",
   "demo": "corri - vivi",
+  "services": "servizi",
+  "service-quest": "Come posso aiutarla?",
+  "service-desc": "Come freelance, offro tre tipi di supporto per lo sviluppo web e mobile.",
+  "contact-me": "Contattami",
+  "service-forma": "Formazione sullo sviluppo web e mobile",
+  "service-forma-desc":"Formazione privata o aziendale per imparare a progettare e sviluppare applicazioni reali, dalla configurazione del progetto al deployment.",
+  "service-dev-desc":"Progettazione e sviluppo di applicazioni end-to-end utilizzando Next.js, NestJS e React Native — dalla definizione dei requisiti alla messa in produzione.",
+  "service-dev": "Sviluppo",
   "in_Progress": "In corso",
+  "service-encadrement":"Supervisione di progetti di fine corso e tirocini estivi",
+  "service-encad-desc": "Guidare gli studenti nei progetti dell'ultimo anno o nei tirocini estivi: scelta dell'argomento, architettura tecnica, monitoraggio costante e preparazione alla presentazione finale.",
+
   "typing": "Sta scrivendo",
   "navbar": {
     "home": "Benvenuto",

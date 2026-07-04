@@ -9,3 +9,10 @@ export interface TypingTextProps {
   text: string;
   speed?: number;
 }
+export interface Service {
+  eyebrow: string;
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+  tags: string[];
+}
