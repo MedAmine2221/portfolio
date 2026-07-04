@@ -1,5 +1,8 @@
 {
   "chooseLanguage": "Choisissez votre langue",
+  "plus": "Voir plus",
+  "moins": "Voir moins",
+  "demo": "exécuter en mode direct",
   "close": "Fermer",
   "in_Progress": "En cours",
   "typing": "En train d’écrire",

@@ -1,5 +1,8 @@
 {
   "chooseLanguage": "Choose your language",
+  "plus": "See more",
+  "moins": "See less",
+  "demo": "run --live",
   "in_Progress": "In Progress",
   "close": "Close",
   "typing": "Typing",
