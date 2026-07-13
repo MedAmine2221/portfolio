@@ -1,7 +1,8 @@
 /* eslint-disable prettier/prettier */
 import { Code, GraduationCap, Laptop, Smartphone } from "lucide-react";
-import { Service } from "./interface";
 import { FiBookOpen, FiCode, FiUsers } from "react-icons/fi";
+
+import { Service } from "./interface";
 
 export const projects = (t: any) => [
     {
@@ -173,7 +174,7 @@ export const experiences = (t: any) => [
       t("experiences.0.items.1"),
       t("experiences.0.items.2"),
     ],
-    skills: ["Flutter", "React Native", "Next JS", "Nest JS"],
+    skills: ["Flutter", "React Native", "Next JS", "Nest JS", "Firebase", "PostgrSQL"],
   },
   {
     date: t("experiences.1.date"),
