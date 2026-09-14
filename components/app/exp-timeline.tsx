@@ -70,7 +70,7 @@ export default function ProExpTimeLine() {
                   <div className={`h-2 bg-gradient-to-r ${exp.gradient}`} />
 
                   <div className="p-4 md:p-6 space-y-4">
-                    {exp.badge && (
+                    {/* {exp.badge && (
                       <span
                         className="inline-flex items-center gap-2 px-3 py-1 text-xs font-bold rounded-full
                         bg-emerald-500/20 text-emerald-300 border border-emerald-500/40"
@@ -78,7 +78,7 @@ export default function ProExpTimeLine() {
                         <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
                         {exp.badge}
                       </span>
-                    )}
+                    )} */}
 
                     <h3 className="text-lg md:text-xl font-bold text-white">
                       {exp.title}
