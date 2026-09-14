@@ -166,13 +166,11 @@ export const experiences = (t: any) => [
     title: t("experiences.0.title"),
     company: "Amed",
     location: "Sahloul",
-    badge: t("experiences.0.badge"),
-    icon: GraduationCap,
+    // badge: t("experiences.0.badge"),
+    icon: Code,
     gradient: "from-purple-500 to-indigo-600",
     items: [
       t("experiences.0.items.0"),
-      t("experiences.0.items.1"),
-      t("experiences.0.items.2"),
     ],
     skills: ["HTML", "Bootstrap", "SailsJS", "SPARQL", "Fuseki"],
   },
@@ -181,7 +179,7 @@ export const experiences = (t: any) => [
     title: t("experiences.1.title"),
     company: "Gate Training",
     location: "Hamem Sousse",
-    badge: t("experiences.1.badge"),
+    // badge: t("experiences.1.badge"),
     icon: GraduationCap,
     gradient: "from-purple-500 to-indigo-600",
     items: [
@@ -196,7 +194,7 @@ export const experiences = (t: any) => [
     title: t("experiences.2.title"),
     company: "ISSAT SO",
     location: "Sousse",
-    badge: t("experiences.2.badge"),
+    // badge: t("experiences.2.badge"),
     icon: GraduationCap,
     gradient: "from-purple-500 to-indigo-600",
     items: [
