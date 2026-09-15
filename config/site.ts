@@ -51,11 +51,11 @@ export const siteConfig = (t: any) => {
       facebook: "https://www.facebook.com/mouhamed.amine.lazreg/",
       instagram: "https://www.instagram.com/mouhamedaminelz/",
       linkedIn: "https://www.linkedin.com/in/mohamed-amine-lazreg-831b1817a/",
-      cv: "https://drive.google.com/file/d/1O9x7NPP4k_LY7dTgn05yWSeeSM-1YlNR/view?usp=sharing",
+      cv: "https://drive.google.com/file/d/1Ho3aJTbHWRnwHwbwLh8wPFiiJxg-A7H0/view?usp=drive_link",
       cv_eng:
-        "https://drive.google.com/file/d/1viXojhmGuCqGYOGsagrq4wlNxaoLMXe6/view?usp=sharing",
+        "https://drive.google.com/file/d/1g6FwHHQSthMjaJ3I5QoqxSKUrwdcLB5j/view?usp=drive_link",
       cv_it:
-        "https://drive.google.com/file/d/1mc07Lp21XHr02ejZNTNuU-3baYR-vlcG/view?usp=sharing",
+        "https://drive.google.com/file/d/1vQc3s7aBVZ7wJZxrDCtOdCWnv1m53BLG/view?usp=drive_link",
     },
   };
 };
