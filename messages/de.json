@@ -1,0 +1,168 @@
+{
+  "chooseLanguage": "Sprache auswählen",
+  "plus": "Mehr anzeigen",
+  "moins": "Weniger anzeigen",
+  "demo": "run --live",
+  "services": "Leistungen",
+  "service-quest": "Wie kann ich Ihnen helfen?",
+  "service-desc": "Als Freelancer biete ich drei Arten von Unterstützung in der Web- und Mobile-Entwicklung an.",
+  "contact-me": "Kontaktieren Sie mich",
+  "service-forma": "Schulungen in Web- und Mobile-Entwicklung",
+  "service-forma-desc":"Individuelle oder unternehmensinterne Schulungen, um zu lernen, wie man reale Anwendungen entwirft und entwickelt – vom Projektaufbau bis zum Deployment.",
+  "service-dev": "Entwicklung",
+  "service-dev-desc":"Ganzheitliche Konzeption und Entwicklung von Anwendungen mit Next.js, NestJS und React Native – von der Anforderungsspezifikation bis zum Produktivbetrieb.",
+  "service-encadrement":"Betreuung von Abschlussarbeiten & Sommerpraktika",
+  "service-encad-desc": "Begleitung von Studierenden bei ihrer Abschlussarbeit oder ihrem Sommerpraktikum: Themenwahl, technische Architektur, regelmäßiges Monitoring und Vorbereitung auf die Abschlusspräsentation.",
+  "in_Progress": "In Bearbeitung",
+  "close": "Schließen",
+  "typing": "Schreibt gerade",
+  "navbar": {
+    "home": "Startseite",
+    "about": "Über mich",
+    "professional_experience": "Berufserfahrung",
+    "projects": "Projekte",
+    "contact": "Kontakt",
+    "search_placeholder": "Suchen..."
+  },
+  "chat": {
+    "no_messages": "Keine Nachrichten",
+    "ai_chat": "KI-Chat",
+    "placeholder": "Wer ist Mohamed Amine Lazreg?"
+  },
+  "home": {
+    "recommendations": "Empfehlungen",
+    "download_cv": "Lebenslauf herunterladen",
+    "hello_world": "Hallo, Welt!",
+    "i_am": "Ich bin Mohamed Amine LAZREG",
+    "enseignant_vacataire": "Full-Stack-Trainer",
+    "full_stack_developer": "Full-Stack-Entwickler",
+    "recomm": {
+      "BOUSSADIA_Marami": "Ich hatte das Vergnügen, Mohamed Amine Lazreg während seines Praktikums bei der Waialys Group zu betreuen und ihn anschließend als Mitglied unseres Teams wachsen zu sehen. Von Anfang an zeigte er große Professionalität, bemerkenswerte Anpassungsfähigkeit und echtes Engagement für seine Aufgaben. Seine Sorgfalt, Genauigkeit und die Fähigkeit, sowohl selbstständig als auch im Team zu arbeiten, trugen wesentlich zum Erfolg mehrerer Projekte bei.",
+      "Emna_Ben_fraj": "Ich hatte die Gelegenheit, mit Mohamed Amine zusammenzuarbeiten, und habe seine Genauigkeit, seine technischen Fähigkeiten und seinen Teamgeist sehr geschätzt. Er war stets hilfsbereit und teilte gern sein Wissen, wodurch er maßgeblich zum Erfolg unserer Projekte beitrug. Ich empfehle ihn uneingeschränkt für jede Entwicklerstelle.",
+      "Hamza_Khlifi": "Ich hatte das Vergnügen, seit seinem Abschlusspraktikum (PFE) in unserem Team mit Mohamed Amine zusammenzuarbeiten. Seine technischen Fähigkeiten und sein Engagement führten dazu, dass er nach dem Praktikum als JavaScript-Entwickler eingestellt wurde. Er leistete einen bedeutenden Beitrag zur Entwicklung der mobilen Anwendung für unser Hauptprojekt.",
+      "Bourawi_Khlifi": "Ich hatte die Gelegenheit, Mohamed Amines Werdegang von seinem ersten Praktikum bis zu seiner heutigen Position als JavaScript-Entwickler zu verfolgen. Dank seiner Motivation und seiner technischen Fähigkeiten gewann er schnell das Vertrauen des Teams. Stets engagiert und ergebnisorientiert zeichnet sich Mohamed Amine durch Genauigkeit, Neugier und einen ausgezeichneten Teamgeist aus.",
+      "Boufares_Mohamed_Amine": "Ich hatte die Gelegenheit, mit Mohamed Amine an mehreren Frontend-Projekten zu arbeiten. Er zeigt einen starken Lernwillen und eine positive, kooperative Haltung im Team. Obwohl er seine technischen Fähigkeiten in React, Next.js und TypeScript noch weiterentwickelt, geht er Herausforderungen mit Einsatz und dem Willen zur Verbesserung an. Mit mehr Erfahrung hat er das Potenzial, ein solider Frontend-Entwickler zu werden.",
+      "Chamseddine_Bouhouch": "Ich hatte das Vergnügen, mit Mohamed Amine zu arbeiten, der stets großes Potenzial und einen starken Eifer zeigte, neue Fähigkeiten zu erlernen. Er trug wirkungsvoll zu mehreren Frontend- und Mobile-Projekten bei und brachte sowohl technischen Mehrwert als auch frische Perspektiven ein. Über seine Fähigkeiten hinaus ist er ein wirklich guter Mensch, der sich nahtlos ins Team einfügte und starke Beziehungen zu seinen Kollegen aufbaute.",
+      "Taha_Meskini": "Ich hatte die Gelegenheit, seit Beginn unseres Praktikums an der Seite von Amine zu arbeiten, und es war eine großartige Erfahrung. Als Mobile-Entwickler zeigte er stets starke technische Fähigkeiten, Engagement und eine echte Leidenschaft dafür, hochwertige Anwendungen zu entwickeln. Amine ist ein fleißiger Teamkollege, der immer die Extrameile geht, um Probleme zu lösen und Ergebnisse pünktlich zu liefern. Sein Teamgeist und seine Bereitschaft, Wissen zu teilen, machten unsere Zusammenarbeit reibungslos und angenehm. Ich empfehle Amine uneingeschränkt für jede Position, die einen motivierten und kompetenten Mobile-Entwickler erfordert."
+    }
+  },
+  "about": {
+    "title": "Über mich",
+    "desc": "Als Informatikingenieur und nebenberuflicher Dozent sehe ich mich als aufmerksamen, methodischen Profi, der mit Leidenschaft Wissen weitergibt. Meine Erfahrung in Industrie und Lehre hat es mir ermöglicht, einen Ansatz zu entwickeln, der zugleich rigoros und menschenzentriert ist, in dem Klarheit, Geduld und Anpassungsfähigkeit im Mittelpunkt meiner Arbeit stehen. Ich lege großen Wert auf Zusammenarbeit, effektive Kommunikation und persönliche Betreuung, sei es mit Studierenden oder in Projektteams. Angetrieben von ständiger Neugier und einer lösungsorientierten Denkweise vermittle ich gerne nicht nur technische Fähigkeiten, sondern auch Arbeitsmethoden und eine Haltung, die auf kontinuierliches Lernen und Innovation ausgerichtet ist.",
+    "formations": {
+      "title_1": "Angewandter Bachelor in Industrieinformatik",
+      "title_2": "Nationales Ingenieurdiplom in Softwaretechnik – Schwerpunkt: Softwarearchitektur"
+    }
+  },
+  "experiences": [
+    {
+      "date": "07-2026 — Heute",
+      "title": "Softwareentwickler",
+      "items": [
+        "Softwareentwicklung"
+      ]
+    },
+    {
+      "date": "03-2026 — 07-2026",
+      "title": "Full-Stack-Trainer",
+      "items": [
+        "Betreuung von Abschlussprojekten (Capstone-Projekte).",
+        "Moderation von Sitzungen mit Schwerpunkt auf Problemlösung und praktischer Anwendung.",
+        "Akademische Begleitung und persönliche Unterstützung der Studierenden.",
+        "Konzeption und Durchführung von Full-Stack-Entwicklungsschulungen."
+      ]
+    },
+    {
+      "date": "09-2025 — 05-2026",
+      "title": "Nebenberuflicher Dozent",
+      "items": [
+        "Betreuung von praktischen Übungen und Studierendenprojekten (Programmierung, OOP, Git, Trello, Slack).",
+        "Moderation von Sitzungen mit Schwerpunkt auf Problemlösung und praktischer Anwendung.",
+        "Akademische Begleitung und Unterstützung der Studierenden."
+      ]
+    },
+    {
+      "title": "Full-Stack-Entwickler",
+      "items": [
+        "Mitarbeit an der Entwicklung von SAAS MAI DE, einer SaaS-Plattform zur Vereinfachung der Analyse von Payer-Bewertungen und zur Unterstützung von Studiendesign und Market-Access-Strategie.",
+        "Beteiligung an der Entwicklung von Komponenten für Educap, eine mobile Bildungsanwendung.",
+        "Entwicklung von DentalFlow, einer medizinischen mobilen Anwendung für Zahnprothetik.",
+        "Entwicklung von Waialys Med, einer medizinischen mobilen Anwendung."
+      ]
+    },
+    {
+      "title": "Abschlusspraktikum im Ingenieurstudium – Full-Stack-Entwickler",
+      "items": [
+        "Entwicklung einer umfassenden Anwendung für das Unternehmensmanagement."
+      ]
+    },
+    {
+      "title": "Sommerpraktikum – Mobile-Entwickler",
+      "localisation":"",
+      "items": [
+        "Entwicklung einer mobilen Anwendung für die Mitarbeiterverwaltung."
+      ]
+    },
+    {
+      "title": "Sommerpraktikum – Spring-Boot-Entwickler",
+      "items": [
+        "Entwicklung einer Webanwendung für die Mitarbeiter- und Schulungsverwaltung."
+      ]
+    },
+    {
+      "title": "Bachelor-Abschlussprojekt",
+      "items": [
+        "Konzeption und Entwicklung einer Anwendung zur Robotersteuerung."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "description": "Diese mobile Bildungsanwendung ermöglicht es Schülern und Eltern, Fehlzeiten und Sanktionen sowie Hausaufgaben nachzuverfolgen. Die App steht auch Lehrkräften zur Verfügung und hilft ihnen, die Anwesenheit der Schüler zu verwalten, Unterrichtsinhalte und Hausaufgaben hinzuzufügen und zu organisieren sowie viele weitere Module zu nutzen."
+    },
+    {
+      "description": "Eine Plattform für Administratoren, die die Analyse vergangener und aktueller Payer-Bewertungen und Evidenzanforderungen ermöglicht und damit das Design klinischer Studien und die Market-Access-Strategie über den gesamten Produktlebenszyklus hinweg unterstützt."
+    },
+    {
+      "description": "Die Portfolio-Management-App von Mohamed Amine hilft mir, alle Kunden zu verwalten, die mich über mein Portfolio kontaktieren. Ich kann meine Termine mit einem Kalender organisieren, Google-Meet-Links für Besprechungen erstellen und automatisch Bestätigungs-, Stornierungs- oder Umplanungs-E-Mails versenden. Diese App macht die Verwaltung meines Terminkalenders und meiner Kundenkommunikation deutlich einfacher und effizienter."
+    },
+    {
+      "description": "Eine intelligente mobile Anwendung zur Zielverwaltung, mit der Sie Ihre anstehenden Ziele in Aufgaben unterteilen können. Bei Ablauf der Frist einer Aufgabe werden automatisch E-Mail-Benachrichtigungen versendet."
+    },
+    {
+      "description": "Webanwendung zur Überwachung der mobilen Anwendung „DAILY COMPASS APP“."
+    },
+    {
+      "description": "Mobile Anwendung zur Verwaltung von Kompetenzen und zur Aktualisierung von Lebensläufen."
+    },
+    {
+      "description": "Webanwendung zur Verwaltung von Kompetenzen und zur Aktualisierung von Lebensläufen."
+    },
+    {
+      "description": "Im Rahmen der Betreuung eines Sommerpraktikums besteht das Projekt in der Entwicklung einer intelligenten Webanwendung zur Verwaltung von Hochzeitslocation-Reservierungen und Hochzeitspaketen. Die Anwendung umfasst zwei Module mit künstlicher Intelligenz. 1. Kundenmodul: ein intelligenter Hochzeitsberater, der zukünftige Paare bei der Planung ihrer Hochzeit unterstützt. Die Nutzer beschreiben ihre Vorlieben (Hochzeitsstil, Budget, Gästeanzahl, Ort, Atmosphäre usw.), und das System empfiehlt die passendsten Hochzeitslocations. Es schlägt außerdem Konditoreien, Musikbands und weitere Dienstleistungen vor, die am besten zu den Anforderungen der Nutzer passen. 2. Administratormodul: ein intelligentes Dashboard zur Analyse von Kundenbewertungen und Feedback. Mithilfe von künstlicher Intelligenz führt das System eine Stimmungsanalyse durch, identifiziert Stärken und Verbesserungspotenziale und erstellt Statistiken, die den Managern helfen, ihre Leistungen zu optimieren."
+    },
+    {
+      "description": "Im Rahmen der Betreuung eines Abschlusspraktikums (Final Year Project) zielt das Projekt darauf ab, eine intelligente Webanwendung zur Verwaltung technischer Dokumente und APIs zu entwickeln. Die Anwendung basiert auf drei Hauptbenutzerrollen: Administrator, Entwickler und Kunde. Sowohl Administratoren als auch Entwickler können technische Dokumente erstellen und verwalten und sie den entsprechenden APIs zuordnen. Jedes Dokument ist mit einer oder mehreren APIs verknüpft, um eine zentrale technische Dokumentation bereitzustellen. Wenn ein Entwickler ein neues Dokument oder eine neue API einreicht, muss diese vor der Veröffentlichung von einem Administrator geprüft und freigegeben werden. Nach der Freigabe werden das Dokument und die zugehörige API automatisch bereitgestellt. Die bereitgestellten APIs stehen den Kunden anschließend über eine eigene Oberfläche zur Verfügung, in der sie die Dokumentation durchsuchen und die APIs interaktiv testen können, ähnlich wie bei Swagger."
+    }
+  ],
+  "contact": {
+    "firstName": "Vorname",
+    "lastName": "Nachname",
+    "object": "Betreff",
+    "choix-dev": "Mit welcher Technologie oder welchen Technologien möchten Sie entwickeln?",
+    "choix-formations": "Welche Frameworks/Sprachen interessieren Sie?",
+    "object-pfe": "Individuelle Betreuung der Abschlussarbeit",
+    "object-dev": "Entwicklung einer Web-/Mobile-Anwendung",
+    "object-formations": "Schulung",
+    "message": "Nachricht",
+    "send": "Senden"
+  },
+  "errors": {
+    "lastName": "Nachname ist erforderlich",
+    "firstName": "Vorname ist erforderlich",
+    "email": "E-Mail ist erforderlich",
+    "object": "Betreff ist erforderlich",
+    "message": "Nachricht ist erforderlich",
+    "prompt": "Prompt ist erforderlich"
+  }
+}

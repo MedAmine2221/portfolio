@@ -32,6 +32,7 @@ export const Navbar = () => {
     { code: "fr", label: "Français" },
     { code: "en", label: "English" },
     { code: "it", label: "Italiano" },
+    { code: "de", label: "Deutsch" },
   ];
   const changeLang = (lang: string) => {
     const segments = pathname.split("/");

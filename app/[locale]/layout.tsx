@@ -90,7 +90,9 @@ export default async function RootLayout({
                         ? "Tous droits réservés ©"
                         : locale === "it"
                           ? "Tutti i diritti riservati ©"
-                          : "All rights reserved ©"}{" "}
+                          : locale === "de"
+                            ? "Alle Rechte vorbehalten ©"
+                            : "All rights reserved ©"}{" "}
                       {new Date().getFullYear()},
                     </span>
                     <p className="text-primary text-sm">Mohamed Amine LAZREG</p>
