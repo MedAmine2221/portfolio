@@ -104,7 +104,7 @@ export default function Home() {
                 ? siteConfigRes.links.cv_it
                 : pathname === "/en"
                   ? siteConfigRes.links.cv_eng
-                  : pathname === "/deu"
+                  : pathname === "/de"
                     ? siteConfigRes.links.cv_deu
                     : siteConfigRes.links.cv
             }
