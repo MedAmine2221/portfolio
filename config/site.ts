@@ -57,7 +57,7 @@ export const siteConfig = (t: any) => {
       cv_it:
         "https://drive.google.com/file/d/1vQc3s7aBVZ7wJZxrDCtOdCWnv1m53BLG/view?usp=drive_link",
       cv_deu:
-        "https://drive.google.com/file/d/1vQc3s7aBVZ7wJZxrDCtOdCWnv1m53BLG/view?usp=drive_link",
+        "https://drive.google.com/file/d/1lU4y_hSBh2o7PjuBT1RnzqohxrslbfDI/view?usp=drive_link",
     },
   };
 };
