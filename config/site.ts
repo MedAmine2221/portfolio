@@ -56,6 +56,8 @@ export const siteConfig = (t: any) => {
         "https://drive.google.com/file/d/1g6FwHHQSthMjaJ3I5QoqxSKUrwdcLB5j/view?usp=drive_link",
       cv_it:
         "https://drive.google.com/file/d/1vQc3s7aBVZ7wJZxrDCtOdCWnv1m53BLG/view?usp=drive_link",
+      cv_deu:
+        "https://drive.google.com/file/d/1vQc3s7aBVZ7wJZxrDCtOdCWnv1m53BLG/view?usp=drive_link",
     },
   };
 };

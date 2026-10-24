@@ -104,7 +104,9 @@ export default function Home() {
                 ? siteConfigRes.links.cv_it
                 : pathname === "/en"
                   ? siteConfigRes.links.cv_eng
-                  : siteConfigRes.links.cv
+                  : pathname === "/deu"
+                    ? siteConfigRes.links.cv_deu
+                    : siteConfigRes.links.cv
             }
           >
             <FiDownload size={18} />
